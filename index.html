@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Self Appraisal Form - KSRIET</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+         
+
+<body>
+	<div class = "header">
+		<h2> K S R Institute For Engineering and Technology</h2>
+	</div>
+	<!--<img src="https://ksriet.ac.in/admin/uploads/general/1591201317ksiet-logonew.png" alt="">
+	<img src="https://ksriet.ac.in/admin/uploads/general/1649418892naac-a-plus.png" alt="" >
+	<h3>Self Appraisal Form</h3>-->
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="#" class="form" id="form1">
+			<h2 class="form__title">Sign Up</h2>
+			<input type="text" placeholder="Username" class="input" />
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<button class="btn">Sign Up</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="#" class="form" id="form2">
+			<h2 class="form__title">Login</h2>
+			<input type="email" placeholder="Username" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<a href="#" class="link">Forgot password?</a>
+			<button class="btn">Login</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Login</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<marquee behavior="" direction="">Designed and developed by : G VISHNUDHASAN, A RAGUL, M SOWNDARYA - II CSE</marquee>
+
+	<script>
+
+		const signInBtn = document.getElementById("signIn");
+		const signUpBtn = document.getElementById("signUp");
+		const fistForm = document.getElementById("form1");
+		const secondForm = document.getElementById("form2");
+		const container = document.querySelector(".container");
+		
+		signInBtn.addEventListener("click", () => {
+			container.classList.remove("right-panel-active");
+		});
+		
+		signUpBtn.addEventListener("click", () => {
+			container.classList.add("right-panel-active");
+		});
+		
+		fistForm.addEventListener("submit", (e) => e.preventDefault());
+		secondForm.addEventListener("submit", (e) => e.preventDefault());
+		
+		
+		</script>
+</body>
+</html>
