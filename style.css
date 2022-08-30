@@ -20,7 +20,7 @@
 body {
 	align-items: center;
 	background-color: var(--white);
-	background: url("https://ksriet.ac.in/admin/uploads/slider/1592672598campus-1.jpg")
+	background-image: url(https://www.ksriet.ac.in/admin/uploads/slider/1592672598campus-1.jpg);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
