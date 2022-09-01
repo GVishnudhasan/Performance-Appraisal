@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Animated Drop-down Menu CSS3</title>
+      <link rel="stylesheet" href="design.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+   <h1 style="text-align: start;">SELF APPRAISAL FORM</h1>
+   <div class="headerpart"></div>
+   <body>
+      <nav>
+         <label for="btn" class="button">Select your Category
+         <span class="fas fa-caret-down"></span>
+         </label>
+         <input type="checkbox" id="btn">
+         <ul class="menu">
+            <li><a href="#">less than 5 years</a></li>
+            <li><a href="#">greater than 5 years</a></li>
+            <li><a href="#">With PhD</a></li>
+            <li><a href="#">HOD/Engg</a></li>
+            <li><a href="#">HOD/S&H</a></li>
+            <li><a href="#">Director</a></li>
+            
+         
+         </ul>
+      </nav>
+      <!-- This code used to rotate drop icon(-180deg).. -->
+      <script>
+         $('nav .button').click(function(){
+           $('nav .button span').toggleClass("rotate");
+         });
+           $('nav ul li .first').click(function(){
+             $('nav ul li .first span').toggleClass("rotate");
+           });
+           $('nav ul li .second').click(function(){
+             $('nav ul li .second span').toggleClass("rotate");
+           });
+      </script> 
+   </body>
+</html>
