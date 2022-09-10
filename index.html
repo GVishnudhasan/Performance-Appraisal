@@ -6,48 +6,38 @@
     <link rel="stylesheet" href="style.css">
   </head>
          
+<header>
+	<img style="width: 1000px;" src="Screenshot 2022-09-10 212840.jpg" alt="">
+</header>
 
 <body>
 	<!--<div class = "header">
 		<h2> K S R Institute For Engineering and Technology</h2>
 	</div>-->
-	<img src="https://ksriet.ac.in/admin/uploads/general/1591201317ksiet-logonew.png" alt="">
-	<img src="https://ksriet.ac.in/admin/uploads/general/1649418892naac-a-plus.png" alt="">
-	<h3>Self Appraisal Form</h3>
+	<h2>Self Appraisal Form</h2>
 <div class="container right-panel-active">
 	<!-- Sign Up -->
 	<div class="container__form container--signup">
-		<form action="#" class="form" id="form1">
-			<h2 class="form__title">Sign Up</h2>
-			<input type="text" placeholder="Username" class="input" />
-			<input type="email" placeholder="Email" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-			<button class="btn">Sign Up</button>
-		</form>
-	</div>
-
-	<!-- Sign In -->
-	<div class="container__form container--signin">
-		<form action="#" class="form" id="form2">
+		<form action="page2.html" class="form" id="form2">
 			<h2 class="form__title">Login</h2>
 			<input type="email" placeholder="Username" class="input" />
 			<input type="password" placeholder="Password" class="input" />
 			<a href="#" class="link">Forgot password?</a>
-			<a href="page2.html">
-				<input type="button" class="btn">Login</input>
-			</a>
+			<button class="btn" onclick= "window.location.href = 'page2.html';" >Login</button>
 		</form>
 	</div>
+
 
 	<!-- Overlay -->
 	<div class="container__overlay">
 		<div class="overlay">
 			<div class="overlay__panel overlay--left">
-				<button class="btn" id="signIn">Login</button>
+				<h3 class="form__title">New User?</h3>
+				<button class="btn" id="signIn" onclick= "window.location.href = 'signup.html';">Sign Up Here</button>
 			</div>
-			<div class="overlay__panel overlay--right">
+			<!--<div class="overlay__panel overlay--right">
 				<button class="btn" id="signUp">Sign Up</button>
-			</div>
+			</div>-->
 		</div>
 	</div>
 </div>

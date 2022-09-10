@@ -35,9 +35,7 @@ body {
 	margin: 0;
 	margin-bottom: 1.25rem;
 }
-header{
-	background-color: #0367a6;
-}
+
 .link {
 	color: var(--gray);
 	font-size: 0.9rem;
