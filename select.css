@@ -30,7 +30,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: grid;
-	height: 100vh;
+	height: 1vh;
 	place-items: center;
 }
 h2{
@@ -47,7 +47,8 @@ h2{
 }
 .select-box .options-container{
 	background: #F5F5F5;
-	color: #4169E1;
+	border: 1px solid var(--blue);
+	color: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
 	font-weight: 700;
 	max-height: 0;
 	width: 100%;
@@ -59,34 +60,23 @@ h2{
 
 }
 .selective{
-	background:royalblue;
-	border-radius: 8px;
-	margin-bottom: 8px;
-	color: white;
-	position: relative;
-	font-weight: 700;
-	order: 0;
-}
-.selective::after{
-	content: "";
-	background: url("https://static.thenounproject.com/png/551749-200.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: absolute;
-	height: 100%;
-	width: 22px;
-	right: 10px;
-	top: 15px;
-	transition: all 0.4s;
+	background-color: var(--blue);
+	background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+	border-radius: 20px;
+	border: 1px solid var(--blue);
+	color: var(--white);
+	cursor: pointer;
+	margin-bottom: 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 4rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 }
 .select-box .options-container.active{
 	max-height: 400px;
 	opacity: 2;
-}
-.select-box .options-container.active + .selective::after{
-	transform: rotateX(180deg);
-	top: -6px;
-
 }
 .select-box .option,
 .selective
