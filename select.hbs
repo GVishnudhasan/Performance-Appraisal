@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Self Appraisal Form - KSRIET</title>
+  </head>
+  <header style="align-content: center;">
+	<img style="width: 1000px;" src="Screenshot 2022-09-10 212840.jpg" alt="">
+</header>
+<style>
+	:root {
+	/* COLORS */
+	--white: #e9e9e9;
+	--gray: #333;
+	--blue: #0367a6;
+	--lightblue: #008997;
+
+	/* RADII */
+	--button-radius: 0.7rem;
+
+	/* SIZES */
+	--max-width: 758px;
+	--max-height: 420px;
+
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	align-items: center;
+	background-color: var(--white);
+	background: url("https://ksriet.ac.in/admin/uploads/slider/1592672598campus-1.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	height: 1vh;
+	place-items: center;
+}
+h2{
+	margin: 16px;
+}
+.container{
+	margin-top: 100px;
+	padding: 32px;
+}
+.select-box{
+	display: flex;
+	width: 400px;
+	flex-direction: column;
+}
+.select-box .options-container{
+	background: #F5F5F5;
+	border: 1px solid var(--blue);
+	color: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+	font-weight: 700;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	border-radius: 8px;
+	overflow: hidden;
+	order: 1;
+
+}
+.selective{
+	background-color: var(--blue);
+	background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+	border-radius: 20px;
+	border: 1px solid var(--blue);
+	color: var(--white);
+	cursor: pointer;
+	margin-bottom: 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 4rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+.select-box .options-container.active{
+	max-height: 400px;
+	opacity: 2;
+}
+.select-box .option,
+.selective
+{
+	padding: 14px 26px;
+	cursor: pointer;
+}
+.select-box .option:hover{
+	background:lightblue;
+
+}
+
+.select-box label{
+	cursor: pointer;
+}
+.select-box .option .radio{
+	display: none;
+
+}
+
+
+
+
+
+</style>
+<body>
+	<!--<img src="https://ksriet.ac.in/admin/uploads/general/1591201317ksiet-logonew.png" alt="">
+	<img src="https://ksriet.ac.in/admin/uploads/general/1649418892naac-a-plus.png" alt="" >
+	<h3>Self Appraisal Form</h3>-->
+	<!-- Sign Up -->
+	<div class="container">
+		<div class="select-box">
+			<div class="selective">
+					SELECT YOUR CATEGORY
+			</div>
+			<div class="options-container active">
+				<div class="option">
+					<input type="radio" class="radio" id="lfyears" name="category" onclick= "window.location.href = 'lessthan5.html';"/>
+					<label for="lfyears">Less than Five years</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="mfyears" name="category"/>
+					<label for="mfyears">More than Five years</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="phd" name="category"/>
+					<label for="phd">With PHD</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="ehod" name="category"/>
+					<label for="ehod">HOD/ENGG</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="shod" name="category"/>
+					<label for="shod">HOD/S&H</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="director" name="category"/>
+					<label for="shod">Director</label>
+				</div>
+				<div class="option">
+					<input type="radio" class="radio" id="prin" name="category" onclick= "window.location.href = 'lessthan5.html';" />
+					<label for="prin">Principal</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const selected=document.querySelector(".selective");
+const optionsContainer=document.querySelector(".options-container");
+const optionsList=document.querySelectorAll(".option");
+selective.addEventListener("click",() => {
+	optionsContainer.classList.toggle("active");
+
+});
+optionsList.forEach(0 => {
+	0.addEventListener("click",() => {
+		selective.innerHTML=0.querySelector("label").innerHTML;
+		optionsContainer.classList.remove("active");
+	});
+});
+	</script>
+
+</body>
+</html>
