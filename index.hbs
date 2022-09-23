@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Self Appraisal Form - KSRIET</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+         
+<header>
+	<img style="width: 1000px;" src="Screenshot 2022-09-10 212840.jpg" alt="">
+</header>
+
+<body>
+	<!--<div class = "header">
+		<h2> K S R Institute For Engineering and Technology</h2>
+	</div>-->
+	<h2>Self Appraisal Form</h2>
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="select.html" class="form" id="form2">
+			<h2 class="form__title">Login</h2>
+			<input type="email" placeholder="Mailid" class="input" name="mailid" />
+			<input type="password" placeholder="Password" class="input" name="StaffCode" />
+			<a href="#" class="link">Forgot password?</a>
+			<button class="btn" onclick= "window.location.href = '/select';" >Login</button>
+		</form>
+	</div>
+
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<h3 class="form__title">New User?</h3>
+				<button class="btn" id="signIn" onclick= "window.location.href = '/register';">Sign Up Here</button>
+			</div>
+			<!--<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>-->
+		</div>
+	</div>
+</div>
+	<marquee behavior="" direction="">Designed and developed by : G VISHNUDHASAN, A RAGUL, M SOWNDARYA - II CSE</marquee>
+
+	<script>
+
+		const signInBtn = document.getElementById("signIn");
+		const signUpBtn = document.getElementById("signUp");
+		const fistForm = document.getElementById("form1");
+		const secondForm = document.getElementById("form2");
+		const container = document.querySelector(".container");
+		
+		signInBtn.addEventListener("click", () => {
+			container.classList.remove("right-panel-active");
+		});
+		
+		signUpBtn.addEventListener("click", () => {
+			container.classList.add("right-panel-active");
+		});
+		
+		fistForm.addEventListener("submit", (e) => e.preventDefault());
+		secondForm.addEventListener("submit", (e) => e.preventDefault());node
+		
+		
+		</script>
+</body>
+</html>
