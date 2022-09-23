@@ -1,4 +1,4 @@
-const selected=document.querySelector(".selective");
+/*const selected=document.querySelector(".selective");
 const optionsContainer=document.querySelector(".options-container");
 const optionsList=document.querySelectorAll(".option");
 selective.addEventListener("click",() => {
@@ -10,4 +10,5 @@ optionsList.forEach(0 => {
 		selective.innerHTML=0.querySelector("label").innerHTML;
 		optionsContainer.classList.remove("active");
 	});
-});
+});*/
+console.log("Hello World")
