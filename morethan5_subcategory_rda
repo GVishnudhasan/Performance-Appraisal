@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Development Activities</title>
+</head>
+<style>
+
+    .form-group .btn
+    {
+        width:100%;
+        padding:8px 10px;
+        font-size:15px;
+        border:0;
+        margin-top: 15px;
+        background-color:#010505;
+        color:white;
+        cursor:pointer;
+        border-radius:3px;
+        outline:none;
+
+    }
+</style>
+<body bgcolor="aqua">
+    <div class = "header" style="text-align: center;">
+		<h1> K S R Institute For Engineering and Technology</h1>
+	</div>
+    <br>
+    <br>
+    <div class="acad" style="text-align: center;">
+        <hr>
+            <h3>Parameters & Guidelines</h3>
+        <hr>
+    </div>
+
+    <table align="center" border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Research & Development Activities</th>
+                <th colspan="30">Total - 200</th>
+                <th>Marks obtained</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="40" align="center"><b>Certificate Course Completed(NPTEL/SWAYAM/etc)</b></td>
+            </tr>
+
+            <tr>
+                <td>Course completion certificate</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td>Course completion certificate with Elite score and above</td>
+                <td colspan="30">10</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>FDP(Minimum 5 Days)/Workshop/Seminar attended</b></td>
+            </tr>
+            <tr>
+                <td>FDP outside State</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td>FDP within State</td>
+                <td colspan="30">10</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>Workshop/Seminar</td>
+                <td colspan="30">10</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Journal Publications</b></td>
+            </tr>
+            <tr>
+                <td>Peer Reviewed Journal(each)</td>
+                <td colspan="30">10</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td>UGC CARE Journal(each)</td>
+                <td colspan="30">30</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>SCI Indexed/Wos journal</td>
+                <td colspan="30">40</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Conference/Technical Book Publications(With ISBN Number)</b></td>
+            </tr>
+            <tr>
+                <td>National/International Conference</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td>Book/Book Chapter Publications</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Seminar/Workshop proposals submitted to Funding Agency</b></td>
+            </tr>
+            <tr>
+                <td>Proposal Submission</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Grant Recieved from Funding Agencies</b></td>
+            </tr>
+            <tr>
+                <td>Less than 1 Lakh(each-10)</td>
+                <td colspan="30">40</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>1 Lakh-5 Lakhs(each-20)</td>
+                <td colspan="30">40</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>More than 5 Lakhs</td>
+                <td colspan="30">40</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Patents / Consultancy works / Entrepreneurial Initiatives</b></td>
+            </tr>
+            <tr>
+                <td>Patents Published</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>Consultancy work(less than 1 lakh)</td>
+                <td colspan="30">10</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>Consultancy work(more than 1 lakh)</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            <tr>
+                <td>Initiatives taken towards start Up /Incubation</td>
+                <td colspan="30">20</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <div class="form-group" onclick= "window.location.href = 'lessthan5.html';">
+        <input type="submit" value="SUBMIT" class="btn">
+    </div>
+</body>
+</html>
