@@ -16,11 +16,11 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.get('/', (req, res) => {
-//     res.json({
-//         "info": "DemoApp"
-//     });
-// });
+app.get('/', (req, res) => {
+    res.json({
+        "info": "DemoApp"
+    });
+});
 
 app.use('/auth', authRoutes);
 
