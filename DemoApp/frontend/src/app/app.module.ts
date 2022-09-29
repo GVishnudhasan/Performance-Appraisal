@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { MAPImapService } from './_service/m-apimap.service';
 import { MInterfaceService } from './_service/m-interface.service';
 import { HttpClientModule } from "@angular/common/http";
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

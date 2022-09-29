@@ -17,3 +17,19 @@ exports.login = async(req, res, next) => {
         });
     }
 }
+
+exports.signup = async(req, res, next) => {
+    try {
+        let data = req.body.data.data;
+        console.log(data);
+        res.status(200).json({
+            status: true,
+            message: 'signup success!'
+        });
+    } catch (e) {
+        res.status(401).json({
+            status: false,
+            message: e.message
+        });
+    }
+}

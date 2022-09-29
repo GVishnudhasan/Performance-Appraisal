@@ -1,5 +1,7 @@
+import { getRootDirs } from '@angular/compiler-cli/src/ngtsc/util/src/typescript';
 import { Component, OnInit } from '@angular/core';
 import { MAPImapService } from '../_service/m-apimap.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,7 @@ import { MAPImapService } from '../_service/m-apimap.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private mServer: MAPImapService) { }
+  constructor(private mServer: MAPImapService, private router: Router) { }
 
   email: any;
   password: any;
@@ -28,5 +30,9 @@ export class LoginComponent implements OnInit {
       console.log("error >>",err.error);
     });
 
+  }
+
+  goto() {
+    this.router.navigate(['/signup']); 
   }
 }

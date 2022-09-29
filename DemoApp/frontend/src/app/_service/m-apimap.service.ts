@@ -11,4 +11,8 @@ export class MAPImapService {
   login(data: any) {
     return this.server.apiConnect({ data : data }, '/v1/login');
   }
+  signup(data: any) {
+    return this.server.apiConnect({ data : data }, '/v1/signup');
+  }
+
 }

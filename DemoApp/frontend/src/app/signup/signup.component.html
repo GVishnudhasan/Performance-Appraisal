@@ -1,0 +1,62 @@
+<div class="header">
+    <h2> SELF APPRAISAL FORM</h2>
+</div>
+<!-- Sign Up -->
+<div class="container">
+    <div class="title">
+        REGISTRATION FORM
+    </div>
+    <div>
+        <div class="form">
+            <div class="form-group">
+                <label for="facultyid">Faculty Id</label>
+                <input type="text" class="form-control" id="Faculty Id" name="facultyid" />
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" [(ngModel)]="obj.name" name="Name" required />
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" class="form-control" id="department" name="department" required />
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation</label>
+                <input type="text" class="form-control" id="designation" name="designation" required />
+
+            </div>
+            <div class="form-group">
+                <label for="totalexperience">Total Experience</label>
+                <input type="text" class="form-control" id="totalexperience" name="totalexperience" required />
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" required />
+            </div>
+            <div class="form-group">
+                <label for="doj">Date of joining</label>
+                <input type="date" class="form-control" id="doj" name="doj" required />
+            </div>
+            <div class="form-group">
+                <label for="mobileno">Mobile No</label>
+                <input type="phone" class="form-control" id="mobileno" name="mobileno" required />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" class="form-control" id="cpassword" name="cpassword" required />
+            </div>
+            <div class="form-group">
+                <input type="submit" (click)="submit()" value="REGISTER" class="btn">
+            </div>
+        </div>
+    </div>
+</div>
