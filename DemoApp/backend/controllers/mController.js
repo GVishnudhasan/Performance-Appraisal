@@ -1,3 +1,6 @@
+
+//const mDb = require('../service/database');
+
 exports.login = async(req, res, next) => {
     try {
         let data = req.body.data.data;
@@ -33,3 +36,4 @@ exports.signup = async(req, res, next) => {
         });
     }
 }
+

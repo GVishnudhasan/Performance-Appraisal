@@ -9,12 +9,18 @@ import { MAPImapService } from './_service/m-apimap.service';
 import { MInterfaceService } from './_service/m-interface.service';
 import { HttpClientModule } from "@angular/common/http";
 import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { Lt5Component } from './lt5/lt5.component';
+import { Mt5Component } from './mt5/mt5.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent,
+    Lt5Component,
+    Mt5Component
   ],
   imports: [
     BrowserModule,
