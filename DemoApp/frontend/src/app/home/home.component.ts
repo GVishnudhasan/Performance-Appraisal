@@ -15,15 +15,15 @@ export class HomeComponent implements OnInit {
   subObj = [
     {
       name:"Less than Five years",
-      link:"#"
+      link:"/lt5"
     },
     {
       name:"More than Five years",
-      link:"#"
+      link:"/mt5"
     },
     {
       name:"With PHD",
-      link:"#"
+      link:"/withphd"
     },
     {
       name:"HOD/ENGG",

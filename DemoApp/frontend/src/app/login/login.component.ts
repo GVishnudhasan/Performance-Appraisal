@@ -19,17 +19,19 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.email, this.password);
-    let data = {
-      email: this.email,
-      password: this.password,
+    if(true){
+      this.router.navigate(['/home']);
+    }else{
+      let data = {
+        email: this.email,
+        password: this.password,
+      }
+      this.mServer.login(data).subscribe(res => {
+        console.log("data >>", res);
+      }, err => {
+        console.log("error >>",err.error);
+      });
     }
-    this.mServer.login(data).subscribe(res => {
-      console.log("data >>", res);
-    }, err => {
-      console.log("error >>",err.error);
-    });
-
   }
 
   goto() {

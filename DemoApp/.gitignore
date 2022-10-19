@@ -15,6 +15,7 @@
 /frontend/.settings/
 /frontend/*.sublime-workspace
 /frontend/package-lock.json
+/frontend/.angular/
 
 # IDE - VSCode
 .vscode/*
