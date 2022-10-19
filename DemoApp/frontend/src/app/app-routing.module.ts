@@ -5,6 +5,7 @@ import { SignupComponent } from "./signup/signup.component";
 import { HomeComponent } from "./home/home.component";
 import { Lt5Component } from './lt5/lt5.component';
 import { Mt5Component } from './mt5/mt5.component';
+import { WithphdComponent } from './withphd/withphd.component';
 
 const routes: Routes = [
   {
@@ -24,8 +25,12 @@ const routes: Routes = [
     component: Lt5Component
   },
   {
-    path: 'home',
+    path: 'mt5',
     component: Mt5Component
+  },
+  {
+    path: 'withphd',
+    component: WithphdComponent
   },
  
   {

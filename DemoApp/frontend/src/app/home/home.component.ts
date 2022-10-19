@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,38 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   tag1 = null;
 
   subObj = [
     {
-      name:"lessthan5",
-      value:"1"
+      name:"Less than Five years",
+      link:"#"
     },
     {
-      name:"morethan5",
-      value:"2"
+      name:"More than Five years",
+      link:"#"
     },
     {
-      name:"withPhD",
-      value:"3"
+      name:"With PHD",
+      link:"#"
     },
     {
-      name:"hod-e",
-      value:"4"
+      name:"HOD/ENGG",
+      link:"#"
     },
     {
-      name:"hod-snh",
-      value:"5"
+      name:"HOD/S&H",
+      link:"#"
     },
     {
-      name:"director",
-      value:"6"
+      name:"Director",
+      link:"#"
     },
     {
-      name:"princi",
-      value:"7"
+      name:"Principal",
+      link:"#"
     }
   ]
 
@@ -60,5 +61,9 @@ export class HomeComponent implements OnInit {
         this.tag1 = null;
 
     }
+  }
+
+  goto(path:any) {
+    this.router.navigate([path]); 
   }
 }
