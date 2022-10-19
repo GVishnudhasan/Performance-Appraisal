@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { Lt5Component } from './lt5/lt5.component';
 import { Mt5Component } from './mt5/mt5.component';
 import { WithphdComponent } from './withphd/withphd.component';
+import { HodenggComponent } from './hodengg/hodengg.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WithphdComponent } from './withphd/withphd.component';
     HomeComponent,
     Lt5Component,
     Mt5Component,
-    WithphdComponent
+    WithphdComponent,
+    HodenggComponent
   ],
   imports: [
     BrowserModule,

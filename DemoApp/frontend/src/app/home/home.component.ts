@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name:"HOD/ENGG",
-      link:"#"
+      link:"/hodengg"
     },
     {
       name:"HOD/S&H",
@@ -55,6 +55,18 @@ export class HomeComponent implements OnInit {
         this.tag1 = type;
         break;
       case "3":
+        this.tag1 = type;
+        break;
+      case "4":
+        this.tag1 = type;
+        break;
+      case "5":
+        this.tag1 = type;
+        break;
+      case "6":
+        this.tag1 = type;
+        break;
+      case "7":
         this.tag1 = type;
         break;
       default:
