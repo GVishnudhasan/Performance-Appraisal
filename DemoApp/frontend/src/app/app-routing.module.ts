@@ -7,6 +7,7 @@ import { Lt5Component } from './lt5/lt5.component';
 import { Mt5Component } from './mt5/mt5.component';
 import { WithphdComponent } from './withphd/withphd.component';
 import { HodenggComponent } from './hodengg/hodengg.component';
+import { HodsnhComponent } from './hodsnh/hodsnh.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'hodengg',
     component: HodenggComponent
+  },
+  {
+    path: 'hodsnh',
+    component: HodsnhComponent
   },
  
   {

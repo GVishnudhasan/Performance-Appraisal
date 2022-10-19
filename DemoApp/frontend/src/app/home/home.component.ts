@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name:"HOD/S&H",
-      link:"#"
+      link:"/hodsnh"
     },
     {
       name:"Director",
