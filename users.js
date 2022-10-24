@@ -3,8 +3,8 @@ const bcrypt=require("bcryptjs");
 const db=mysql.createConnection({
     host:'localhost',
     user:'root',
-    password:'abc123',
-    database:'login_crud'
+    password:'',
+    database:'usersdb'
 });
 exports.register=(req,res)=>{
     console.log(req.body);

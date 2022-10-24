@@ -6,8 +6,8 @@ const app=express();
 const db=mysql.createConnection({
     host:'localhost',
     user:'root',
-    password:'abc123',
-    database:'login_crud'
+    password:'',
+    database:'usersdb'
 });
 db.connect((err)=>{
     if(err){
