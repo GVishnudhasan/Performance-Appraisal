@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-mt5',
-  templateUrl: './mt5.component.html',
-  styleUrls: ['./mt5.component.scss']
+  selector: "app-mt5",
+  templateUrl: "./mt5.component.html",
+  styleUrls: ["./mt5.component.scss"],
 })
 export class Mt5Component implements OnInit {
+  constructor() {}
 
-  constructor() { }
   categoryList = {
     g1: {
       qty_of_class: {
@@ -81,7 +81,7 @@ export class Mt5Component implements OnInit {
       },
     },
     g4: {
-        prep_of_ppt: {
+      prep_of_ppt: {
         os1: 0,
         os2: 0,
         es1: 0,
@@ -99,7 +99,7 @@ export class Mt5Component implements OnInit {
       },
     },
     g5: {
-        mid_sem_fb: {
+      mid_sem_fb: {
         os1: 0,
         os2: 0,
         es1: 0,
@@ -125,7 +125,7 @@ export class Mt5Component implements OnInit {
       },
     },
     g6: {
-        on_time_sub: {
+      on_time_sub: {
         os1: 0,
         os2: 0,
         es1: 0,
@@ -143,81 +143,81 @@ export class Mt5Component implements OnInit {
       },
     },
     g7: {
-        pass: 0,
-        score: 0,
+      pass: 0,
+      score: 0,
     },
     g8: {
-        pass: 0,
-        score: 0,
+      pass: 0,
+      score: 0,
     },
     g9: {
       lab_manual_prep: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 10,
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      std_of_lab: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      content_beyond_syll: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      on_time_comp: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 20,
+      },
     },
-    std_of_lab: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 20,
-    },
-    content_beyond_syll: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 10,
-    },
-    on_time_comp: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 20,
-    },
-  },
     g10: {
       a: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 10,
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      b: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      c: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      d: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 20,
+      },
     },
-    b: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 20,
-    },
-    c: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 10,
-    },
-    d: {
-      os1: 0,
-      os2: 0,
-      es1: 0,
-      es2: 0,
-      sum: 0,
-      overall_total: 20,
-    },
-  },
   };
 
   categoryList2 = {
@@ -232,17 +232,16 @@ export class Mt5Component implements OnInit {
       },
       ins_lev_res: {
         op1: 0,
-        sum:0,
+        sum: 0,
         overall_total: 30,
       },
       rat_eff_prin: {
-        op1:0,
+        op1: 0,
         overall_total: 20,
       },
       grand_total: 0,
     },
-    g2:
-     {
+    g2: {
       par_ext_act: {
         os1: 0,
         os2: 0,
@@ -253,29 +252,24 @@ export class Mt5Component implements OnInit {
       },
       grand_total: 0,
     },
-      g3: {
-        aw_rec: {
-          os1: 0,
-          os2: 0,
-          es1: 0,
-          es2: 0,
-          sum: 0,
-          overall_total: 30,
+    g3: {
+      aw_rec: {
+        os1: 0,
+        os2: 0,
+        es1: 0,
+        es2: 0,
+        sum: 0,
+        overall_total: 30,
       },
       grand_total: 0,
-      },
-    };
+    },
+  };
 
-
-
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   async setmap() {
     await this.opt_data();
     console.log(this.categoryList);
     console.log(this.categoryList2);
-
   }
 
   async opt_data() {
@@ -305,17 +299,10 @@ export class Mt5Component implements OnInit {
       this.categoryList.g1.qb.sum +
       this.categoryList.g1.rf_book.sum;
 
-    this.categoryList2.g1.grand_total = this.categoryList2.g1.dep_lev_res + this.categoryList2.g1.ra_eff_Hod + this.categoryList2.g1.ins_lev_res + this.categoryList2.g1.rat_eff_prin;
-
-    
-
-
-
-    
-    
-
-
-
-  
+    this.categoryList2.g1.grand_total =
+      this.categoryList2.g1.dep_lev_res.op1 +
+      this.categoryList2.g1.ra_eff_Hod.op1 +
+      this.categoryList2.g1.ins_lev_res.op1 +
+      this.categoryList2.g1.rat_eff_prin.op1;
   }
 }
