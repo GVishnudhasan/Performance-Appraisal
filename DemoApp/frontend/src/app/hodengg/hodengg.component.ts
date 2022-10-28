@@ -362,6 +362,74 @@ export class HodenggComponent implements OnInit {
     },
   };
 
+
+  categoryList3 = {
+    g1: {
+      inplant_training: {
+        pass: 0,
+        score: 0,
+        overall_total: 10,
+      },
+    },
+    g2: {
+      project_intern: {
+        pass: 0,
+        score: 0,
+        overall_total: 10,
+      },
+    },
+    g3: {
+      cert_courses: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    g4: {
+      membership: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      }
+    },
+    g5: {
+      part_in_project: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    g6: {
+      part_in_cocurr: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g7: {
+      val_added: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    g8: {
+      part_in_extracurr: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    g9: {
+      prizes: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    grand_total: 0,
+  };
+
   ngOnInit(): void {}
 
   async setmap() {

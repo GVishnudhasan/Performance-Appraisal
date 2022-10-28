@@ -895,8 +895,9 @@
                 <br>score = (No. of students undergone In-plant Tranining / No. of students in III year) x 5
                 <br><b>Minimum Targt = 70%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g1.inplant_training.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g1.inplant_training.score"></td>
 
         </tr>
 
@@ -907,8 +908,9 @@
                 <br>score = (No. of students undergone Project Internship / No.of student in IV year) x 10
                 <br><b>Minimum Target = 70%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g2.project_intern.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g2.project_intern.score"></td>
 
         </tr>
         <tr>
@@ -916,8 +918,9 @@
                 <br>score = (No. of students Completed Certificate Courses / No.of student in II & III year) x 10
                 <br><b>Minimum Target = 70%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g3.cert_courses.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g3.cert_courses.marks"></td>
         </tr>
 
 
@@ -927,8 +930,9 @@
                 Year) x 10
                 <br><b>Minimum Target = 70%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g4.membership.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g4.membership.marks"></td>
 
         </tr>
         <tr>
@@ -937,8 +941,9 @@
                 / No. of students IV Year) x 10
                 <br><b>Minimum Target = 70%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g5.part_in_project.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g5.part_in_project.marks"></td>
 
         </tr>
         <tr>
@@ -951,8 +956,9 @@
                 10
                 <br><b>Minimum Target = 70%</b>
             </td>
-            <td colspan="30">20</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g6.part_in_cocurr.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g6.part_in_cocurr.marks"></td>
         </tr>
 
         <tr>
@@ -960,8 +966,9 @@
                 <br>score = (No. of students attended / Total No. of students I to IV Year) x 10
                 <br><b>Minimum Target = 100%</b>
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g7.val_added.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g7.val_added.marks"></td>
 
         </tr>
 
@@ -974,8 +981,9 @@
                 <br>Score = (No. of students participated in extension activities / Total No. of students I Year to IV
                 Year) x 5
                 <br><b>Minimum Target = 75%</b>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g8.part_in_extracurr.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g8.part_in_extracurr.marks"></td>
 
         </tr>
         <tr>
@@ -983,14 +991,13 @@
                 <br> 1. State Leave - (each 1)
                 <br> 2. National Level - (each 2)
             </td>
-            <td colspan="30">10</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="30">{{categoryList3.g9.prizes.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList3.g9.prizes.marks"></td>
         </tr>
     </tbody>
 </table>
-<div class="form-group" onclick="window.location.href = 'HOD.html';">
-    <input type="submit" value="SUBMIT" class="btn">
-</div>
+
 <div class="acad" style="text-align: center;">
     <hr>
     <h3>Student Development Activities- 100</h3>
@@ -1011,47 +1018,47 @@
         <tr>
             <td>In-plant Training </td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g1.inplant_training.score}}</td>
         </tr>
         <tr>
             <td>Internship</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g2.project_intern.score}}</td>
         </tr>
         <tr>
             <td>Certificate Courses (NPTEL / SWAYAM / etc) Completed</td>
             <td colspan="20">20</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g3.cert_courses.marks}}</td>
         </tr>
         <tr>
             <td>Membership in professional society</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g4.membership.marks}}</td>
         </tr>
         <tr>
             <td>Participation in project Contests / Publications in Conference / Journals</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g5.part_in_project.marks}}</td>
         </tr>
         <tr>
             <td>Participation in co-curricular Activities (PPT / Events / Workshops / seminar etc.)</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g6.part_in_cocurr.marks}}</td>
         </tr>
         <tr>
             <td>Value Added Courses Attended</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g7.val_added.marks}}</td>
         </tr>
         <tr>
             <td>Participation in extracurricular and extension activities(sports,NSS,YRC,ect.)</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g8.part_in_extracurr.marks}}</td>
         </tr>
         <tr>
             <td>Awards & Recongnition of First Year students</td>
             <td colspan="20">10</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
+            <td colspan="20">{{categoryList3.g9.prizes.marks}}</td>
         </tr>
     </tbody>
     <tfoot>
@@ -1059,6 +1066,11 @@
     </tfoot>
 
 </table>
+
+<div class="form-group">
+    <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
+</div>
+
 
 <div class="acad" style="text-align: center;">
     <hr>
