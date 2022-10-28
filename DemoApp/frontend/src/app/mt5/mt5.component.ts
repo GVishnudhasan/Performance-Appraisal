@@ -576,14 +576,14 @@ export class Mt5Component implements OnInit {
       this.categoryList.g10.b.sum +
       this.categoryList.g10.d.sum;
       this.categoryList1.g1.grand_total =
-      this.categoryList1.g1.training_at_industry.marks +
+      this.categoryList1.g1.training_tier_1_ind.marks +
+      this.categoryList1.g1.training_tier_2_tier_3_ind.marks +
       this.categoryList1.g1.training_outcome.marks;
 
     //cl1 - g2
 
     this.categoryList1.g2.grand_total =
-      this.categoryList1.g2.guest_lecture.marks +
-      this.categoryList1.g2.outcome_achieved.marks;
+      this.categoryList1.g2.guest_lecture.marks;
 
     //cl1 - g3
 
