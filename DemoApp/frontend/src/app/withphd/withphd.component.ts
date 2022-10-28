@@ -57,6 +57,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 10,
       },
+      grand_total: 0,
     },
     g3: {
       gate_or_refbook: {
@@ -83,6 +84,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 5,
       },
+      grand_total: 0,
     },
     g4: {
         prep_of_ppt: {
@@ -101,6 +103,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 10,
       },
+      grand_total: 0,
     },
     g5: {
         mid_sem_fb: {
@@ -127,6 +130,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 10,
       },
+      grand_total: 0,
     },
     g6: {
         on_time_sub: {
@@ -145,6 +149,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 10,
       },
+      grand_total: 0,
     },
     g7: {
         pass: 0,
@@ -187,6 +192,7 @@ export class WithphdComponent implements OnInit {
       sum: 0,
       overall_total: 20,
     },
+    grand_total: 0,
   },
     g10: {
       a: {
@@ -221,8 +227,228 @@ export class WithphdComponent implements OnInit {
       sum: 0,
       overall_total: 10,
     },
+    grand_total: 0,
   },
+
+  
   };
 
+  async setmap() {
+    await this.opt_data();
+    console.log(this.categoryList);
+  }
 
+  async opt_data() {
+    //cl - g1
+    this.categoryList.g1.qty_of_class.sum =
+      (this.categoryList.g1.qty_of_class.os1 +
+        this.categoryList.g1.qty_of_class.os2 +
+        this.categoryList.g1.qty_of_class.es1 +
+        this.categoryList.g1.qty_of_class.es2) /
+      4;
+
+    this.categoryList.g1.qb.sum =
+      (this.categoryList.g1.qb.os1 +
+        this.categoryList.g1.qb.os2 +
+        this.categoryList.g1.qb.es1 +
+        this.categoryList.g1.qb.es2) /
+      4;
+
+    this.categoryList.g1.rf_book.sum =
+      (this.categoryList.g1.rf_book.os1 +
+        this.categoryList.g1.rf_book.os2 +
+        this.categoryList.g1.rf_book.es1 +
+        this.categoryList.g1.rf_book.es2) /
+      4;
+
+    this.categoryList.g1.grand_total =
+      this.categoryList.g1.qty_of_class.sum +
+      this.categoryList.g1.qb.sum +
+      this.categoryList.g1.rf_book.sum;
+
+    //cl - g2
+
+    this.categoryList.g2.qty_of_videomaterial.sum =
+      (this.categoryList.g2.qty_of_videomaterial.os1 +
+        this.categoryList.g2.qty_of_videomaterial.os2 +
+        this.categoryList.g2.qty_of_videomaterial.es1 +
+        this.categoryList.g2.qty_of_videomaterial.es2) /
+      4;
+
+    this.categoryList.g2.prep_of_videomaterial.sum =
+      (this.categoryList.g2.prep_of_videomaterial.os1 +
+        this.categoryList.g2.prep_of_videomaterial.os2 +
+        this.categoryList.g2.prep_of_videomaterial.es1 +
+        this.categoryList.g2.prep_of_videomaterial.es2) /
+      4;
+
+    this.categoryList.g2.grand_total =
+      this.categoryList.g2.qty_of_videomaterial.sum +
+      this.categoryList.g2.prep_of_videomaterial.sum;
+
+    //cl - g3
+    this.categoryList.g3.gate_or_refbook.sum =
+      (this.categoryList.g3.gate_or_refbook.os1 +
+        this.categoryList.g3.gate_or_refbook.os2 +
+        this.categoryList.g3.gate_or_refbook.es1 +
+        this.categoryList.g3.gate_or_refbook.es2) /
+      4;
+
+    this.categoryList.g3.usage_of_bt.sum =
+      (this.categoryList.g3.usage_of_bt.os1 +
+        this.categoryList.g3.usage_of_bt.os2 +
+        this.categoryList.g3.usage_of_bt.es1 +
+        this.categoryList.g3.usage_of_bt.es2) /
+      4;
+
+    this.categoryList.g3.on_time_sub_qp.sum =
+      (this.categoryList.g3.on_time_sub_qp.os1 +
+        this.categoryList.g3.on_time_sub_qp.os2 +
+        this.categoryList.g3.on_time_sub_qp.es1 +
+        this.categoryList.g3.on_time_sub_qp.es2) /
+      4;
+
+    this.categoryList.g3.grand_total =
+      this.categoryList.g3.usage_of_bt.sum +
+      this.categoryList.g3.gate_or_refbook.sum +
+      this.categoryList.g3.on_time_sub_qp.sum;
+
+    //cl - g4
+
+    this.categoryList.g4.prep_of_ppt.sum =
+      (this.categoryList.g4.prep_of_ppt.os1 +
+        this.categoryList.g4.prep_of_ppt.os2 +
+        this.categoryList.g4.prep_of_ppt.es1 +
+        this.categoryList.g4.prep_of_ppt.es2) /
+      4;
+
+    this.categoryList.g6.comp_of_cf.sum =
+      (this.categoryList.g6.comp_of_cf.os1 +
+        this.categoryList.g6.comp_of_cf.os2 +
+        this.categoryList.g6.comp_of_cf.es1 +
+        this.categoryList.g6.comp_of_cf.es2) /
+      4;
+
+    this.categoryList.g4.grand_total =
+      this.categoryList.g4.prep_of_ppt.sum +
+      this.categoryList.g6.comp_of_cf.sum;
+
+    //cl - g5
+    this.categoryList.g5.mid_sem_fb.sum =
+      (this.categoryList.g5.mid_sem_fb.os1 +
+        this.categoryList.g5.mid_sem_fb.os2 +
+        this.categoryList.g5.mid_sem_fb.es1 +
+        this.categoryList.g5.mid_sem_fb.es2) /
+      4;
+
+    this.categoryList.g5.end_sem_fb.sum =
+      (this.categoryList.g5.end_sem_fb.os1 +
+        this.categoryList.g5.end_sem_fb.os2 +
+        this.categoryList.g5.end_sem_fb.es1 +
+        this.categoryList.g5.end_sem_fb.es2) /
+      4;
+
+    this.categoryList.g5.arm_fb.sum =
+      (this.categoryList.g5.arm_fb.os1 +
+        this.categoryList.g5.arm_fb.os2 +
+        this.categoryList.g5.arm_fb.es1 +
+        this.categoryList.g5.arm_fb.es2) /
+      4;
+
+    this.categoryList.g5.grand_total =
+      this.categoryList.g5.mid_sem_fb.sum +
+      this.categoryList.g5.end_sem_fb.sum +
+      this.categoryList.g5.arm_fb.sum;
+
+    //cl - g6
+
+    this.categoryList.g6.on_time_sub.sum =
+      (this.categoryList.g6.on_time_sub.os1 +
+        this.categoryList.g6.on_time_sub.os2 +
+        this.categoryList.g6.on_time_sub.es1 +
+        this.categoryList.g6.on_time_sub.es2) /
+      4;
+
+    this.categoryList.g6.comp_of_cf.sum =
+      (this.categoryList.g6.comp_of_cf.os1 +
+        this.categoryList.g6.comp_of_cf.os2 +
+        this.categoryList.g6.comp_of_cf.es1 +
+        this.categoryList.g6.comp_of_cf.es2) /
+      4;
+
+    this.categoryList.g6.grand_total =
+      this.categoryList.g6.comp_of_cf.sum +
+      this.categoryList.g6.on_time_sub.sum;
+
+    //cl - g9
+    this.categoryList.g9.lab_manual_prep.sum =
+      (this.categoryList.g9.lab_manual_prep.os1 +
+        this.categoryList.g9.lab_manual_prep.os2 +
+        this.categoryList.g9.lab_manual_prep.es1 +
+        this.categoryList.g9.lab_manual_prep.es2) /
+      4;
+
+    this.categoryList.g9.std_of_lab.sum =
+      (this.categoryList.g9.std_of_lab.os1 +
+        this.categoryList.g9.std_of_lab.os2 +
+        this.categoryList.g9.std_of_lab.es1 +
+        this.categoryList.g9.std_of_lab.es2) /
+      4;
+
+    this.categoryList.g9.content_beyond_syll.sum =
+      (this.categoryList.g9.content_beyond_syll.os1 +
+        this.categoryList.g9.content_beyond_syll.os2 +
+        this.categoryList.g9.content_beyond_syll.es1 +
+        this.categoryList.g9.content_beyond_syll.es2) /
+      4;
+
+    this.categoryList.g9.on_time_comp.sum =
+      (this.categoryList.g9.on_time_comp.os1 +
+        this.categoryList.g9.on_time_comp.os2 +
+        this.categoryList.g9.on_time_comp.es1 +
+        this.categoryList.g9.on_time_comp.es2) /
+      4;
+
+    this.categoryList.g9.grand_total =
+      this.categoryList.g9.lab_manual_prep.sum +
+      this.categoryList.g9.content_beyond_syll.sum +
+      this.categoryList.g9.std_of_lab.sum +
+      this.categoryList.g9.on_time_comp.sum;
+
+    //cl - g10
+    this.categoryList.g10.a.sum =
+      (this.categoryList.g10.a.os1 +
+        this.categoryList.g10.a.os2 +
+        this.categoryList.g10.a.es1 +
+        this.categoryList.g10.a.es2) /
+      4;
+
+    this.categoryList.g10.b.sum =
+      (this.categoryList.g10.b.os1 +
+        this.categoryList.g10.b.os2 +
+        this.categoryList.g10.b.es1 +
+        this.categoryList.g10.b.es2) /
+      4;
+
+    this.categoryList.g10.c.sum =
+      (this.categoryList.g10.c.os1 +
+        this.categoryList.g10.c.os2 +
+        this.categoryList.g10.c.es1 +
+        this.categoryList.g10.c.es2) /
+      4;
+
+    this.categoryList.g10.d.sum =
+      (this.categoryList.g10.d.os1 +
+        this.categoryList.g10.d.os2 +
+        this.categoryList.g10.d.es1 +
+        this.categoryList.g10.d.es2) /
+      4;
+
+    this.categoryList.g10.grand_total =
+      this.categoryList.g10.a.sum +
+      this.categoryList.g10.c.sum +
+      this.categoryList.g10.b.sum +
+      this.categoryList.g10.d.sum;
+
+}
 }
