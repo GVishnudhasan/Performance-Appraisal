@@ -202,11 +202,15 @@
             </tr>
 
             <tr>
-                <td colspan="30">
+                <td colspan="25">
                     <li>1. If Pass % is <60% - zero points</li>
                     <li>2. Score = (pass % x 80) + increment/decrement in previous IA
                         <br> Note: Only two IA-1 and IA-2 are considered
                     </li>
+                </td>
+                <td>
+                    <input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                        [(ngModel)]="categoryList.g7.pass">
                 </td>
             </tr>
             <tr>
@@ -214,9 +218,13 @@
             </tr>
 
             <tr>
-                <td colspan="30">
+                <td colspan="25">
                     <li>1. If Pass % is <60% - zero points</li>
                     <li>2. Score = (pass % x 80) + Average of increment/decrement in Internal Assesments</li>
+                </td>
+                <td>
+                    <input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                        [(ngModel)]="categoryList.g8.pass">
                 </td>
             </tr>
 
