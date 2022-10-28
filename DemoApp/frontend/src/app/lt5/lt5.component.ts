@@ -400,6 +400,48 @@ export class Lt5Component implements OnInit {
     },
   };
 
+  categoryList3 = {
+    g1: {
+      dept_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      rating_for_eff_hod: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      ins_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      rating_for_eff_pric: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g2: {
+      part_ext_act: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      grand_total: 0,
+    },
+    g3: {
+      awards_recieved: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+  };
+
   ngOnInit(): void {}
 
   async setmap() {
@@ -692,6 +734,24 @@ export class Lt5Component implements OnInit {
     this.categoryList2.g7.grand_total =
       this.categoryList2.g7.patents_published.marks +
       this.categoryList2.g7.consultancy_work.marks;
+
+    //cl3 - g1
+
+    this.categoryList3.g1.grand_total =
+      this.categoryList3.g1.dept_lvl_resp.marks +
+      this.categoryList3.g1.ins_lvl_resp.marks +
+      this.categoryList3.g1.rating_for_eff_hod.marks +
+      this.categoryList3.g1.rating_for_eff_pric.marks;
+
+    //cl3 - g2
+
+    this.categoryList3.g2.grand_total =
+      this.categoryList3.g2.part_ext_act.marks;
+
+    //cl2 - g3
+
+    this.categoryList3.g3.grand_total =
+      this.categoryList3.g3.awards_recieved.marks;
 
   }
 }

@@ -923,11 +923,127 @@
 
     <!-- G4 -->
 
-    G5-Sub
+    <div class="header" style="text-align: center;">
+        <h1> K S R Institute For Engineering and Technology</h1>
+    </div>
+    <br>
+    <br>
+    <div class="acad" style="text-align: center;">
+        <hr>
+        <h3>Parameters & Guidelines</h3>
+        <hr>
+    </div>
+    <br>
+    <br>
+    <table align="center" border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Administrative & Extension Activities</th>
+                <th colspan="30">Total - 200</th>
+                <th>Marks obtained</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="40" align="center"><b>Administrative Responsibilities (Departments & Institution level)</b>
+                </td>
+            </tr>
 
-    b_bt || n_bt
+            <tr>
+                <td>Department Level Responsibility(each 15)</td>
+                <td colspan="30">{{categoryList3.g1.dept_lvl_resp.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g1.dept_lvl_resp.marks"></td>
 
-    <!-- <div class="acad" style="text-align: center;">
+            </tr>
+            <tr>
+                <td>Rating for the effectiveness by HoD</td>
+                <td colspan="30">{{categoryList3.g1.rating_for_eff_hod.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g1.rating_for_eff_hod.marks"></td>
+            </tr>
+            <tr>
+                <td>Institutional level Responsibility</td>
+                <td colspan="30">{{categoryList3.g1.ins_lvl_resp.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g1.ins_lvl_resp.marks"></td>
+            </tr>
+            <tr>
+                <td>Rating for the effectiveness by Principal</td>
+                <td colspan="30">{{categoryList3.g1.rating_for_eff_pric.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g1.rating_for_eff_pric.marks"></td>
+            </tr>
+
+            <tr>
+                <td colspan="40" align="center"><b>Participation in Extension Activities</b></td>
+            </tr>
+            <tr>
+                <td>Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga, eco Club, Rotary, JCI etc.
+                    (each 15)</td>
+                <td colspan="30">{{categoryList3.g2.part_ext_act.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g2.part_ext_act.marks"></td>
+            </tr>
+            <tr>
+                <td colspan="40" align="center"><b>Any other Achivements(Specify if any)</b></td>
+            </tr>
+            <tr>
+                <td>Awards recieved, 100% result, Guest lecture delivered, Resource persons for
+                    FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution
+                    etc.</td>
+                <td colspan="30">{{categoryList3.g3.awards_recieved.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                        [(ngModel)]="categoryList3.g3.awards_recieved.marks"></td>
+            </tr>
+
+            <div class="acad" style="text-align: center;">
+                <hr>
+                <h3>Administrative & Extension Activities - 100</h3>
+                <a href="lessthan5_subcategory_aea.html">Click here to fill the sub-category</a>
+                <hr>
+            </div>
+
+            <table align="center" border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Academic Performance Parameters</th>
+                        <th colspan="20">Max. Score</th>
+                        <th colspan="20">Obtained Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Administrative Responsibilities (Departments & Institution level)</td>
+                        <td colspan="20">50</td>
+                        <td colspan="20">{{categoryList3.g1.grand_total}}</td>
+                    </tr>
+                    <tr>
+                        <td>Participation in Extension Activities (NSS, NCC, UBA, Yoga, etc.)</td>
+                        <td colspan="20">30</td>
+                        <td colspan="20">{{categoryList3.g2.grand_total}}</td>
+                    </tr>
+                    <tr>
+                        <td>Any other Achievement(Specify if any)</td>
+                        <td colspan="20">20</td>
+                        <td colspan="20">{{categoryList3.g3.grand_total}}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th colspan="30" rowspan="5">Total: </th>
+                </tfoot>
+
+            </table>
+
+            <div class="form-group">
+                <div class="btn" (click)="setmap()">Submit</div>
+            </div>
+
+            G5-Sub
+
+            b_bt || n_bt
+
+            <!-- <div class="acad" style="text-align: center;">
         <hr>
         <h3>Skill Development Activities - 200</h3>
         <a href="lessthan5_subcategory_sda.html">Click here to fill the sub-category</a>
@@ -1203,7 +1319,7 @@
     </div>
 </div> -->
 
-    <!-- <div>
+            <!-- <div>
     <div class = "header" style="text-align: center;">
         <img style="width: 1000px;" src="Screenshot 2022-09-10 212840.jpg" alt="">
 	</div>
@@ -1591,7 +1707,7 @@
 
 
 
-    <!-- </tbody>
+            <!-- </tbody>
     </table>
     <div class="form-group" onclick= "window.location.href = 'lessthan5.html';">
         <input type="submit" value="SUBMIT" class="btn">
