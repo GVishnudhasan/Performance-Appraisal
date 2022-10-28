@@ -610,5 +610,3 @@ export class Mt5Component implements OnInit {
 
   
     
-  }
-}
