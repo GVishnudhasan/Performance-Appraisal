@@ -40,27 +40,39 @@
     
                 <tr>
                     <td>Quality of class notes</td>
-                    <td colspan="20">20</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
+                    <td colspan="20">{{categoryList.g1.qty_of_class.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g1.qty_of_class.os1"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g1.qty_of_class.os2"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g1.qty_of_class.es1"></td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20"
+                            min="0" [(ngModel)]="categoryList.g1.qty_of_class.es2"></td>
                 </tr>
                 <tr>
                     <td>Question bank (Univ., 2 marks & 16 marks)</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g1.qb.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.qb.os1"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.qb.os2"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.qb.es1"></td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g1.qb.es2"></td>
                 </tr>
                 <tr>
                     <td>Ref. Book / Univ. QP Problem solving</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g1.rf_book.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.rf_book.os1"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.rf_book.os2"></td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g1.rf_book.es1"></td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g1.rf_book.es2"></td>
                 </tr>
     
                 <tr>
@@ -69,19 +81,33 @@
     
                 <tr>
                     <td>Quality of video material</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g2.qty_of_videomaterial.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.qty_of_videomaterial.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.qty_of_videomaterial.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.qty_of_videomaterial.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g2.qty_of_videomaterial.es2"></td>
                 </tr>
                 <tr>
                     <td>Preparation of video material</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g2.prep_of_videomaterial.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.prep_of_videomaterial.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.prep_of_videomaterial.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g2.prep_of_videomaterial.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g2.prep_of_videomaterial.es2"></td>
                 </tr>
     
                 <tr>
@@ -90,48 +116,82 @@
     
                 <tr>
                     <td>GATE / Ref. Book Questions</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g3.gate_or_refbook.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g3.gate_or_refbook.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g3.gate_or_refbook.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g3.gate_or_refbook.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g3.gate_or_refbook.es2"></td>
                 </tr>
                 <tr>
                     <td>Usage of Blooms Taxonomy</td>
-                    <td colspan="20">5</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
+                    <td colspan="20">{{categoryList.g3.usage_of_bt.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.usage_of_bt.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.usage_of_bt.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.usage_of_bt.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.usage_of_bt.es2"></td>
                 </tr>
                 <tr>
                     <td>On time submission of Question Papers</td>
-                    <td colspan="20">5</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
+                    <td colspan="20">{{categoryList.g3.on_time_sub_qp.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.on_time_sub_qp.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.on_time_sub_qp.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.on_time_sub_qp.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g3.on_time_sub_qp.es2"></td>
                 </tr>
-    
                 <tr>
                     <td colspan="30" align="center"><b>Innovation in Teaching & Learning - 20</b></td>
                 </tr>
     
                 <tr>
                     <td>Preparation of PPT</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g4.prep_of_ppt.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.prep_of_ppt.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.prep_of_ppt.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.prep_of_ppt.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g4.prep_of_ppt.es2"></td>
                 </tr>
                 <tr>
                     <td>Using various Pedagogical teaching methods</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g4.using_various_ptm.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.using_various_ptm.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.using_various_ptm.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g4.using_various_ptm.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g4.using_various_ptm.es2"></td>
                 </tr>
     
                 <tr>
@@ -140,27 +200,48 @@
     
                 <tr>
                     <td>Mid-semester feedback</td>
-                    <td colspan="20">5</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
+                    <td colspan="20">{{categoryList.g5.mid_sem_fb.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.mid_sem_fb.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.mid_sem_fb.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.mid_sem_fb.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.mid_sem_fb.es2"></td>
                 </tr>
                 <tr>
                     <td>End-semester feedback</td>
-                    <td colspan="20">5</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"></td>
+                    <td colspan="20">{{categoryList.g5.end_sem_fb.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.end_sem_fb.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.end_sem_fb.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.end_sem_fb.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="5" min="0"
+                            [(ngModel)]="categoryList.g5.end_sem_fb.es2"></td>
                 </tr>
                 <tr>
                     <td>Academic Review Meeting feedback</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g5.arm_fb.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g5.arm_fb.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g5.arm_fb.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g5.arm_fb.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g5.arm_fb.es2"></td>
                 </tr>
     
                 <tr>
@@ -169,19 +250,33 @@
     
                 <tr>
                     <td>On time Submission</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g6.on_time_sub.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.on_time_sub.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.on_time_sub.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.on_time_sub.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g6.on_time_sub.es2"></td>
                 </tr>
                 <tr>
                     <td>Completeness of Course file</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g6.comp_of_cf.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.comp_of_cf.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.comp_of_cf.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g6.comp_of_cf.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g6.comp_of_cf.es2"></td>
                 </tr>
     
                 <tr>
@@ -189,11 +284,15 @@
                 </tr>
     
                 <tr>
-                    <td colspan="30">
+                    <td colspan="25">
                         <li>1. If Pass % is <60% - zero points</li>
                         <li>2. Score = (pass % x 80) + increment/decrement in previous IA
                             <br> Note: Only two IA-1 and IA-2 are considered
                         </li>
+                    </td>
+                    <td>
+                        <input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g7.pass">
                     </td>
                 </tr>
                 <tr>
@@ -205,6 +304,10 @@
                         <li>1. If Pass % is <60% - zero points</li>
                         <li>2. Score = (pass % x 80) + Average of increment/decrement in Internal Assesments</li>
                     </td>
+                    <td>
+                        <input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g8.pass">
+                    </td>
                 </tr>
     
                 <tr>
@@ -213,34 +316,64 @@
     
                 <tr>
                     <td>Lab Manual Preparation</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g9.lab_manual_prep.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g9.lab_manual_prep.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g9.lab_manual_prep.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g9.lab_manual_prep.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g9.lab_manual_prep.es2"></td>
                 </tr>
                 <tr>
                     <td>Standard of Prelab and Postlab Questions and Conduction</td>
-                    <td colspan="20">20</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
+                    <td colspan="20">{{categoryList.g9.std_of_lab.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.std_of_lab.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.std_of_lab.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.std_of_lab.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20"
+                            min="0" [(ngModel)]="categoryList.g9.std_of_lab.es2">
+                    </td>
                 </tr>
                 <tr>
                     <td>Content Beyond Syllabus</td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
+                    <td colspan="20">{{categoryList.g9.content_beyond_syll.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.content_beyond_syll.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.content_beyond_syll.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.content_beyond_syll.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20"
+                            min="0" [(ngModel)]="categoryList.g9.content_beyond_syll.es2"></td>
                 </tr>
                 <tr>
                     <td>On time completion of Exercises</td>
-                    <td colspan="20">20</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20" min="0"></td>
+                    <td colspan="20">{{categoryList.g9.on_time_comp.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.on_time_comp.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.on_time_comp.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                            [(ngModel)]="categoryList.g9.on_time_comp.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20"
+                            min="0" [(ngModel)]="categoryList.g9.on_time_comp.es2"></td>
                 </tr>
                 <tr>
                     <td colspan="30" align="center"><b>Impact of mentoring in academic performance - 40</b></td>
@@ -251,44 +384,72 @@
                         <br>
                         A = 2 * (No. of students completed courses/Total no. of students) x 10
                     </td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g10.a.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.a.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.a.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.a.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g10.a.es2"></td>
                 </tr>
                 <tr>
                     <td>Performance in Internal Assessment (A)
                         <br>
                         B = (No. of students pass/ Total no. of students) x 10
                     </td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g10.b.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.b.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.b.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.b.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g10.b.es2"></td>
                 </tr>
                 <tr>
                     <td>Performance in End semester Assessment(first class)
                         <br>
                         C = (No. of students in first class/ Total no. of students) x 20
                     </td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g10.c.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.c.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.c.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.c.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g10.c.es2"></td>
                 </tr>
                 <tr>
                     <td>Performance in End semester Assessment(Distinction)
                         <br>
                         D = 4 * (No. of students in Distinction /Total no. of students) x 10
                     </td>
-                    <td colspan="20">10</td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
-                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10" min="0"></td>
+                    <td colspan="20">{{categoryList.g10.d.overall_total}}</td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.d.os1">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.d.os2">
+                    </td>
+                    <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                            [(ngModel)]="categoryList.g10.d.es1">
+                    </td>
+                    <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
+                            min="0" [(ngModel)]="categoryList.g10.d.es2"></td>
                 </tr>
                 
     
@@ -326,52 +487,52 @@
             <tr>
                 <td>Standard of Class notes</td>
                 <td colspan="20">40</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g1.grand_total}}</td>
             </tr>
             <tr>
                 <td>Preparation of video materials</td>
                 <td colspan="20">20</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g2.grand_total}}</td>
             </tr>
             <tr>
                 <td>Standard of IA / Assignment / Tutorial QP</td>
                 <td colspan="20">20</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g3.grand_total}}</td>
             </tr>
             <tr>
                 <td>Innovation in Teaching and Learning</td>
                 <td colspan="20">20</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g4.grand_total}}</td>
             </tr>
             <tr>
                 <td>Students Feedback</td>
                 <td colspan="20">20</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g5.grand_total}}</td>
             </tr>
             <tr>
                 <td>Submission of Course files</td>
                 <td colspan="20">20</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g6.grand_total}}</td>
             </tr>
             <tr>
                 <td>Performance in Internal Assessments</td>
                 <td colspan="20">80</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g7.pass}}</td>
             </tr>
             <tr>
                 <td>Performance in End Semester Exams</td>
                 <td colspan="20">80</td>
-                <td colspan="20"></td>
+                <td colspan="20">Performance in End Semester Exams</td>
             </tr>
             <tr>
                 <td>Effectiveness in Lab conduction</td>
                 <td colspan="20">60</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g9.grand_total}}</td>
             </tr>
             <tr>
                 <td>Impact of mentoring in academic performance</td>
                 <td colspan="20">40</td>
-                <td colspan="20"></td>
+                <td colspan="20">{{categoryList.g10.grand_total}}</td>
             </tr>
         </tbody>
         
