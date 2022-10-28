@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-hodengg',
-  templateUrl: './hodengg.component.html',
-  styleUrls: ['./hodengg.component.scss']
+  selector: "app-hodengg",
+  templateUrl: "./hodengg.component.html",
+  styleUrls: ["./hodengg.component.scss"],
 })
 export class HodenggComponent implements OnInit {
-
-  constructor() { }
-
+  constructor() {}
 
   categoryList = {
     g1: {
@@ -161,7 +159,6 @@ export class HodenggComponent implements OnInit {
   };
 
   categoryList1 = {
-    
     g2: {
       fdp_out: {
         marks: 0,
@@ -260,49 +257,49 @@ export class HodenggComponent implements OnInit {
         overall_total: 30,
       },
     },
-    g2:{
+    g2: {
       placement_higher_edu: {
         pass: 0,
         score: 0,
         overall_total: 30,
       },
     },
-    g3:{
+    g3: {
       fds_sttp: {
         marks: 0,
         sum: 0,
         overall_total: 30,
       },
     },
-    g4:{
+    g4: {
       cert_courses: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g5:{
+    g5: {
       guest_lecture: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g6:{
+    g6: {
       funding_prop: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g7:{
+    g7: {
       conf_book_proposal: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g8:{
+    g8: {
       journal_publ: {
         marks: 0,
         sum: 0,
@@ -332,15 +329,16 @@ export class HodenggComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
-    g11:{
+    g11: {
       membership: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g12:{
+    g12: {
       patent_prod_dev: {
         marks: 0,
         sum: 0,
@@ -364,14 +362,12 @@ export class HodenggComponent implements OnInit {
     },
   };
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   async setmap() {
     await this.opt_data();
     console.log(this.categoryList);
   }
-
 
   async opt_data() {
     //cl - g1
@@ -517,13 +513,11 @@ export class HodenggComponent implements OnInit {
 
     //cl - g7
 
-    this.categoryList.g7.score =
-      this.categoryList.g7.pass
+    this.categoryList.g7.score = this.categoryList.g7.pass;
 
     //cl - g8
 
-    this.categoryList.g8.score =
-      this.categoryList.g8.pass
+    this.categoryList.g8.score = this.categoryList.g8.pass;
 
     //cl1 - g2
 
@@ -559,12 +553,15 @@ export class HodenggComponent implements OnInit {
 
     this.categoryList1.g7.grand_total =
       this.categoryList1.g7.patents_published.marks +
-      this.categoryList1.g7.consultancy_work.marks + this.categoryList1.g7.consultancy_work_less_than_one.marks + this.categoryList1.g7.initiatives_taken.marks;
+      this.categoryList1.g7.consultancy_work.marks +
+      this.categoryList1.g7.consultancy_work_less_than_one.marks +
+      this.categoryList1.g7.initiatives_taken.marks;
 
-    //cl2 - g1
+    //cl2 - g10
 
-    
-
+    this.categoryList2.g10.grand_total =
+      this.categoryList2.g10.mou_signed.marks +
+      this.categoryList2.g10.impact_of_ind.marks +
+      this.categoryList2.g10.training.marks;
   }
 }
-
