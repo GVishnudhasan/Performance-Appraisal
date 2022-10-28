@@ -307,50 +307,117 @@ export class Mt5Component implements OnInit {
       grand_total: 0,
     },
   };
-
   categoryList2 = {
     g1: {
-      dep_lev_res: {
-        op1: 0,
-        overall_total: 30,
-      },
-      ra_eff_Hod: {
-        op1: 0,
-        overall_total: 20,
-      },
-      ins_lev_res: {
-        op1: 0,
+      course_comp_cert: {
+        marks: 0,
         sum: 0,
-        overall_total: 30,
-      },
-      rat_eff_prin: {
-        op1: 0,
         overall_total: 20,
+      },
+      course_comp_cert_elite: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
     g2: {
-      par_ext_act: {
-        os1: 0,
-        os2: 0,
-        es1: 0,
-        es2: 0,
+      fdp_out: {
+        marks: 0,
         sum: 0,
-        overall_total: 30,
+        overall_total: 20,
+      },
+      fdp_in: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      workshop_seminar: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
     g3: {
-      aw_rec: {
-        os1: 0,
-        os2: 0,
-        es1: 0,
-        es2: 0,
+      peer_reviewed_journal: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      ugc_care_journal: {
+        marks: 0,
         sum: 0,
         overall_total: 30,
       },
+      sci_ind_wos_journal:{
+        marks:0,
+        sum:0,
+        overall_total:40
+      },
       grand_total: 0,
     },
+
+  
+    g4: {
+      national_intl_conference: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      book_publication: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g5: {
+      proposal_submission: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g6: {
+      less_than_one: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      one_five_lakh: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      
+      more_than_five: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      grand_total: 0,
+    },
+    g7: {
+      patents_published: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      consultancy_work_less: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      consultancy_work_more: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+
 
   };
 
@@ -388,11 +455,6 @@ export class Mt5Component implements OnInit {
       this.categoryList.g1.qb.sum +
       this.categoryList.g1.rf_book.sum;
 
-    this.categoryList2.g1.grand_total =
-      this.categoryList2.g1.dep_lev_res.op1 +
-      this.categoryList2.g1.ra_eff_Hod.op1 +
-      this.categoryList2.g1.ins_lev_res.op1 +
-      this.categoryList2.g1.rat_eff_prin.op1;
     
       this.categoryList.g2.qty_of_videomaterial.sum =
       (this.categoryList.g2.qty_of_videomaterial.os1 +
@@ -604,8 +666,56 @@ export class Mt5Component implements OnInit {
       this.categoryList1.g5.impact_of_mentoring.marks +
       this.categoryList1.g5.a.marks +
       this.categoryList1.g5.b.marks;
+    
+    //cl2 - g1
+
+    this.categoryList2.g1.grand_total =
+      this.categoryList2.g1.course_comp_cert.marks +
+      this.categoryList2.g1.course_comp_cert_elite.marks;
+
+    //cl2 - g2
+
+    this.categoryList2.g2.grand_total =
+      this.categoryList2.g2.fdp_out.marks +
+      this.categoryList2.g2.fdp_in.marks +
+      this.categoryList2.g2.workshop_seminar.marks;
+
+    //cl2 - g3
+
+    this.categoryList2.g3.grand_total =
+      this.categoryList2.g3.peer_reviewed_journal.marks +
+      this.categoryList2.g3.ugc_care_journal.marks;
+      this.categoryList2.g3.sci_ind_wos_journal.marks;
+
+
+    //cl2 - g4
+
+    this.categoryList2.g4.grand_total =
+      this.categoryList2.g4.national_intl_conference.marks +
+      this.categoryList2.g4.book_publication.marks;
+
+    //cl2 - g5
+
+    this.categoryList2.g5.grand_total =
+      this.categoryList2.g5.proposal_submission.marks;
+
+    //cl2 - g6
+
+    this.categoryList2.g6.grand_total =
+      this.categoryList2.g6.less_than_one.marks +
+      this.categoryList2.g6.one_five_lakh.marks +
+      this.categoryList2.g6.more_than_five.marks;
+
+    //cl2 - g7
+
+    this.categoryList2.g7.grand_total =
+      this.categoryList2.g7.patents_published.marks +
+      this.categoryList2.g7.consultancy_work_less.marks;
+      this.categoryList2.g7.consultancy_work_more.marks;
+
   }
 }
+
 
 
   
