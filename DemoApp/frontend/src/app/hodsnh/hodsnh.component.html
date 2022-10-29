@@ -306,7 +306,6 @@
             </table>
         </div>
     </div>
-</div>
 <div>
     <div class="acad" style="text-align: center;">
         <hr>
@@ -729,6 +728,142 @@
     <tfoot>
         <th colspan="30" rowspan="5">Total: </th>
     </tfoot>
+</table>
+<br>
+<br>
+<table align="center" border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Student Development Activities</th>
+            <th colspan="30">Total - 100</th>
+            <th>Marks obtained</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        
+
+
+
+        
+        
+
+
+        <tr>
+            <td><b>Membership in professional society</b>
+                <br>score = (No. of students with membership in professional society / Total No. of student I Year to IV
+                Year) x 10
+                <br><b>Minimum Target = 70%</b>
+            </td>
+            <td colspan="30">{{categoryList4.g1.membership.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList4.g1.membership.marks"></td>
+
+        </tr>
+        <tr>
+            <td><b>Participation in Co-curricular Activity (Paper presentation / Events / Workshop / Seminars ect. in
+                    other institutions)</b>
+                <br>score = (No. of students presented paper or participated in events / No. of students in I Year and
+                II Year) x 10
+                <br><b>Minimum Target = 70%</b>
+                <br>score = (No. of students participated in workshop or seminars / No. of student in II and III Year) x
+                10
+                <br><b>Minimum Target = 70%</b>
+            </td>
+            <td colspan="30">{{categoryList4.g2.part_in_cocurr.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList4.g2.part_in_cocurr.marks"></td>
+        </tr>
+
+        <tr>
+            <td><b>Value Added Courses Attended</b>
+                <br>score = (No. of students attended / Total No. of students I to IV Year) x 10
+                <br><b>Minimum Target = 100%</b>
+            </td>
+            <td colspan="30">{{categoryList4.g3.val_added.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList4.g3.val_added.marks"></td>
+
+        </tr>
+
+
+
+        <tr>
+            <td><b>Participation in Extracurricular and Extension activities (Sports, NSS, YRC, ect.)</b>
+                <br>Score = (No. of students attended / Total No. of students I Year to IV Year) x 5
+                <br><b>Minimum Target = 25%</b>
+                <br>Score = (No. of students participated in extension activities / Total No. of students I Year to IV
+                Year) x 5
+                <br><b>Minimum Target = 75%</b>
+            <td colspan="30">{{categoryList4.g4.part_in_extracurr.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList4.g4.part_in_extracurr.marks"></td>
+
+        </tr>
+        <tr>
+            <td><b>Prizes, Awards and Recognition</b>
+                <br> 1. State Leave - (each 1)
+                <br> 2. National Level - (each 2)
+            </td>
+            <td colspan="30">{{categoryList4.g5.prizes.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                    [(ngModel)]="categoryList4.g5.prizes.marks"></td>
+        </tr>
+    </tbody>
+</table>
+<div class="form-group">
+    <div class="btn" (click)="setmap()">Submit</div>
+</div>
+
+<div class="acad" style="text-align: center;">
+    <hr>
+    <h3>Student Development Activities- 100</h3>
+    <a href="lessthan5_subcategory_aea.html">Click here to fill the sub-category</a>
+    <hr>
+</div>
+
+<table align="center" border="1" width="100%">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Academic Performance Parameters</th>
+            <th colspan="20">Max. Score</th>
+            <th colspan="20">Obtained Score</th>
+        </tr>
+
+        
+        <tr>
+            <td>Membership in professional society</td>
+            <td colspan="20">10</td>
+            <td colspan="20">{{categoryList4.g1.membership.marks}}</td>
+        </tr>
+        <tr>
+            <td>Participation in co-curricular Activities (PPT / Events / Workshops / seminar etc.)</td>
+            <td colspan="20">10</td>
+            <td colspan="20">{{categoryList4.g2.part_in_cocurr.marks}}</td>
+        </tr>
+        <tr>
+            <td>Value Added Courses Attended</td>
+            <td colspan="20">10</td>
+            <td colspan="20">{{categoryList4.g3.val_added.marks}}</td>
+        </tr>
+        <tr>
+            <td>Participation in extracurricular and extension activities(sports,NSS,YRC,ect.)</td>
+            <td colspan="20">10</td>
+            <td colspan="20">{{categoryList4.g4.part_in_extracurr.marks}}</td>
+        </tr>
+        <tr>
+            <td>Awards & Recongnition of First Year students</td>
+            <td colspan="20">10</td>
+            <td colspan="20">{{categoryList4.g5.prizes.marks}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <th colspan="30" rowspan="5">Total: </th>
+    </tfoot>
+
 </table>
 
 <!-- <td colspan="20">{{categoryList.g7.pass}}</td>

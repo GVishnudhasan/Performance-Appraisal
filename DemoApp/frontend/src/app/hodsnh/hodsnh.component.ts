@@ -151,10 +151,12 @@ export class HodsnhComponent implements OnInit {
     g7: {
       pass: 0,
       score: 0,
+      overall_total:80
     },
     g8: {
       pass: 0,
       score: 0,
+      overall_total:80
     },
   };
   categoryList2 = {
@@ -162,17 +164,17 @@ export class HodsnhComponent implements OnInit {
       fdp_out: {
         marks: 0,
         sum: 0,
-        overall_total: 20,
+        overall_total: 40,
       },
       fdp_in: {
         marks: 0,
         sum: 0,
-        overall_total: 10,
+        overall_total: 20,
       },
       workshop_seminar: {
         marks: 0,
         sum: 0,
-        overall_total: 10,
+        overall_total: 20,
       },
       grand_total: 0,
     },
@@ -180,12 +182,12 @@ export class HodsnhComponent implements OnInit {
       ugc_care_journal: {
         marks: 0,
         sum: 0,
-        overall_total: 30,
+        overall_total: 50,
       },
       sci_ind_wos_journal:{
         marks:0,
         sum:0,
-        overall_total:40
+        overall_total:50
       },
       grand_total: 0,
     },
@@ -195,12 +197,12 @@ export class HodsnhComponent implements OnInit {
       national_intl_conference: {
         marks: 0,
         sum: 0,
-        overall_total: 20,
+        overall_total: 40,
       },
       book_publication: {
         marks: 0,
         sum: 0,
-        overall_total: 20,
+        overall_total: 40,
       },
       grand_total: 0,
     },
@@ -208,7 +210,7 @@ export class HodsnhComponent implements OnInit {
       proposal_submission: {
         marks: 0,
         sum: 0,
-        overall_total: 20,
+        overall_total: 30,
       },
       grand_total: 0,
     },
@@ -323,6 +325,45 @@ export class HodsnhComponent implements OnInit {
       grand_total: 0,
     },
   };
+  categoryList4= {
+    g1: {
+      membership: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      }
+    },
+    g2: {
+      part_in_cocurr: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+    },
+    g3: {
+      val_added: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g4: {
+      part_in_extracurr: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g5: {
+      prizes: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+    },
+    grand_total: 0,
+  };
+
 
   ngOnInit(): void {
   }
