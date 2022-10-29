@@ -536,20 +536,20 @@
             <td colspan="20">Overall First Year Result in End  Semester Examinations in Preious Academic Year 
             <br><b>Minimum Target = 60%</b>
             <br>1. If pass % is < 60% - zero points
-            <br>1. Score = (pass % x 60) / 90</td>
+            <br>1. Score = (pass % x 60) / 90
             <td colspan="20">{{categoryList3.g1.overall_firstyear_result.overall_total}}</td>
             <td colspan=""><input type="number" style="width: 30px;" name="marks" required
                 [(ngModel)]="categoryList3.g1.overall_firstyear_result.marks">
-            </td>
+        </tr>
+        <tr>
 
-            <td colspan="20">Overall Department Result(physics,chemistry,maths & english) in End  Semester Examinations in Preious Academic Year
-                <br><b>Minimum Target = 60%</b>
-                <br>1. If pass % is < 60% - zero points
-                <br>1. Score = (pass % x 60) / 90</td>
-                <td colspan="20">{{categoryList3.g1.overall_dept_result.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
-                    [(ngModel)]="categoryList3.g1.overall_dept_result.marks">
-                </td>
+            <br>Overall Department Result(physics,chemistry,maths & english) in End  Semester Examinations in Preious Academic Year
+            <br><b>Minimum Target = 60%</b>
+            <br>1. If pass % is < 60% - zero points
+            <br>1. Score = (pass % x 60) / 90
+            <td colspan="20">{{categoryList3.g1.overall_dept_result.overall_total}}</td>
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                [(ngModel)]="categoryList3.g1.overall_dept_result.marks">
     
 
         </tr>
@@ -655,9 +655,10 @@
             
         </tbody>
 </table>
-<div class="form-group" onclick= "window.location.href = 'HOD.html';">
-    <input type="submit" value="SUBMIT" class="btn">
+<div class="form-group">
+    <div class="btn" (click)="setmap()">Submit</div>
 </div>
+
 <div class="acad" style="text-align: center;">
     <hr>
         <h3>FIRST YEAR DEVELOPMENT ACTIVITIES-300</h3>
@@ -677,58 +678,61 @@
         <tr>
             <td>Overall First year Department Result in End Semester Examinations in Previous Academic Year</td>
             <td colspan="20">60</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g1.grand_total}}</td>
+            <td colspan="20">{{categoryList3.g1.grand_total}}</td>
         </tr>
         <tr>
             <td>FDP /STTP/Workshop/Seminar Attended by S&H Faculty members</td>
             <td colspan="20">30</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g2.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g2.grand_total}}</td>
         </tr>
         <tr>
             <td>Certificate Courses(NPTEL/SWAYAM/etc)Completed by S&H Faculty members </td>
             <td colspan="20">30</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g3.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g3.grand_total}}</td>
         </tr>
         <tr>
             <td>Guest Lecture/Workshops/Seminars /Value Added Courses Organized </td>
             <td colspan="20">20</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g4.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g4.grand_total}}</td>
         </tr>
         <tr>
             <td>Funding Proposals </td>
             <td colspan="20">30</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g5.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g5.grand_total}}</td>
         </tr>
         <tr>
             <td>Conference/Book Publication</td>
             <td colspan="20">40</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g6.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g6.grand_total}}</td>
         </tr>
         <tr>
             <td>Journal Publication</td>
             <td colspan="20">30</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g7.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g7.grand_total}}</td>
         </tr>
         <tr>
             <td>Membership in professional society</td>
             <td colspan="20">20</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g8.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g8.grand_total}}</td>
         </tr>
         <tr>
             <td>Grants Recieved & Consultancy</td>
             <td colspan="20">20</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g9.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g9.grand_total}}</td>
         </tr>
         <tr>
             <td>Awards & Recognition of S&H Faculty</td>
             <td colspan="20">20</td>
-            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required>{{categoryList3.g10.overall_total}}</td>
+            <td colspan="20">{{categoryList3.g10.grand_total}}</td>
         </tr>
     </tbody>
     <tfoot>
         <th colspan="30" rowspan="5">Total: </th>
     </tfoot>
 </table>
+
+<!-- <td colspan="20">{{categoryList.g7.pass}}</td>
+            </tr> -->
 
 
 

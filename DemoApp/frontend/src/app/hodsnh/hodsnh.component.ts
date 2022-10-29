@@ -256,6 +256,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 30,
       },
+      grand_total:0,
     },
     g3:{
       cert_courses: {
@@ -263,6 +264,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 30,
       },
+      grand_total:0,
     },
     g4:{
       guest_lecture: {
@@ -270,6 +272,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total:0,
     },
     g5:{
       funding_prop: {
@@ -277,6 +280,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 30,
       },
+      grand_total:0,
     },
     g6:{
       conf_book_proposal: {
@@ -284,6 +288,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 40,
       },
+      grand_total:0,
     },
     g7:{
       journal_publ: {
@@ -291,6 +296,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 30,
       },
+      grand_total:0,
     },
     g8:{
       membership: {
@@ -298,6 +304,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total:0,
     },
     g9: {
       grants_rec: {
@@ -305,6 +312,7 @@ export class HodsnhComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total:0,
     },
     g10: {
       awards: {
@@ -501,6 +509,17 @@ export class HodsnhComponent implements OnInit {
     this.categoryList3.g1.grand_total =
       this.categoryList3.g1.overall_firstyear_result.marks +
       this.categoryList3.g1.overall_dept_result.marks ;
+
+    this.categoryList3.g2.grand_total=this.categoryList3.g2.fds_sttp.marks;
+    this.categoryList3.g3.grand_total=this.categoryList3.g3.cert_courses.marks;
+    this.categoryList3.g4.grand_total=this.categoryList3.g4.guest_lecture.marks;
+    this.categoryList3.g5.grand_total=this.categoryList3.g5.funding_prop.marks;
+    this.categoryList3.g6.grand_total=this.categoryList3.g6.conf_book_proposal.marks;
+    this.categoryList3.g7.grand_total=this.categoryList3.g7.journal_publ.marks;
+    this.categoryList3.g8.grand_total=this.categoryList3.g8.membership.marks;
+    this.categoryList3.g9.grand_total=this.categoryList3.g9.grants_rec.marks;
+    this.categoryList3.g10.grand_total=this.categoryList3.g10.awards.marks;
+
 
     
 
