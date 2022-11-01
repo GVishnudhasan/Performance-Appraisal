@@ -4,6 +4,10 @@
     </div>
     <br>
     <br>
+    <div>
+        <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
+        <a (click)="mActive(true)" class="next">Next &raquo;</a>
+    </div>
 
     <!-- G1 -->
     <div *ngIf="active_flag == 0">
