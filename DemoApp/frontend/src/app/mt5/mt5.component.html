@@ -1008,10 +1008,14 @@
     <div class="form-group">
         <div class="btn" (click)="setmap()">Submit</div>
     </div>
-    <tr>
-        <td colspan="40" align="center"><b>Rating by HoD,Director & Principal</b>
-        </td>
-    </tr>    
+    <div class="acad" style="text-align: center;">
+        <hr>
+            <h3>Rating by HoD, Director & Principal - 100</h3>
+        <hr>
+    </div>
+
+    <table align="center" border="1" width="100%">
+        <tbody>    
             <tr>
                 <td>Dedication and Taking responsibility by self</td>
                 <td colspan="30">{{categoryList4.g1.dept_lvl_resp.overall_total}}</td>
@@ -1047,19 +1051,14 @@
                     [(ngModel)]="categoryList4.g5.rating_princi_manage.marks"></td>
 
             </tr>
-
-
-
-
-
-        </tbody>
-    </table>
+            </tbody>
+            </table>
     <div class="form-group">
         <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
     </div>
     <div class="acad" style="text-align: center;">
         <hr>
-            <h3>Rating by HoD, Director & Principal - 100</h3>
+            <h3>Rating by HoD, Director & Principal</h3>
         <hr>
     </div>
 
