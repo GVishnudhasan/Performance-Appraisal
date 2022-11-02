@@ -772,6 +772,16 @@ export class Mt5Component implements OnInit {
       this.categoryList3.g3.awards_recieved.marks;
 
   }
+
+  active_flag = 0;
+  max_list = 4;
+  mActive(arg:any){
+    if(arg){
+      this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
+    }else{
+      this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
+    }
+  }
 }
 
 
