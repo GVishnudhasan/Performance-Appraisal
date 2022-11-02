@@ -362,7 +362,6 @@ export class HodenggComponent implements OnInit {
     },
   };
 
-
   categoryList3 = {
     g1: {
       inplant_training: {
@@ -631,5 +630,15 @@ export class HodenggComponent implements OnInit {
       this.categoryList2.g10.mou_signed.marks +
       this.categoryList2.g10.impact_of_ind.marks +
       this.categoryList2.g10.training.marks;
+  }
+
+  active_flag = 0;
+  max_list = 4;
+  mActive(arg:any){
+    if(arg){
+      this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
+    }else{
+      this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
+    }
   }
 }
