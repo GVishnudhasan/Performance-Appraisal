@@ -8,17 +8,36 @@ td {
     border-radius: 3px;
 }
 
-.form-group .btn
-    {
-        width:100%;
-        padding:8px 10px;
-        font-size:15px;
-        border:0;
-        margin-top: 15px;
-        background-color:#010505;
-        color:white;
-        cursor:pointer;
-        border-radius:3px;
-        outline:none;
+.form-group .btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    margin-top: 15px;
+    background-color: #010505;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
 
-    }
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #04AA6D;
+    color: white;
+}
