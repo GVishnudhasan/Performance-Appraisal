@@ -382,20 +382,20 @@
         <tr>
             <td>FDP outside State</td>
             <td colspan="30">{{categoryList2.g1.fdp_out.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g1.fdp_out.marks"></td>
 
         </tr>
         <tr>
             <td>FDP within State</td>
             <td colspan="30">{{categoryList2.g1.fdp_in.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required  max="20" min="0"
                     [(ngModel)]="categoryList2.g1.fdp_in.marks"></td>
         </tr>
         <tr>
             <td>Workshop/Seminar</td>
             <td colspan="30">{{categoryList2.g1.workshop_seminar.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList2.g1.workshop_seminar.marks"></td>
         </tr>
         <tr>
@@ -404,13 +404,13 @@
         <tr>
             <td>UGC CARE Journal</td>
             <td colspan="30">{{categoryList2.g2.ugc_care_journal.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="50" min="0"
                     [(ngModel)]="categoryList2.g2.ugc_care_journal.marks"></td>
         </tr>
         <tr>
             <td>SCI Indexed/Wos Journal</td>
             <td colspan="30">{{categoryList2.g2.sci_ind_wos_journal.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="50" min="0"
                     [(ngModel)]="categoryList2.g2.sci_ind_wos_journal.marks"></td>
         </tr>
         <tr>
@@ -419,14 +419,14 @@
         <tr>
             <td>National/International Conference</td>
             <td colspan="30">{{categoryList2.g3.national_intl_conference.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g3.national_intl_conference.marks"></td>
 
         </tr>
         <tr>
             <td>Book/Book Chapter Publications</td>
             <td colspan="30">{{categoryList2.g3.book_publication.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g3.book_publication.marks"></td>
         </tr>
         <tr>
@@ -435,7 +435,7 @@
         <tr>
             <td>Proposal Submission-(each-10 points)</td>
             <td colspan="30">{{categoryList2.g4.proposal_submission.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                     [(ngModel)]="categoryList2.g4.proposal_submission.marks"></td>
 
         </tr>
@@ -445,19 +445,19 @@
         <tr>
             <td>Less than 1 Lakh(each-10)</td>
             <td colspan="30">{{categoryList2.g5.less_than_one.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g5.less_than_one.marks"></td>
         </tr>
         <tr>
             <td>1 lakh-5 lakhs(each-20)</td>
             <td colspan="30">{{categoryList2.g5.one_five_lakh.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g5.one_five_lakh.marks"></td>
         </tr>
         <tr>
             <td>More than 5 Lakhs</td>
             <td colspan="30">{{categoryList2.g5.more_than_five.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                     [(ngModel)]="categoryList2.g5.more_than_five.marks"></td>
         </tr>
         <tr>
@@ -538,7 +538,7 @@
             <br>1. If pass % is < 60% - zero points
             <br>1. Score = (pass % x 60) / 90
             <td colspan="20">{{categoryList3.g1.overall_firstyear_result.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g1.overall_firstyear_result.marks">
         </tr>
         <tr>
@@ -548,7 +548,7 @@
             <br>1. If pass % is < 60% - zero points
             <br>1. Score = (pass % x 60) / 90
             <td colspan="20">{{categoryList3.g1.overall_dept_result.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g1.overall_dept_result.marks">
     
 
@@ -559,7 +559,7 @@
             <td colspan="20">FDS / STTP / Workshop / Seminar Attended by Faculty members
                 <br><b>Minimum Target = 90%</b></td>
             <td colspan="20">{{categoryList3.g2.fds_sttp.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g2.fds_sttp.marks">
             </td>
 
@@ -568,7 +568,7 @@
             <td colspan="20">Certificate Courses (NPTEL / SWAYAM / etc) completed by Faculty members
                 <br><b>Minimum Target = 90%</b></td>
             <td colspan="20">{{categoryList3.g3.cert_courses.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g3.cert_courses.marks">
             </td>
 
@@ -580,7 +580,7 @@
                 <br>2. Professional Ethics / VAC on LIfe Skills(10)
                 <br><b>Minimum Target = 20</b></td>
             <td colspan="20">{{categoryList3.g4.guest_lecture.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                 [(ngModel)]="categoryList3.g4.guest_lecture.marks">
             </td>
 
@@ -590,7 +590,7 @@
             <br>Project Proposal (10) - (each -5)
             <br>Other Proposal (10) - (each - 2)
            <td colspan="20">{{categoryList3.g5.funding_prop.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g5.funding_prop.marks">
             </td>
         </tr>
@@ -602,7 +602,7 @@
                 <br>No. of Book Publications - (each 10)
                 <br><b>Target = 2 per year</b></td>
             <td colspan="20">{{categoryList3.g6.conf_book_proposal.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                 [(ngModel)]="categoryList3.g6.conf_book_proposal.marks">
             </td>
 
@@ -616,7 +616,7 @@
             <br>Score = (No. of Publications in UGC CARE / No. of faculty with above 5 year) x 10 
             <br>Score = (No. of Publications in SCI indexed or WoS / No. of faculty with Ph.D.) x 10 
             <td colspan="20">{{categoryList3.g7.journal_publ.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="30" min="0"
                 [(ngModel)]="categoryList3.g7.journal_publ.marks">
             </td>
         </tr>    
@@ -624,7 +624,7 @@
             <td colspan="20"><b>Membership in professional society (IE, IETE, SAE, ISHRAE, CSI, IEEE, etc.)</b>
             <br><b>Minimum Target = 80% of faculty</b>    
             <td colspan="20">{{categoryList3.g8.membership.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                 [(ngModel)]="categoryList3.g8.membership.marks">
             </td>
         </tr>
@@ -636,7 +636,7 @@
             <br>2. consultancy - 10 (For every Rs.50,000-1)    
             <br>3. Any Grant received through funding / Consultancy with more than 20 lakhs - 20    
             <td colspan="20">{{categoryList3.g9.grants_rec.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                 [(ngModel)]="categoryList3.g9.grants_rec.marks">
             </td>
         </tr>
@@ -647,7 +647,7 @@
             <td colspan="20">1. State Leave (each 4)
             <br>2. National Leavel (each 5)    
             <td colspan="20">{{categoryList3.g10.awards.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
                 [(ngModel)]="categoryList3.g10.awards.marks">
               
             </td>
@@ -758,7 +758,7 @@
                 <br><b>Minimum Target = 70%</b>
             </td>
             <td colspan="30">{{categoryList4.g1.membership.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g1.membership.marks"></td>
 
         </tr>
@@ -773,7 +773,7 @@
                 <br><b>Minimum Target = 70%</b>
             </td>
             <td colspan="30">{{categoryList4.g2.part_in_cocurr.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g2.part_in_cocurr.marks"></td>
         </tr>
 
@@ -783,7 +783,7 @@
                 <br><b>Minimum Target = 100%</b>
             </td>
             <td colspan="30">{{categoryList4.g3.val_added.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g3.val_added.marks"></td>
 
         </tr>
@@ -798,7 +798,7 @@
                 Year) x 5
                 <br><b>Minimum Target = 75%</b>
             <td colspan="30">{{categoryList4.g4.part_in_extracurr.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g4.part_in_extracurr.marks"></td>
 
         </tr>
@@ -808,7 +808,7 @@
                 <br> 2. National Level - (each 2)
             </td>
             <td colspan="30">{{categoryList4.g5.prizes.overall_total}}</td>
-            <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
                     [(ngModel)]="categoryList4.g5.prizes.marks"></td>
         </tr>
     </tbody>

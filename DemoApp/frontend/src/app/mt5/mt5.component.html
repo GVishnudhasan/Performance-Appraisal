@@ -786,7 +786,7 @@
             <tr>
                 <td>Book/Book Chapter Publications</td>
                 <td colspan="30">{{categoryList2.g4.book_publication.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                         [(ngModel)]="categoryList2.g4.book_publication.marks"></td>
             </tr>
             <tr>
@@ -795,7 +795,7 @@
             <tr>
                 <td>Proposal Submission-(each-10 points)</td>
                 <td colspan="30">{{categoryList2.g5.proposal_submission.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                         [(ngModel)]="categoryList2.g5.proposal_submission.marks"></td>
 
             </tr>
@@ -805,19 +805,19 @@
             <tr>
                 <td>Less than 1 Lakh(each-10)</td>
                 <td colspan="30">{{categoryList2.g6.less_than_one.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                         [(ngModel)]="categoryList2.g6.less_than_one.marks"></td>
             </tr>
             <tr>
                 <td>1 lakh-5 lakhs(each-20)</td>
                 <td colspan="30">{{categoryList2.g6.one_five_lakh.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                         [(ngModel)]="categoryList2.g6.one_five_lakh.marks"></td>
             </tr>
             <tr>
                 <td>More than 5 Lakhs</td>
                 <td colspan="30">{{categoryList2.g6.more_than_five.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="40" min="0"
                         [(ngModel)]="categoryList2.g6.more_than_five.marks"></td>
             </tr>
             <tr>
@@ -826,15 +826,28 @@
             <tr>
                 <td>Patents Published</td>
                 <td colspan="30">{{categoryList2.g7.patents_published.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                         [(ngModel)]="categoryList2.g7.patents_published.marks"></td>
             </tr>
             <tr>
-                <td>Consultancy work</td>
+                <td>Consultancy work(less than 1 lakh)</td>
                 <td colspan="30">{{categoryList2.g7.consultancy_work_less.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
                         [(ngModel)]="categoryList2.g7.consultancy_work_less.marks"></td>
             </tr>
+            <tr>
+                <td>Consultancy work(more than 1 lakh)</td>
+                <td colspan="30">{{categoryList2.g7.consultancy_work_less.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
+                        [(ngModel)]="categoryList2.g7.consultancy_work_less.marks"></td>
+            </tr>
+            <tr>
+                <td>Initiative taken towards startup/incubation</td>
+                <td colspan="30">{{categoryList2.g7.consultancy_work_less.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
+                        [(ngModel)]="categoryList2.g7.consultancy_work_less.marks"></td>
+            </tr>
+            
 
         </tbody>
     </table>
@@ -868,7 +881,7 @@
             <tr>
                 <td>Journal Publications</td>
                 <td colspan="20">40</td>
-                <td colspan="20">{{categoryList2.g3.grand_total}}</td>m
+                <td colspan="20">{{categoryList2.g3.grand_total}}</td>
             </tr>
             <tr>
                 <td>Conference / Technical Book Publications</td>
@@ -915,26 +928,26 @@
             <tr>
                 <td>Department Level Responsibility(each 15)</td>
                 <td colspan="30">{{categoryList3.g1.dept_lvl_resp.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required required max="30" min="0"
                         [(ngModel)]="categoryList3.g1.dept_lvl_resp.marks"></td>
 
             </tr>
             <tr>
                 <td>Rating for the effectiveness by HoD</td>
                 <td colspan="30">{{categoryList3.g1.rating_for_eff_hod.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required required max="20" min="0"
                         [(ngModel)]="categoryList3.g1.rating_for_eff_hod.marks"></td>
             </tr>
             <tr>
                 <td>Institutional level Responsibility</td>
                 <td colspan="30">{{categoryList3.g1.ins_lvl_resp.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required required max="30" min="0"
                         [(ngModel)]="categoryList3.g1.ins_lvl_resp.marks"></td>
             </tr>
             <tr>
                 <td>Rating for the effectiveness by Principal</td>
                 <td colspan="30">{{categoryList3.g1.rating_for_eff_pric.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required  max="20" min="0"
                         [(ngModel)]="categoryList3.g1.rating_for_eff_pric.marks"></td>
             </tr>
 
@@ -945,7 +958,7 @@
                 <td>Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga, eco Club, Rotary, JCI etc.
                     (each 15)</td>
                 <td colspan="30">{{categoryList3.g2.part_ext_act.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required required max="30" min="0"
                         [(ngModel)]="categoryList3.g2.part_ext_act.marks"></td>
             </tr>
             <tr>
@@ -956,7 +969,7 @@
                     FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution
                     etc.</td>
                 <td colspan="30">{{categoryList3.g3.awards_recieved.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks"required max="20" min="0"
                         [(ngModel)]="categoryList3.g3.awards_recieved.marks"></td>
             </tr>
         </tbody>
@@ -1019,35 +1032,35 @@
             <tr>
                 <td>Dedication and Taking responsibility by self</td>
                 <td colspan="30">{{categoryList4.g1.dept_lvl_resp.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required 
+                <td colspan=""><input type="number" style="width: 30px;" name="marks"  required max="20" min="0"
                     [(ngModel)]="categoryList4.g1.dept_lvl_resp.marks"></td>
 
             </tr>         
             <tr>
                 <td>Document Maintenance and regular Updation</td>
                 <td colspan="30">{{categoryList4.g2.doc_main_reg_upd.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g2.doc_main_reg_upd.marks"></td>
 
             </tr>
             <tr>
                 <td>Involvement towards department development</td>
                 <td colspan="30">{{categoryList4.g3.inv_dept_dev.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks"  required max="20" min="0"
                     [(ngModel)]="categoryList4.g3.inv_dept_dev.marks"></td>
 
             </tr>
             <tr>
                 <td>Completion of work on time without follow up</td>
                 <td colspan="30">{{categoryList4.g4.comp_wrk_withot_follow.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
                     [(ngModel)]="categoryList4.g4.comp_wrk_withot_follow.marks"></td>
 
             </tr>
             <tr>
                 <td>Ratiing by Principal/Mangement</td>
                 <td colspan="30">{{categoryList4.g5.rating_princi_manage.overall_total}}</td>
-                <td colspan=""><input type="number" style="width: 30px;" name="marks" required
+                <td colspan=""><input type="number" style="width: 30px;" name="marks"  required max="20" min="0"
                     [(ngModel)]="categoryList4.g5.rating_princi_manage.marks"></td>
 
             </tr>

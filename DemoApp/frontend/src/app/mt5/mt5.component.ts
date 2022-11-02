@@ -415,6 +415,13 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      init_tow_start: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      
+
       grand_total: 0,
     },
 
@@ -793,6 +800,7 @@ export class Mt5Component implements OnInit {
       this.categoryList2.g7.patents_published.marks +
       this.categoryList2.g7.consultancy_work_less.marks;
       this.categoryList2.g7.consultancy_work_more.marks;
+      this.categoryList2.g7.init_tow_start.marks;
 
       this.categoryList3.g1.grand_total =
       this.categoryList3.g1.dept_lvl_resp.marks +
