@@ -461,6 +461,45 @@ export class Mt5Component implements OnInit {
       grand_total: 0,
     },
   };
+  categoryList4= {
+    g1: {
+      dept_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g2:{
+      doc_main_reg_upd: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g3:{
+    
+      inv_dept_dev: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g4:{
+      comp_wrk_withot_follow: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g5:{
+      rating_princi_manage: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+  };
+  
 
 
   ngOnInit(): void {}
@@ -770,6 +809,7 @@ export class Mt5Component implements OnInit {
 
     this.categoryList3.g3.grand_total =
       this.categoryList3.g3.awards_recieved.marks;
+
 
   }
 }
