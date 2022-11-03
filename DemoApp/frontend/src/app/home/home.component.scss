@@ -1,63 +1,76 @@
-h2{
-	margin: 16px;
+h2 {
+    margin: 16px;
 }
-.container{
-	margin-top: 100px;
-	padding: 32px;
-}
-.select-box{
-	display: flex;
-	width: 400px;
-	flex-direction: column;
-}
-.select-box .options-container{
-	background: #F5F5F5;
-	border: 1px solid var(--blue);
-	color: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
-	font-weight: 700;
-	max-height: 0;
-	width: 100%;
-	opacity: 0;
-	transition: all 0.4s;
-	border-radius: 8px;
-	overflow: hidden;
-	order: 1;
 
+.container {
+    margin-top: 156px;
+    padding: 32px;
 }
-.selective{
-	background-color: var(--blue);
-	background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
-	border-radius: 20px;
-	border: 1px solid var(--blue);
-	color: var(--white);
-	cursor: pointer;
-	margin-bottom: 10px;
-	font-size: 0.8rem;
-	font-weight: bold;
-	letter-spacing: 0.1rem;
-	padding: 0.9rem 4rem;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+
+.select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    margin-right: -60px;
 }
-.select-box .options-container.active{
-	max-height: 400px;
-	opacity: 2;
+
+.select-box .options-container {
+    background: #F5F5F5;
+    border: 1px solid var(--blue);
+    color: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+    font-weight: 700;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
 }
+
+.selective {
+    background-color: var(--blue);
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.select-box .options-container.active {
+    max-height: 400px;
+    opacity: 2;
+}
+
 .select-box .option,
-.selective
-{
-	padding: 14px 26px;
-	cursor: pointer;
-}
-.select-box .option:hover{
-	background:lightblue;
-
+.selective {
+    padding: 14px 26px;
+    cursor: pointer;
 }
 
-.select-box label{
-	cursor: pointer;
+.select-box .option:hover {
+    background: lightblue;
 }
-.select-box .option .radio{
-	display: none;
 
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+.alt_txt1 {
+    text-align: center;
+}
+
+.alt_txt2 {
+    margin-left: 2%;
 }

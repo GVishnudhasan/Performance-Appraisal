@@ -1,28 +1,31 @@
-<h2>Self Appraisal Form</h2>
-<div class="container right-panel-active">
-    <!-- Sign Login -->
-    <div class="container__form container--signup">
-        <div class="form">
-            <h2 class="form__title">Login</h2>
-            <input type="email" [(ngModel)]="email" placeholder="Username" class="input" />
-            <input type="password" [(ngModel)]="password" placeholder="Password" class="input" />
-            <a href="#" class="link">Forgot password?</a>
-            <button class="btn" (click)="login()">Login</button>
-        </div>
-    </div>
-
-
-    <!-- Overlay -->
-    <div class="container__overlay">
-        <div class="overlay">
-            <div class="overlay__panel overlay--left">
-                <h3 class="form__title">New User?</h3>
-                <button class="btn" (click)="goto()">Sign Up Here</button>
+<div class="fs_div1">
+    <h2>
+        Self Appraisal Form</h2>
+    <div class="container right-panel-active">
+        <!-- Sign Login -->
+        <div class="container__form container--signup">
+            <div class="form">
+                <h2 class="form__title">Login</h2>
+                <input type="email" [(ngModel)]="email" placeholder="Username" class="input" />
+                <input type="password" [(ngModel)]="password" placeholder="Password" class="input" />
+                <a href="#" class="link">Forgot password?</a>
+                <button class="btn" (click)="login()">Login</button>
             </div>
-            <!--<div class="overlay__panel overlay--right">
+        </div>
+
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <h3 class="form__title">New User?</h3>
+                    <button class="btn" (click)="goto()">Sign Up Here</button>
+                </div>
+                <!--<div class="overlay__panel overlay--right">
 				<button class="btn" id="signUp">Sign Up</button>
 			</div>-->
+            </div>
         </div>
     </div>
+    <marquee behavior="" direction="">Designed and developed by : G VISHNUDHASAN, A RAGUL, M SOWNDARYA - II CSE</marquee>
 </div>
-<marquee behavior="" direction="">Designed and developed by : G VISHNUDHASAN, A RAGUL, M SOWNDARYA - II CSE</marquee>

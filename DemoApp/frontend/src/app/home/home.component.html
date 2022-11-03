@@ -13,15 +13,16 @@
     TEST3
 </div> -->
 
-<div class="container">
-    <div class="select-box">
-        <div class="selective">SELECT YOUR CATEGORY</div>
-        <!-- active -->
-        <div class="options-container active">
-            <div class="option" *ngFor="let mObj of subObj">
-                <div (click)="goto(mObj.link)">
-                    <input type="radio" class="radio" name="mObj.name" />
-                    <label for="lfyears">{{mObj.name}}</label>
+<div>
+    <div class="container">
+        <div class="select-box">
+            <div class="selective alt_txt1">SELECT YOUR CATEGORY</div>
+            <!-- active -->
+            <div class="options-container active">
+                <div class="option" *ngFor="let mObj of subObj" (click)="goto(mObj.link)">
+                    <div class="alt_txt2">
+                        <label for="lfyears">* {{mObj.name}}</label>
+                    </div>
                 </div>
             </div>
         </div>
