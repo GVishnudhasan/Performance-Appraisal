@@ -233,12 +233,12 @@ export class Lt5Component implements OnInit {
       training_at_industry: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       training_outcome: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
@@ -246,12 +246,12 @@ export class Lt5Component implements OnInit {
       guest_lecture: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 30,
       },
       outcome_achieved: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
@@ -259,12 +259,12 @@ export class Lt5Component implements OnInit {
       mou_signed: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       impact_of_ic: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       grand_total: 0,
     },
@@ -272,17 +272,17 @@ export class Lt5Component implements OnInit {
       vac_faculty_team: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       vac_faculty_industry: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       vac_industry_resources: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
@@ -290,17 +290,17 @@ export class Lt5Component implements OnInit {
       impact_of_mentoring: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       a: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       b: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       grand_total: 0,
     },

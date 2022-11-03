@@ -232,6 +232,277 @@ export class WithphdComponent implements OnInit {
 
   
   };
+  categoryList1 = {
+    g1: {
+      training_tier_1_ind: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      training_tier_2_tier_3_ind: {
+        marks: 0,
+        sum: 0,
+        overall_total: 5,
+      },
+      training_outcome:{
+        marks:0,
+        sum:0,
+        overall_total: 10,
+
+
+      },
+      grand_total: 0,
+    },
+    g2: {
+      guest_lecture: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      grand_total: 0,
+    },
+    g3: {
+      mou_signed: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      impact_of_ic: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g4: {
+      vac_faculty_team: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      vac_faculty_industry: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      vac_industry_resources: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      grand_total: 0,
+    },
+    g5: {
+      impact_of_mentoring: {
+        marks: 0,
+        sum: 0,
+        overall_total: 0,
+      },
+      a: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      b: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+  };
+  categoryList2 = {
+    g1: {
+      course_comp_cert: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      course_comp_cert_elite: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      grand_total: 0,
+    },
+    g2: {
+      fdp_out: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      fdp_in: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      workshop_seminar: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      grand_total: 0,
+    },
+    g3: {
+      peer_reviewed_journal: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      ugc_care_journal: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      sci_ind_wos_journal:{
+        marks:0,
+        sum:0,
+        overall_total:40
+      },
+      grand_total: 0,
+    },
+
+  
+    g4: {
+      national_intl_conference: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      book_publication: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g5: {
+      proposal_submission: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g6: {
+      less_than_one: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      one_five_lakh: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      
+      more_than_five: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
+      },
+      grand_total: 0,
+    },
+    g7: {
+      patents_published: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      consultancy_work_less: {
+        marks: 0,
+        sum: 0,
+        overall_total: 10,
+      },
+      consultancy_work_more: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+  };
+  categoryList3 = {
+    g1: {
+      dept_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      rating_for_eff_hod: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      ins_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      rating_for_eff_pric: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+    g2: {
+      part_ext_act: {
+        marks: 0,
+        sum: 0,
+        overall_total: 30,
+      },
+      grand_total: 0,
+    },
+    g3: {
+      awards_recieved: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+      grand_total: 0,
+    },
+  };
+  categoryList4= {
+    g1: {
+      dept_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g2:{
+      doc_main_reg_upd: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g3:{
+    
+      inv_dept_dev: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g4:{
+      comp_wrk_withot_follow: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g5:{
+      rating_princi_manage: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+  };
+
+
 
   async setmap() {
     await this.opt_data();
@@ -450,5 +721,96 @@ export class WithphdComponent implements OnInit {
       this.categoryList.g10.b.sum +
       this.categoryList.g10.d.sum;
 
-}
+      this.categoryList1.g1.grand_total =
+      this.categoryList1.g1.training_tier_1_ind.marks +
+      this.categoryList1.g1.training_tier_2_tier_3_ind.marks +
+      this.categoryList1.g1.training_outcome.marks;
+
+    //cl1 - g2
+
+    this.categoryList1.g2.grand_total =
+      this.categoryList1.g2.guest_lecture.marks;
+
+    //cl1 - g3
+
+    this.categoryList1.g3.grand_total =
+      this.categoryList1.g3.mou_signed.marks +
+      this.categoryList1.g3.impact_of_ic.marks;
+
+    //cl1 - g4
+
+    this.categoryList1.g4.grand_total =
+      this.categoryList1.g4.vac_faculty_industry.marks +
+      this.categoryList1.g4.vac_faculty_team.marks +
+      this.categoryList1.g4.vac_industry_resources.marks;
+
+    //cl1 - g5
+
+    this.categoryList1.g5.grand_total =
+      this.categoryList1.g5.impact_of_mentoring.marks +
+      this.categoryList1.g5.a.marks +
+      this.categoryList1.g5.b.marks;
+
+      this.categoryList2.g1.grand_total =
+      this.categoryList2.g1.course_comp_cert.marks +
+      this.categoryList2.g1.course_comp_cert_elite.marks;
+
+    //cl2 - g2
+
+    this.categoryList2.g2.grand_total =
+      this.categoryList2.g2.fdp_out.marks +
+      this.categoryList2.g2.fdp_in.marks +
+      this.categoryList2.g2.workshop_seminar.marks;
+
+    //cl2 - g3
+
+    this.categoryList2.g3.grand_total =
+      this.categoryList2.g3.peer_reviewed_journal.marks +
+      this.categoryList2.g3.ugc_care_journal.marks;
+      this.categoryList2.g3.sci_ind_wos_journal.marks;
+
+
+    //cl2 - g4
+
+    this.categoryList2.g4.grand_total =
+      this.categoryList2.g4.national_intl_conference.marks +
+      this.categoryList2.g4.book_publication.marks;
+
+    //cl2 - g5
+
+    this.categoryList2.g5.grand_total =
+      this.categoryList2.g5.proposal_submission.marks;
+
+    //cl2 - g6
+
+    this.categoryList2.g6.grand_total =
+      this.categoryList2.g6.less_than_one.marks +
+      this.categoryList2.g6.one_five_lakh.marks +
+      this.categoryList2.g6.more_than_five.marks;
+
+    //cl2 - g7
+
+    this.categoryList2.g7.grand_total =
+      this.categoryList2.g7.patents_published.marks +
+      this.categoryList2.g7.consultancy_work_less.marks;
+      this.categoryList2.g7.consultancy_work_more.marks;
+
+      this.categoryList3.g1.grand_total =
+      this.categoryList3.g1.dept_lvl_resp.marks +
+      this.categoryList3.g1.ins_lvl_resp.marks +
+      this.categoryList3.g1.rating_for_eff_hod.marks +
+      this.categoryList3.g1.rating_for_eff_pric.marks;
+
+    //cl3 - g2
+
+    this.categoryList3.g2.grand_total =
+      this.categoryList3.g2.part_ext_act.marks;
+
+    //cl2 - g3
+
+    this.categoryList3.g3.grand_total =
+      this.categoryList3.g3.awards_recieved.marks;
+
+
+  }
 }
