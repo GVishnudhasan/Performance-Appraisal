@@ -233,17 +233,17 @@ export class Mt5Component implements OnInit {
       training_tier_1_ind: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       training_tier_2_tier_3_ind: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 5,
       },
       training_outcome:{
         marks:0,
         sum:0,
-        overall_total: 0,
+        overall_total: 10,
 
 
       },
@@ -253,7 +253,7 @@ export class Mt5Component implements OnInit {
       guest_lecture: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 40,
       },
       grand_total: 0,
     },
@@ -261,12 +261,12 @@ export class Mt5Component implements OnInit {
       mou_signed: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       impact_of_ic: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       grand_total: 0,
     },
@@ -274,17 +274,17 @@ export class Mt5Component implements OnInit {
       vac_faculty_team: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       vac_faculty_industry: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       vac_industry_resources: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
@@ -292,17 +292,17 @@ export class Mt5Component implements OnInit {
       impact_of_mentoring: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       a: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 20,
       },
       b: {
         marks: 0,
         sum: 0,
-        overall_total: 0,
+        overall_total: 10,
       },
       grand_total: 0,
     },
@@ -822,7 +822,7 @@ export class Mt5Component implements OnInit {
   }
 
   active_flag = 0;
-  max_list = 4;
+  max_list = 5;
   mActive(arg:any){
     if(arg){
       this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;

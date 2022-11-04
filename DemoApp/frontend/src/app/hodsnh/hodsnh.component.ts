@@ -560,10 +560,15 @@ export class HodsnhComponent implements OnInit {
     this.categoryList3.g8.grand_total=this.categoryList3.g8.membership.marks;
     this.categoryList3.g9.grand_total=this.categoryList3.g9.grants_rec.marks;
     this.categoryList3.g10.grand_total=this.categoryList3.g10.awards.marks;
+  }
 
-
-    
-
-
-      }
+  active_flag = 0;
+  max_list = 4;
+  mActive(arg:any){
+    if(arg){
+      this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
+    }else{
+      this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
     }
+  }
+}

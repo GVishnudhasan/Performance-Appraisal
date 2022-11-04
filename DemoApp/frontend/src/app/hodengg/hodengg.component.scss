@@ -1,7 +1,11 @@
 th, td {
     border: 1px solid black;
     border-radius: 3px;
-  }
+}
+
+  .bg_color {
+    background-color: aqua;
+}
 
   .form-group .btn
   {
@@ -17,3 +21,24 @@ th, td {
       outline:none;
 
   }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #04AA6D;
+    color: white;
+}
