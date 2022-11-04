@@ -5,11 +5,48 @@
         <!-- Sign Login -->
         <div class="container__form container--signup">
             <div class="form">
-                <h2 class="form__title">Login</h2>
-                <input type="email" [(ngModel)]="email" placeholder="Username" class="input" />
-                <input type="password" [(ngModel)]="password" placeholder="Password" class="input" />
-                <a href="#" class="link">Forgot password?</a>
-                <button class="btn" (click)="login()">Login</button>
+                <form [formGroup]="userForm" (ngSubmit)="login()" novalidate>
+
+                    <h2 class="form__title">Login</h2>
+
+                    <input type="email" [(ngModel)]="email" placeholder="Email" class="input" formControlName="email" />
+                    <div class="invalid-feedback" *ngIf="f.email.touched">
+                        <div *ngIf="f.email.errors?.required">Email is required</div>
+                        <div *ngIf="f.email.errors?.pattern || f.email.errors?.email">Email must be a valid email address</div>
+                    </div>
+
+                    <input type="password" [(ngModel)]="password" placeholder="Password" class="input" formControlName="password" />
+                    <div class="invalid-feedback">
+                        <div *ngIf="f.password.touched && f.password.errors?.required">
+                            Password Required
+                        </div>
+                        <div *ngIf="f.password.errors?.['pattern']">
+                            Check your Password
+                        </div>
+                    </div>
+
+                    <input type="number" [(ngModel)]="minmax" placeholder="Example min/max" class="input" formControlName="minmax" />
+                    <div class="invalid-feedback">
+                        <div *ngIf="f.minmax.touched && f.minmax.errors?.required">
+                            Number Required
+                        </div>
+                        <div *ngIf="f.minmax.hasError('max')">
+                            Minimum required number is 20.
+                        </div>
+                        <div *ngIf="f.minmax.hasError('min')">
+                            Minimum required number is 5.
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <input class="btn" type="submit" value="Login" [disabled]="!userForm.valid" />
+                    <hr>
+
+                    <a href="#" class="link">Forgot password?</a>
+                </form>
+
             </div>
         </div>
 

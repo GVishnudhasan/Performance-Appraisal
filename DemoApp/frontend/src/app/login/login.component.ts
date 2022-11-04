@@ -1,7 +1,8 @@
-import { getRootDirs } from '@angular/compiler-cli/src/ngtsc/util/src/typescript';
 import { Component, OnInit } from '@angular/core';
 import { MAPImapService } from '../_service/m-apimap.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +10,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  constructor(private mServer: MAPImapService, private router: Router, private fb: FormBuilder, private toastr: ToastrService) { }
 
-  constructor(private mServer: MAPImapService, private router: Router) { }
+  userForm: FormGroup | any;
 
   email: any;
   password: any;
+  minmax: any;
 
   ngOnInit(): void {
+    const fb = this.fb;
+    this.userForm = fb.group({
+      email: fb.control('', [Validators.required, Validators.email, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+      password: fb.control('', [Validators.required, Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
+      minmax: fb.control('', [Validators.required, Validators.min(5), Validators.max(20)]),
+    });
   }
 
+  get f() { return this.userForm.controls; }
+
   login() {
-    if(true){
+    if (this.userForm.invalid) {
+      this.mToastMsg(false, "Error", "please check your credentials.");
+      return;
+    }
+
+    if (true) {
+      this.mToastMsg(true, "success", "login successful.");
       this.router.navigate(['/home']);
-    }else{
+    } else {
       let data = {
         email: this.email,
         password: this.password,
@@ -29,12 +46,18 @@ export class LoginComponent implements OnInit {
       this.mServer.login(data).subscribe(res => {
         console.log("data >>", res);
       }, err => {
-        console.log("error >>",err.error);
+        console.log("error >>", err.error);
       });
     }
   }
 
   goto() {
-    this.router.navigate(['/signup']); 
+    this.router.navigate(['/signup']);
+  }
+
+  async mToastMsg(tag: boolean, title: any, message: any) {
+    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+      timeOut: 3000,
+    });
   }
 }
