@@ -788,7 +788,6 @@ export class WithphdComponent implements OnInit {
       this.categoryList2.g6.one_five_lakh.marks +
       this.categoryList2.g6.more_than_five.marks;
 
-    //cl2 - g7
 
     this.categoryList2.g7.grand_total =
       this.categoryList2.g7.patents_published.marks +
