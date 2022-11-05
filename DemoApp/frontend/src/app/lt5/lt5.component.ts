@@ -1,12 +1,18 @@
 import { Component, OnInit } from "@angular/core";
-
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: "app-lt5",
   templateUrl: "./lt5.component.html",
   styleUrls: ["./lt5.component.scss"],
 })
 export class Lt5Component implements OnInit {
-  constructor() {}
+  // constructor() {}
+
+  userForm: FormGroup | any;
+  minmax: any;
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
+
 
   categoryList = {
     g1: {
@@ -442,7 +448,14 @@ export class Lt5Component implements OnInit {
     },
   };
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const fb = this.fb;
+    this.userForm = fb.group({
+      minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    });
+  }
+
+  get f() { return this.userForm.controls; }
 
   async setmap() {
     await this.opt_data();
@@ -765,4 +778,21 @@ export class Lt5Component implements OnInit {
     }
   }
 
+  // mCheck(tag:string,min:number,max:number, data:any){
+  //   console.log(tag, min, max, data);
+
+  //   if(data<= min || data >= max){
+  //     this.toastr.error('everything is broken', 'Major Error', {
+  //       timeOut: 1000,
+  //     });
+
+  //   }
+  //   return true;
+  // }
+
+  async mToastMsg(tag: boolean, title: any, message: any) {
+    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+      timeOut: 3000,
+    });
+  }
 }

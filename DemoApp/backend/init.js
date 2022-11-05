@@ -25,8 +25,9 @@ connection.query('CREATE DATABASE IF NOT EXISTS sample', async() => {
   console.log('DB INITIALIZED')
 
   connection.query('CREATE TABLE IF NOT EXISTS sample.sample (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY (id))');
-  let m1= `CREATE TABLE IF NOT EXISTS staff (id int PRIMARY KEY,faculty_id varchar(255),faculty_name varchar(255),date_of_birth varchar(255),date_of_joining varchar(255),email_id varchar(255),mobile_number int,gender varchar(255))`
-
+  let m1=`CREATE TABLE IF NOT EXISTS staff (id int PRIMARY KEY,faculty_id varchar(255),faculty_name varchar(255),date_of_birth varchar(255),date_of_joining varchar(255),email_id varchar(255),mobile_number int,gender varchar(255),password varchar(255),cpassword varchar(255)
+  )`
+  
   connection.query(m1);
   console.log('staff > TABLE CREATED')
   console.log('TABLE CREATED');

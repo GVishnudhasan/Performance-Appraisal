@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +17,7 @@ import { Mt5Component } from './mt5/mt5.component';
 import { WithphdComponent } from './withphd/withphd.component';
 import { HodenggComponent } from './hodengg/hodengg.component';
 import { HodsnhComponent } from './hodsnh/hodsnh.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,14 @@ import { HodsnhComponent } from './hodsnh/hodsnh.component';
     HodsnhComponent
   ],
   imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule, 
+    ReactiveFormsModule
   ],
   providers: [MAPImapService,MInterfaceService],
   bootstrap: [AppComponent]

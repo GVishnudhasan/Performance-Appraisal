@@ -1,5 +1,17 @@
+.mcontainer {
+    top: 180px;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+}
+
 .bg_color {
     background-color: aqua;
+}
+
+table {
+    table-layout: auto;
+    width: 60%;
 }
 
 th,

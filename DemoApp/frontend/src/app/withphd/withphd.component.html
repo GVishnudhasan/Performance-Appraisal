@@ -1,3 +1,4 @@
+<div class="mcontainer">
 <div class="bg_color">
   <div class="header" style="text-align: center">
     <img style="width: 1000px" src="Screenshot 2022-09-10 212840.jpg" alt="" />
@@ -13,12 +14,11 @@
   <br />
   <br />
   <div *ngIf="active_flag == 0">
-    <div class="acad" style="text-align: center">
-      <hr />
-      <h3>Academic activities - 400</h3>
-      <a href="Ph.d_subcategory_aa.html">Click here to fill the sub-category</a>
-      <hr />
-    </div>
+    <div class="acad" style="text-align: center;">
+
+      <h1>Academic activities - 300</h1>
+
+  </div>
     <div>
       <div class="header" style="text-align: center">
         <img
@@ -1301,22 +1301,17 @@
         </tbody>
       </table>
 
-      <div class="form-group">
-        <div class="btn" (click)="setmap()">Submit</div>
-      </div>
     </div>
 
-    <div>
-      <div class="header" style="text-align: center">
-        <h1>K S R Institute For Engineering and Technology</h1>
-      </div>
+  <div>
+      
       <br />
       <br />
-      <div class="acad" style="text-align: center">
-        <hr />
-        <h3>Parameters & Guidelines</h3>
-        <hr />
-      </div>
+      <div class="acad" style="text-align: center;">
+        <br>
+        <h3>Academic activities - 300</h3>
+        <br>
+    </div>
 
       <table align="center" border="1" width="100%">
         <thead>
@@ -1379,20 +1374,27 @@
           </tr>
         </tbody>
       </table>
+      <div class="form-group">
+        <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
+    </div>
     </div>
   </div>
 
   <div *ngIf="active_flag == 1">
     <div class="bg_color">
       <table align="center" border="1" width="100%">
-        <div class="bg_color"></div>
+        <div class="acad" style="text-align: center;">
+          <h1>Skill Development Activities - 200</h1>
+      </div>
+      <table align="center" border="1" width="100%">
         <thead>
-          <tr>
-            <th>Skill Development Activities</th>
-            <th colspan="30">Total - 200</th>
-            <th>Marks obtained</th>
-          </tr>
+            <tr>
+                <th>Skill Development Activities</th>
+                <th colspan="30">Total - 200</th>
+                <th>Marks obtained</th>
+            </tr>
         </thead>
+      
         <tbody>
           <tr>
             <td colspan="40" align="center">
@@ -1633,15 +1635,11 @@
           </tr>
         </tbody>
       </table>
-    </div>
+  </table>
+  </div>
 
     <div class="acad" style="text-align: center">
-      <hr />
-      <h3>Skill Development Activities - 200</h3>
-      <a href="lessthan5_subcategory_sda.html"
-        >Click here to fill the sub-category</a
-      >
-      <hr />
+      <h1>Skill Development Activities - 200</h1>
     </div>
 
     <table align="center" border="1" width="100%">
@@ -1683,16 +1681,23 @@
         <th colspan="30" rowspan="5">Total:</th>
       </tfoot>
     </table>
+    <div class="form-group">
+      <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
   </div>
-</div>
-<table align="center" border="1" width="100%">
-  <thead>
-    <tr>
-      <th>Research & Development Activities</th>
-      <th colspan="30">Total - 200</th>
-      <th>Marks obtained</th>
-    </tr>
-  </thead>
+  </div>
+<div *ngIf="active_flag == 2">
+  <table align="center" border="1" width="100%">
+    <div class="acad" style="text-align: center;">
+      <h1>Research & Development Activities - 200</h1>
+  </div>
+  <table align="center" border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Research & Development Activities</th>
+            <th colspan="30">Total - 200</th>
+            <th>Marks obtained</th>
+        </tr>
+    </thead>
   <tbody>
     <tr>
       <td colspan="40" align="center">
@@ -1958,12 +1963,75 @@
     </tr>
   </tbody>
 </table>
+<div class="acad" style="text-align: center;">
+  <hr>
+      <h1>Research & Development Activities - 200</h1>
+  <hr>
+</div>
+
+<table align="center" border="1" width="100%">
+  <thead>
+      <tr>
+          <th>Academic Performance Parameters</th>
+          <th colspan="20">Max. Score</th>
+          <th colspan="20">Obtained Score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Certificate Courses Completed (NPTEL / SWAYAM / etc)</td>
+          <td colspan="20">30</td>
+          <td colspan="20">{{ categoryList2.g1.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>FDP /Workshop/Seminar attended</td>
+          <td colspan="20">20</td>
+          <td colspan="20">{{ categoryList2.g2.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>Journal Publications</td>
+          <td colspan="20">40</td>
+          <td colspan="20">{{ categoryList2.g3.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>Conference / Technical Book Publications</td>
+          <td colspan="20">20</td>
+          <td colspan="20">{{ categoryList2.g4.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>Seminar / Workshop proposals Submitted to Funding Agency</td>
+          <td colspan="20">20</td>
+          <td colspan="20">{{ categoryList2.g5.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>Grants Recieved from Funding Agencies</td>
+          <td colspan="20">40</td>
+          <td colspan="20">{{ categoryList2.g6.grand_total }}</td>
+      </tr>
+      <tr>
+          <td>PATENTS / Consultancy works / Entrepreneurial Initiatives</td>
+          <td colspan="20">30</td>
+          <td colspan="20">{{ categoryList2.g7.grand_total }}</td>
+      </tr>
+      
+  </tbody>
+  <tfoot>
+      <th colspan="30" rowspan="5">Total: </th>
+  </tfoot>
+</table>
 <div class="form-group">
   <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
 </div>
+</table>
+</div>
+
 
 <br />
 <br />
+<div *ngIf="active_flag == 3">
+  <div class="acad" style="text-align: center;">
+    <h1>Administrative & Extension Activities - 200</h1>
+</div>
 <table align="center" border="1" width="100%">
   <thead>
     <tr>
@@ -2082,15 +2150,9 @@
   </tbody>
 </table>
 
-<div class="form-group">
-  <div class="btn" (click)="setmap()">Submit</div>
-</div>
 <div class="acad" style="text-align: center">
   <hr />
-  <h3>Administrative & Extension Activities - 100</h3>
-  <a href="lessthan5_subcategory_aea.html"
-    >Click here to fill the sub-category</a
-  >
+  <h1>Administrative & Extension Activities - 100</h1>
   <hr />
 
   <table align="center" border="1" width="100%">
@@ -2130,6 +2192,9 @@
   <div class="form-group">
     <div class="btn" (click)="setmap()">Submit</div>
   </div>
+  </div>
+  </div>
+  <div *ngIf="active_flag == 4">
   <div class="acad" style="text-align: center">
     <hr />
     <h3>Rating by HoD, Director & Principal - 100</h3>
@@ -2211,11 +2276,6 @@
       </tr>
     </tbody>
   </table>
-  <div class="form-group">
-    <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">
-      Submit
-    </div>
-  </div>
   <div class="acad" style="text-align: center">
     <hr />
     <h3>Rating by HoD, Director & Principal</h3>
@@ -2256,4 +2316,10 @@
       <th colspan="30" rowspan="5">Total:</th>
     </tfoot>
   </table>
+  <div class="form-group">
+    <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
 </div>
+</div>
+</div>
+</div>
+
