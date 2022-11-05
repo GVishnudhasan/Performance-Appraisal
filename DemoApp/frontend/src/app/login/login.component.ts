@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.userForm = fb.group({
       email: fb.control('', [Validators.required, Validators.email, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
       password: fb.control('', [Validators.required, Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
-      minmax: fb.control('', [Validators.required, Validators.min(5), Validators.max(20)]),
+      minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     });
   }
 
