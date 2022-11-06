@@ -1,4 +1,13 @@
 <div class="mcontainer">
+<<<<<<< HEAD
+  <div class="bg_color">
+    <div class="header" style="text-align: center">
+      <img
+        style="width: 1000px"
+        src="Screenshot 2022-09-10 212840.jpg"
+        alt=""
+      />
+=======
     <div class="bg_color">
         <div class="header" style="text-align: center;">
             <img style="width: 1000px;" src="Screenshot 2022-09-10 212840.jpg" alt="">
@@ -1204,5 +1213,2278 @@
 
 
         </div>
+>>>>>>> a60a9731cbbb5482ffed33c543c10cd47be6e02a
     </div>
+    <br />
+    <br />
+    <div style="float: left">
+      <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
+    </div>
+    <div style="float: right">
+      <a (click)="mActive(true)" class="next">Next &raquo;</a>
+    </div>
+    <br />
+    <br />
+
+    <!-- G1 -->
+    <div *ngIf="active_flag == 0">
+      <div class="acad" style="text-align: center">
+        <h1>Academic activities - 400</h1>
+      </div>
+      <br />
+      <br />
+
+      <div>
+        <div class="acad" style="text-align: center">
+          <hr />
+          <h3>Parameters & Guidelines</h3>
+          <hr />
+        </div>
+
+        <table align="center" border="1" width="100%">
+          <thead>
+            <tr>
+              <th>Academic Performance Parameters</th>
+              <th colspan="20">Total - 400</th>
+              <th>Marks obtained in ODD-S1</th>
+              <th>Marks obtained in ODD-S2</th>
+              <th>Marks obtained in EVEN-S1</th>
+              <th>Marks obtained in EVEN-S1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="30" align="center">
+                <b>Standard of Class notes - 40</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Quality of class notes</td>
+              <td colspan="20">
+                {{ categoryList.g1.qty_of_class.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qty_of_class.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qty_of_class.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qty_of_class.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qty_of_class.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Question bank (Univ., 2 marks & 16 marks)</td>
+              <td colspan="20">{{ categoryList.g1.qb.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qb.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qb.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qb.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.qb.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Ref. Book / Univ. QP Problem solving</td>
+              <td colspan="20">{{ categoryList.g1.rf_book.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.rf_book.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.rf_book.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.rf_book.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g1.rf_book.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Preparation of video material - 20</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Quality of video material</td>
+              <td colspan="20">
+                {{ categoryList.g2.qty_of_videomaterial.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.qty_of_videomaterial.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.qty_of_videomaterial.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.qty_of_videomaterial.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.qty_of_videomaterial.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Preparation of video material</td>
+              <td colspan="20">
+                {{ categoryList.g2.prep_of_videomaterial.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.prep_of_videomaterial.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.prep_of_videomaterial.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.prep_of_videomaterial.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g2.prep_of_videomaterial.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Standard of IA / Assignment / Tutorial QP - 20</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>GATE / Ref. Book Questions</td>
+              <td colspan="20">
+                {{ categoryList.g3.gate_or_refbook.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.gate_or_refbook.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.gate_or_refbook.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.gate_or_refbook.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.gate_or_refbook.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Usage of Blooms Taxonomy</td>
+              <td colspan="20">
+                {{ categoryList.g3.usage_of_bt.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.usage_of_bt.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.usage_of_bt.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.usage_of_bt.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.usage_of_bt.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>On time submission of Question Papers</td>
+              <td colspan="20">
+                {{ categoryList.g3.on_time_sub_qp.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Innovation in Teaching & Learning - 20</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Preparation of PPT</td>
+              <td colspan="20">
+                {{ categoryList.g4.prep_of_ppt.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.prep_of_ppt.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.prep_of_ppt.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.prep_of_ppt.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.prep_of_ppt.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Using various Pedagogical teaching methods</td>
+              <td colspan="20">
+                {{ categoryList.g4.using_various_ptm.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.using_various_ptm.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.using_various_ptm.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.using_various_ptm.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g4.using_various_ptm.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center"><b>Students Feedback - 20</b></td>
+            </tr>
+
+            <tr>
+              <td>Mid-semester feedback</td>
+              <td colspan="20">
+                {{ categoryList.g5.mid_sem_fb.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.mid_sem_fb.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.mid_sem_fb.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.mid_sem_fb.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.mid_sem_fb.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>End-semester feedback</td>
+              <td colspan="20">
+                {{ categoryList.g5.end_sem_fb.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.end_sem_fb.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.end_sem_fb.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.end_sem_fb.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="5"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.end_sem_fb.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Academic Review Meeting feedback</td>
+              <td colspan="20">{{ categoryList.g5.arm_fb.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.arm_fb.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.arm_fb.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.arm_fb.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g5.arm_fb.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Submission of Course Files - 20</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>On time Submission</td>
+              <td colspan="20">
+                {{ categoryList.g6.on_time_sub.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.on_time_sub.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.on_time_sub.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.on_time_sub.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.on_time_sub.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Completeness of Course file</td>
+              <td colspan="20">
+                {{ categoryList.g6.comp_of_cf.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.comp_of_cf.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.comp_of_cf.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.comp_of_cf.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g6.comp_of_cf.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Performance in Internal Assessment - 80</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="25">
+                <li>1. If Pass % is <60% - zero points</li>
+                <li>
+                  2. Score = (pass % x 80) + increment/decrement in previous IA
+                  <br />
+                  Note: Only two IA-1 and IA-2 are considered
+                </li>
+              </td>
+              <td>
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g7.pass"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="30" align="center">
+                <b>Performance in End Semester Exams - 80</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="25">
+                <li>1. If Pass % is <60% - zero points</li>
+                <li>
+                  2. Score = (pass % x 80) + Average of increment/decrement in
+                  Internal Assesments
+                </li>
+              </td>
+              <td>
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g8.pass"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="30" align="center">
+                <b>Effectiveness of Lab conduction - 60</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Lab Manual Preparation</td>
+              <td colspan="20">
+                {{ categoryList.g9.lab_manual_prep.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.lab_manual_prep.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.lab_manual_prep.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.lab_manual_prep.es1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.lab_manual_prep.es2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Standard of Prelab and Postlab Questions and Conduction</td>
+              <td colspan="20">
+                {{ categoryList.g9.std_of_lab.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.std_of_lab.os1"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.std_of_lab.os2"
+                  maxlength="2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.std_of_lab.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.std_of_lab.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Content Beyond Syllabus</td>
+              <td colspan="20">
+                {{ categoryList.g9.content_beyond_syll.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.content_beyond_syll.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.content_beyond_syll.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.content_beyond_syll.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.content_beyond_syll.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>On time completion of Exercises</td>
+              <td colspan="20">
+                {{ categoryList.g9.on_time_comp.overall_total }}
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.on_time_comp.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.on_time_comp.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.on_time_comp.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="20"
+                  min="0"
+                  [(ngModel)]="categoryList.g9.on_time_comp.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="30" align="center">
+                <b>Impact of mentoring in academic performance - 40</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                Certification in NPTEL/MOOCS <br />
+                A = 2 * (No. of students completed courses/Total no. of
+                students) x 10
+              </td>
+              <td colspan="20">{{ categoryList.g10.a.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.a.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.a.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.a.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.a.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Performance in Internal Assessment (A) <br />
+                B = (No. of students pass/ Total no. of students) x 10
+              </td>
+              <td colspan="20">{{ categoryList.g10.b.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.b.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.b.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.b.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.b.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Performance in End semester Assessment(first class) <br />
+                C = (No. of students in first class/ Total no. of students) x 20
+              </td>
+              <td colspan="20">{{ categoryList.g10.c.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.c.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.c.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.c.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.c.es2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Performance in End semester Assessment(Distinction) <br />
+                D = 4 * (No. of students in Distinction /Total no. of students)
+                x 10
+              </td>
+              <td colspan="20">{{ categoryList.g10.d.overall_total }}</td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.d.os1"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.d.os2"
+                />
+              </td>
+              <td colspan="">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.d.es1"
+                />
+              </td>
+              <td colspan="20">
+                <input
+                  type="number"
+                  style="width: 30px"
+                  name="marks"
+                  required
+                  max="10"
+                  min="0"
+                  [(ngModel)]="categoryList.g10.d.es2"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="acad" style="text-align: center">
+          <br />
+          <h1>Academic Activities - 400</h1>
+          <br />
+        </div>
+
+        <table align="center" border="1" width="100%">
+          <thead>
+            <tr>
+              <th>Academic Performance Parameters</th>
+              <th colspan="20">Max. Score</th>
+              <th colspan="20">Obtained Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Standard of Class notes</td>
+              <td colspan="20">40</td>
+              <td colspan="20">{{ categoryList.g1.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Preparation of video materials</td>
+              <td colspan="20">20</td>
+              <td colspan="20">{{ categoryList.g2.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Standard of IA / Assignment / Tutorial QP</td>
+              <td colspan="20">20</td>
+              <td colspan="20">{{ categoryList.g3.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Innovation in Teaching and Learning</td>
+              <td colspan="20">20</td>
+              <td colspan="20">{{ categoryList.g4.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Students Feedback</td>
+              <td colspan="20">20</td>
+              <td colspan="20">{{ categoryList.g5.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Submission of Course files</td>
+              <td colspan="20">20</td>
+              <td colspan="20">{{ categoryList.g6.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Performance in Internal Assessments</td>
+              <td colspan="20">80</td>
+              <td colspan="20">{{ categoryList.g7.pass }}</td>
+            </tr>
+            <tr>
+              <td>Performance in End Semester Exams</td>
+              <td colspan="20">80</td>
+              <td colspan="20">{{ categoryList.g8.pass }}</td>
+            </tr>
+            <tr>
+              <td>Effectiveness in Lab conduction</td>
+              <td colspan="20">60</td>
+              <td colspan="20">{{ categoryList.g9.grand_total }}</td>
+            </tr>
+            <tr>
+              <td>Impact of mentoring in academic performance</td>
+              <td colspan="20">40</td>
+              <td colspan="20">{{ categoryList.g10.grand_total }}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <th colspan="30" rowspan="5">Total:</th>
+          </tfoot>
+        </table>
+      </div>
+      <div class="form-group">
+        <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">
+          Submit
+        </div>
+      </div>
+    </div>
+
+    <!-- G2 -->
+    <div *ngIf="active_flag == 1">
+      <div class="acad" style="text-align: center">
+        <h1>Skill Development Activities - 200</h1>
+      </div>
+      <br />
+      <br />
+      <div class="acad" style="text-align: center">
+        <hr />
+        <h3>Parameters & Guidelines</h3>
+        <hr />
+      </div>
+      <br />
+      <br />
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Skill Development Activities</th>
+            <th colspan="30">Total - 200</th>
+            <th>Marks obtained</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Industrial Training Undergone(Min. 2 Days)</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Training at Industry</td>
+            <td colspan="30">
+              {{ categoryList1.g1.training_at_industry.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g1.training_at_industry.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Training outcome (Guest Lecture, IPT, Project, consultancy etc)
+            </td>
+            <td colspan="30">
+              {{ categoryList1.g1.training_outcome.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g1.training_outcome.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Academic activities in collaboration with Industries</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Guest Lecture / Industrial Visit(each-15)</td>
+            <td colspan="30">
+              {{ categoryList1.g2.guest_lecture.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g2.guest_lecture.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Outcome achieved (Mini Project/Case Study/ Paper Presentation etc)
+              (each-5)
+            </td>
+            <td colspan="30">
+              {{ categoryList1.g2.outcome_achieved.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g2.outcome_achieved.marks"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="40" align="center">
+              <b>Initiatives on Industrial collaboration</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>MoU Signed with Industry</td>
+            <td colspan="30">
+              {{ categoryList1.g3.mou_signed.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g3.mou_signed.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Impact of Industrial collaboration through training to faculty,
+              IPT, VAC, Project, Guest Lecture, Consultancy etc.
+            </td>
+            <td colspan="30">
+              {{ categoryList1.g3.impact_of_ic.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g3.impact_of_ic.marks"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="40" align="center">
+              <b>Value Added Courses Conducted by Faculty(Min 30 Hours)</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>VAC conducted by the faculty team (Max. 3 Faculty)</td>
+            <td colspan="30">
+              {{ categoryList1.g4.vac_faculty_team.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g4.vac_faculty_team.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>VAC organised by the faculty in association with industry</td>
+            <td colspan="30">
+              {{ categoryList1.g4.vac_faculty_industry.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g4.vac_faculty_team.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              VAC organised joinedwith industry and resourses Sharing mode
+              (eg:15 hrs our faculty and remaining 15 hrs by experts from
+              industry)
+            </td>
+            <td colspan="30">
+              {{ categoryList1.g4.vac_industry_resources.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g4.vac_industry_resources.marks"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="40" align="center">
+              <b>Impact of mentoring in Skill Development</b>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td>
+              <li>
+                Impact of mentoring in Skill Development can be measured in term
+                of the following activities
+                <br />
+                <a>&ThickSpace; 1. Paper Presentation <br /></a>
+                <a
+                  >&ThickSpace; 2. Participation in any technical event <br
+                /></a>
+                <a>&ThickSpace; 3. Internship/IPT <br /></a>
+                <a>&ThickSpace; 4. Participation in VAC <br /></a>
+                <a
+                  >&ThickSpace; 5.Participation in project/Desing
+                  contest/Hackathon <br
+                /></a>
+              </li>
+            </td>
+            <td colspan="30">
+              {{ categoryList1.g5.impact_of_mentoring.overall_total }}
+            </td>
+            <td colspan="30">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g5.impact_of_mentoring.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              A = (No. of students in any of the three mentioned activities
+              /Total no. of students) x 40
+            </td>
+            <td colspan="30">{{ categoryList1.g5.a.overall_total }}</td>
+            <td colspan="30">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g5.a.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              B = (No. of students won prize in any of the activities /Total no.
+              of students) x 20
+            </td>
+            <td colspan="30">{{ categoryList1.g5.b.overall_total }}</td>
+            <td colspan="30">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList1.g5.b.marks"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="acad" style="text-align: center">
+        <h1>Skill Development Activities - 200</h1>
+      </div>
+
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Academic Performance Parameters</th>
+            <th colspan="20">Max. Score</th>
+            <th colspan="20">Obtained Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Industrial Training Undergone</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList1.g1.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Academic activities in collaboration with Industries</td>
+            <td colspan="20">40</td>
+            <td colspan="20">{{ categoryList1.g2.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Initiatives on Industrial collaboration</td>
+            <td colspan="20">60</td>
+            <td colspan="20">{{ categoryList1.g3.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Value Added Courses Conducted by Faculty</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList1.g4.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Impact of mentoring in Skill Development</td>
+            <td colspan="20">60</td>
+            <td colspan="20">{{ categoryList1.g5.grand_total }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th colspan="30" rowspan="5">Total:</th>
+        </tfoot>
+      </table>
+
+      <div class="form-group">
+        <div class="btn" (click)="setmap()">Submit</div>
+      </div>
+    </div>
+
+    <!-- G3 -->
+    <div *ngIf="active_flag == 2">
+      <div class="acad" style="text-align: center">
+        <h1>Research & Development Activities - 200</h1>
+      </div>
+      <br />
+      <br />
+      <div class="acad" style="text-align: center">
+        <hr />
+        <h3>Parameters & Guidelines</h3>
+        <hr />
+      </div>
+
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Research & Development Activities</th>
+            <th colspan="30">Total - 200</th>
+            <th>Marks obtained</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Certificate Course Completed(NPTEL/SWAYAM/etc)</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Course completion certificate</td>
+            <td colspan="30">
+              {{ categoryList2.g1.course_comp_cert.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g1.course_comp_cert.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Course completion certificate with Elite score and above</td>
+            <td colspan="30">
+              {{ categoryList2.g1.course_comp_cert_elite.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g1.course_comp_cert_elite.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>FDP(Minimum 5 Days)/Workshop/Seminar attended</b>
+            </td>
+          </tr>
+          <tr>
+            <td>FDP outside State</td>
+            <td colspan="30">{{ categoryList2.g2.fdp_out.overall_total }}</td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g2.fdp_out.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>FDP within State</td>
+            <td colspan="30">{{ categoryList2.g2.fdp_in.overall_total }}</td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g2.fdp_in.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Workshop/Seminar</td>
+            <td colspan="30">
+              {{ categoryList2.g2.workshop_seminar.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g2.workshop_seminar.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center"><b>Journal Publications</b></td>
+          </tr>
+          <tr>
+            <td>Peer Reviewed Journal(each)</td>
+            <td colspan="30">
+              {{ categoryList2.g3.peer_reviewed_journal.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g3.peer_reviewed_journal.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>UGC CARE Journal(each)</td>
+            <td colspan="30">
+              {{ categoryList2.g3.ugc_care_journal.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g3.ugc_care_journal.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Conference/Technical Book Publications(With ISBN Number)</b>
+            </td>
+          </tr>
+          <tr>
+            <td>National/International Conference</td>
+            <td colspan="30">
+              {{ categoryList2.g4.national_intl_conference.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g4.national_intl_conference.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Book/Book Chapter Publications</td>
+            <td colspan="30">
+              {{ categoryList2.g4.book_publication.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g4.book_publication.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Seminar/Workshop proposals submitted to Funding Agency</b>
+            </td>
+          </tr>
+          <tr>
+            <td>Proposal Submission</td>
+            <td colspan="30">
+              {{ categoryList2.g5.proposal_submission.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g5.proposal_submission.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Grant Recieved from Funding Agencies</b>
+            </td>
+          </tr>
+          <tr>
+            <td>Less than 1 Lakh(each-10)</td>
+            <td colspan="30">
+              {{ categoryList2.g6.less_than_one.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g6.less_than_one.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>More than 1 Lakh</td>
+            <td colspan="30">
+              {{ categoryList2.g6.more_than_one.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g6.more_than_one.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Patents / Consultancy works</b>
+            </td>
+          </tr>
+          <tr>
+            <td>Patents Published</td>
+            <td colspan="30">
+              {{ categoryList2.g7.patents_published.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g7.patents_published.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Consultancy work</td>
+            <td colspan="30">
+              {{ categoryList2.g7.consultancy_work.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList2.g7.consultancy_work.marks"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="acad" style="text-align: center">
+        <h1>Research & Development Activities - 200</h1>
+      </div>
+
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Academic Performance Parameters</th>
+            <th colspan="20">Max. Score</th>
+            <th colspan="20">Obtained Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Certificate Courses Completed (NPTEL / SWAYAM / etc)</td>
+            <td colspan="20">40</td>
+            <td colspan="20">{{ categoryList2.g1.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>FDP /Workshop/Seminar attended</td>
+            <td colspan="20">40</td>
+            <td colspan="20">{{ categoryList2.g2.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Journal Publications</td>
+            <td colspan="20">40</td>
+            <td colspan="20">{{ categoryList2.g3.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Conference / Technical Book Publications</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList2.g4.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Seminar / Workshop proposals Submitted to Funding Agency</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList2.g5.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Grants Recieved from Funding Agencies</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList2.g6.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>PATENTS / Consultancy works</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList2.g7.grand_total }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th colspan="30" rowspan="5">Total:</th>
+        </tfoot>
+      </table>
+
+      <div class="form-group">
+        <div class="btn" (click)="setmap()">Submit</div>
+      </div>
+    </div>
+
+    <!-- G4 -->
+    <div *ngIf="active_flag == 3">
+      <div class="acad" style="text-align: center">
+        <h1>Administrative & Extension Activities - 100</h1>
+      </div>
+      <br />
+      <br />
+      <div class="acad" style="text-align: center">
+        <hr />
+        <h3>Parameters & Guidelines</h3>
+        <hr />
+      </div>
+      <br />
+      <br />
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Administrative & Extension Activities</th>
+            <th colspan="30">Total - 200</th>
+            <th>Marks obtained</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="40" align="center">
+              <b
+                >Administrative Responsibilities (Departments & Institution
+                level)</b
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>Department Level Responsibility(each 15)</td>
+            <td colspan="30">
+              {{ categoryList3.g1.dept_lvl_resp.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g1.dept_lvl_resp.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Rating for the effectiveness by HoD</td>
+            <td colspan="30">
+              {{ categoryList3.g1.rating_for_eff_hod.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g1.rating_for_eff_hod.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Institutional level Responsibility</td>
+            <td colspan="30">
+              {{ categoryList3.g1.ins_lvl_resp.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g1.ins_lvl_resp.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Rating for the effectiveness by Principal</td>
+            <td colspan="30">
+              {{ categoryList3.g1.rating_for_eff_pric.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g1.rating_for_eff_pric.marks"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="40" align="center">
+              <b>Participation in Extension Activities</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Participation in Extension Activities conducted by NSS, NCC, UBA,
+              Yoga, eco Club, Rotary, JCI etc. (each 15)
+            </td>
+            <td colspan="30">
+              {{ categoryList3.g2.part_ext_act.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g2.part_ext_act.marks"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Any other Achivements(Specify if any)</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Awards recieved, 100% result, Guest lecture delivered, Resource
+              persons for FDP/Seminar/Workshop/training,Jury/Chief guest for
+              programs, BoS/DAC Member in other institution etc.
+            </td>
+            <td colspan="30">
+              {{ categoryList3.g3.awards_recieved.overall_total }}
+            </td>
+            <td colspan="">
+              <input
+                type="number"
+                style="width: 30px"
+                name="marks"
+                required
+                [(ngModel)]="categoryList3.g3.awards_recieved.marks"
+              />
+            </td>
+          </tr>
+
+          <div class="acad" style="text-align: center">
+            <h1>Administrative & Extension Activities - 100</h1>
+          </div>
+        </tbody>
+      </table>
+
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Academic Performance Parameters</th>
+            <th colspan="20">Max. Score</th>
+            <th colspan="20">Obtained Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Administrative Responsibilities (Departments & Institution level)
+            </td>
+            <td colspan="20">50</td>
+            <td colspan="20">{{ categoryList3.g1.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>
+              Participation in Extension Activities (NSS, NCC, UBA, Yoga, etc.)
+            </td>
+            <td colspan="20">30</td>
+            <td colspan="20">{{ categoryList3.g2.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Any other Achievement(Specify if any)</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList3.g3.grand_total }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th colspan="30" rowspan="5">Total:</th>
+        </tfoot>
+      </table>
+
+      <div class="form-group">
+        <div class="btn" (click)="setmap()">Submit</div>
+      </div>
+    </div>
+  </div>
 </div>
