@@ -1,11 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+
+
 @Component({
   selector: "app-lt5",
   templateUrl: "./lt5.component.html",
   styleUrls: ["./lt5.component.scss"],
 })
+
 export class Lt5Component implements OnInit {
   // constructor() {}
 
@@ -451,7 +454,23 @@ export class Lt5Component implements OnInit {
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
-      minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
     });
   }
 
