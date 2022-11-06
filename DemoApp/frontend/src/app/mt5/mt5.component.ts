@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-mt5",
@@ -6,8 +8,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./mt5.component.scss"],
 })
 export class Mt5Component implements OnInit {
-  constructor() {}
+  // constructor() {}
 
+  userForm: FormGroup | any;
+  minmax: any;
+  
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
+  
   categoryList = {
     g1: {
       qty_of_class: {
@@ -508,8 +515,16 @@ export class Mt5Component implements OnInit {
   };
   
 
+  ngOnInit(): void {
+    const fb = this.fb;
+    this.userForm = fb.group({
+      minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    });
+  }
 
-  ngOnInit(): void {}
+  get f() { return this.userForm.controls; }
+
+
   async setmap() {
     await this.opt_data();
     console.log(this.categoryList);
@@ -829,6 +844,12 @@ export class Mt5Component implements OnInit {
     }else{
       this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
     }
+  }
+
+  async mToastMsg(tag: boolean, title: any, message: any) {
+    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+      timeOut: 3000,
+    });
   }
 }
 
