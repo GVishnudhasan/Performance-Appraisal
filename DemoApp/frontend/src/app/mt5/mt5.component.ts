@@ -1,6 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import {
+  FormBuilder,
+  FormGroup,
+  FormControl,
+  Validators,
+  FormArray,
+} from "@angular/forms";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-mt5",
@@ -12,9 +18,9 @@ export class Mt5Component implements OnInit {
 
   userForm: FormGroup | any;
   minmax: any;
-  
+
   constructor(private fb: FormBuilder, private toastr: ToastrService) {}
-  
+
   categoryList = {
     g1: {
       qty_of_class: {
@@ -60,7 +66,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 10,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g3: {
       gate_or_refbook: {
@@ -87,7 +93,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 5,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g4: {
       prep_of_ppt: {
@@ -106,7 +112,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 10,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g5: {
       mid_sem_fb: {
@@ -133,7 +139,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 10,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g6: {
       on_time_sub: {
@@ -152,18 +158,18 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 10,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g7: {
       pass: 0,
       score: 0,
     },
-  
+
     g8: {
       pass: 0,
       score: 0,
     },
-  
+
     g9: {
       lab_manual_prep: {
         os1: 0,
@@ -197,7 +203,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 20,
       },
-      grand_total:0,
+      grand_total: 0,
     },
     g10: {
       a: {
@@ -232,7 +238,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 20,
       },
-      grand_total:0,
+      grand_total: 0,
     },
   };
   categoryList1 = {
@@ -247,12 +253,10 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 5,
       },
-      training_outcome:{
-        marks:0,
-        sum:0,
+      training_outcome: {
+        marks: 0,
+        sum: 0,
         overall_total: 10,
-
-
       },
       grand_total: 0,
     },
@@ -357,15 +361,14 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 30,
       },
-      sci_ind_wos_journal:{
-        marks:0,
-        sum:0,
-        overall_total:40
+      sci_ind_wos_journal: {
+        marks: 0,
+        sum: 0,
+        overall_total: 40,
       },
       grand_total: 0,
     },
 
-  
     g4: {
       national_intl_conference: {
         marks: 0,
@@ -398,7 +401,7 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 40,
       },
-      
+
       more_than_five: {
         marks: 0,
         sum: 0,
@@ -427,12 +430,9 @@ export class Mt5Component implements OnInit {
         sum: 0,
         overall_total: 20,
       },
-      
 
       grand_total: 0,
     },
-
-
   };
   categoryList3 = {
     g1: {
@@ -475,7 +475,7 @@ export class Mt5Component implements OnInit {
       grand_total: 0,
     },
   };
-  categoryList4= {
+  categoryList4 = {
     g1: {
       dept_lvl_resp: {
         marks: 0,
@@ -483,29 +483,28 @@ export class Mt5Component implements OnInit {
         overall_total: 20,
       },
     },
-    g2:{
+    g2: {
       doc_main_reg_upd: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g3:{
-    
+    g3: {
       inv_dept_dev: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g4:{
+    g4: {
       comp_wrk_withot_follow: {
         marks: 0,
         sum: 0,
         overall_total: 20,
       },
     },
-    g5:{
+    g5: {
       rating_princi_manage: {
         marks: 0,
         sum: 0,
@@ -513,17 +512,196 @@ export class Mt5Component implements OnInit {
       },
     },
   };
-  
 
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
-      minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_class_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_class_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_class_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qb_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qb_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qb_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qb_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      rf_book_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      rf_book_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      rf_book_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      rf_book_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_videomaterial_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_videomaterial_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_videomaterial_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      qty_of_videomaterial_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_videomaterial_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_videomaterial_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_videomaterial_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_videomaterial_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      gate_or_refbook_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      gate_or_refbook_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      gate_or_refbook_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      gate_or_refbook_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      usage_of_bt_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      usage_of_bt_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      usage_of_bt_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      usage_of_bt_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      on_time_sub_qp_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      on_time_sub_qp_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      on_time_sub_qp_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      on_time_sub_qp_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_ppt_os1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_ppt_os2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_ppt_es1: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
+      prep_of_ppt_es2: fb.control("", [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(20),
+      ]),
     });
   }
 
-  get f() { return this.userForm.controls; }
-
+  get f() {
+    return this.userForm.controls;
+  }
 
   async setmap() {
     await this.opt_data();
@@ -558,8 +736,7 @@ export class Mt5Component implements OnInit {
       this.categoryList.g1.qb.sum +
       this.categoryList.g1.rf_book.sum;
 
-    
-      this.categoryList.g2.qty_of_videomaterial.sum =
+    this.categoryList.g2.qty_of_videomaterial.sum =
       (this.categoryList.g2.qty_of_videomaterial.os1 +
         this.categoryList.g2.qty_of_videomaterial.os2 +
         this.categoryList.g2.qty_of_videomaterial.es1 +
@@ -740,7 +917,7 @@ export class Mt5Component implements OnInit {
       this.categoryList.g10.c.sum +
       this.categoryList.g10.b.sum +
       this.categoryList.g10.d.sum;
-      this.categoryList1.g1.grand_total =
+    this.categoryList1.g1.grand_total =
       this.categoryList1.g1.training_tier_1_ind.marks +
       this.categoryList1.g1.training_tier_2_tier_3_ind.marks +
       this.categoryList1.g1.training_outcome.marks;
@@ -769,7 +946,7 @@ export class Mt5Component implements OnInit {
       this.categoryList1.g5.impact_of_mentoring.marks +
       this.categoryList1.g5.a.marks +
       this.categoryList1.g5.b.marks;
-    
+
     //cl2 - g1
 
     this.categoryList2.g1.grand_total =
@@ -788,8 +965,7 @@ export class Mt5Component implements OnInit {
     this.categoryList2.g3.grand_total =
       this.categoryList2.g3.peer_reviewed_journal.marks +
       this.categoryList2.g3.ugc_care_journal.marks;
-      this.categoryList2.g3.sci_ind_wos_journal.marks;
-
+    this.categoryList2.g3.sci_ind_wos_journal.marks;
 
     //cl2 - g4
 
@@ -814,10 +990,10 @@ export class Mt5Component implements OnInit {
     this.categoryList2.g7.grand_total =
       this.categoryList2.g7.patents_published.marks +
       this.categoryList2.g7.consultancy_work_less.marks;
-      this.categoryList2.g7.consultancy_work_more.marks;
-      this.categoryList2.g7.init_tow_start.marks;
+    this.categoryList2.g7.consultancy_work_more.marks;
+    this.categoryList2.g7.init_tow_start.marks;
 
-      this.categoryList3.g1.grand_total =
+    this.categoryList3.g1.grand_total =
       this.categoryList3.g1.dept_lvl_resp.marks +
       this.categoryList3.g1.ins_lvl_resp.marks +
       this.categoryList3.g1.rating_for_eff_hod.marks +
@@ -832,28 +1008,25 @@ export class Mt5Component implements OnInit {
 
     this.categoryList3.g3.grand_total =
       this.categoryList3.g3.awards_recieved.marks;
-
-
   }
 
   active_flag = 0;
   max_list = 5;
-  mActive(arg:any){
-    if(arg){
-      this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
-    }else{
-      this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
+  mActive(arg: any) {
+    if (arg) {
+      this.active_flag =
+        this.active_flag < this.max_list
+          ? this.active_flag + 1
+          : this.active_flag;
+    } else {
+      this.active_flag =
+        this.active_flag > 0 ? this.active_flag - 1 : this.active_flag;
     }
   }
 
   async mToastMsg(tag: boolean, title: any, message: any) {
-    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+    await this.toastr[tag ? "success" : "error"](title, message, {
       timeOut: 3000,
     });
   }
 }
-
-
-
-  
-    
