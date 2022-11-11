@@ -67,7 +67,8 @@
                                         </div>
                                 </td>
                             <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="20" min="0"
-                                    [(ngModel)]="categoryList.g1.qty_of_class.os2"formControlName="qty_of_class_os2">       
+                                    [(ngModel)]="categoryList.g1.qty_of_class.os2"
+                                    formControlName="qty_of_class_os2">       
                                     <div class="invalid-feedback">
                                         <div *ngIf="f.qty_of_class_os2.touched && f.qty_of_class_os2.errors?.required">
                                             Number Required
@@ -95,7 +96,7 @@
                                                     Minimum required marks is 0.
                                                 </div>
                                             </div>
-                                    ></td>
+                                    </td>
                             <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="20"
                                     min="0" [(ngModel)]="categoryList.g1.qty_of_class.es2"
                                     formControlName="qty_of_class_es2">
@@ -192,7 +193,7 @@
                                     </td>
                             <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
                                     [(ngModel)]="categoryList.g1.qb.os2"
-                                    formControlName="qty_of_class_os2">       
+                                    formControlName="rf_book_os2">       
                                             <div class="invalid-feedback">
                                                 <div *ngIf="f.rf_book_os2.touched && f.rf_book_os2.errors?.required">
                                                     Number Required
@@ -236,19 +237,7 @@
                                                 </div>
                                     </td>
                         </tr>
-                        <tr>
-                            <td>Ref. Book / Univ. QP Problem solving</td>
-                            <td colspan="20">{{categoryList.g1.rf_book.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g1.rf_book.os1"></td>
-                            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g1.rf_book.os2"></td>
-                            <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g1.rf_book.es1"></td>
-                            <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
-                                    min="0" [(ngModel)]="categoryList.g1.rf_book.es2"></td>
-                        </tr>
-    
+                        
                         <tr>
                             <td colspan="30" align="center"><b>Preparation of video material - 20</b></td>
                         </tr>
@@ -257,13 +246,52 @@
                             <td>Quality of video material</td>
                             <td colspan="20">{{categoryList.g2.qty_of_videomaterial.overall_total}}</td>
                             <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.os1">
+                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.os1"
+                                    formControlName="qty_of_videomaterial_os1">
+                                            <div class="invalid-feedback">
+                                                <div *ngIf="f.qty_of_videomaterial_os1.touched && f.qty_of_videomaterial_os1.errors?.required">
+                                                    Number Required
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_os1.hasError('max')">
+                                                    Maximum required marks is 20.
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_os1.hasError('min')">
+                                                    Minimum required marks is 0.
+                                                </div>
+                                                </div>
+                                    
                             </td>
                             <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.os2">
+                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.os2"
+                                    formControlName="qty_of_videomaterial_os2">
+                                            <div class="invalid-feedback">
+                                                <div *ngIf="f.qty_of_videomaterial_os2.touched && f.qty_of_videomaterial_os1.errors?.required">
+                                                    Number Required
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_os2.hasError('max')">
+                                                    Maximum required marks is 20.
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_os2.hasError('min')">
+                                                    Minimum required marks is 0.
+                                                </div>
+                                                </div>
                             </td>
                             <td colspan=""><input type="number" style="width: 30px;" name="marks" required max="10" min="0"
-                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.es1">
+                                    [(ngModel)]="categoryList.g2.qty_of_videomaterial.es1"
+                                    formControlName="qty_of_videomaterial_es1">
+                                            <div class="invalid-feedback">
+                                                <div *ngIf="f.qty_of_videomaterial_es1.touched && f.qty_of_videomaterial_os1.errors?.required">
+                                                    Number Required
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_es1.hasError('max')">
+                                                    Maximum required marks is 20.
+                                                </div>
+                                                <div *ngIf="f.qty_of_videomaterial_es1.hasError('min')">
+                                                    Minimum required marks is 0.
+                                                </div>
+                                                </div>
+                                    
+                                    >
                             </td>
                             <td colspan="20"><input type="number" style="width: 30px;" name="marks" required max="10"
                                     min="0" [(ngModel)]="categoryList.g2.qty_of_videomaterial.es2"></td>

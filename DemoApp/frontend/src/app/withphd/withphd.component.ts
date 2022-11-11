@@ -819,7 +819,5 @@ export class WithphdComponent implements OnInit {
         }else{
           this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
         }
-
-
   }
 }
