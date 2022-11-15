@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-hodengg",
@@ -6,7 +8,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./hodengg.component.scss"],
 })
 export class HodenggComponent implements OnInit {
-  constructor() {}
+  
+  userForm: FormGroup | any;
+  minmax: any;
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
+
 
   categoryList = {
     g1: {
@@ -429,7 +435,31 @@ export class HodenggComponent implements OnInit {
     grand_total: 0,
   };
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const fb = this.fb;
+    this.userForm = fb.group({
+      qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      qb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      rf_book_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      qty_of_videomaterial_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    });
+    
+  }
 
   async setmap() {
     await this.opt_data();
@@ -632,6 +662,8 @@ export class HodenggComponent implements OnInit {
       this.categoryList2.g10.training.marks;
   }
 
+  get f() { return this.userForm.controls; }
+
   active_flag = 0;
   max_list = 4;
   mActive(arg:any){
@@ -640,5 +672,11 @@ export class HodenggComponent implements OnInit {
     }else{
       this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
     }
+  }
+
+  async mToastMsg(tag: boolean, title: any, message: any) {
+    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+      timeOut: 3000,
+    });
   }
 }
