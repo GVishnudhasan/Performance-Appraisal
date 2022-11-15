@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  build_version: 'v1.5',
+  production: true,
+  appurl: 'http://localhost:3000',
 };
