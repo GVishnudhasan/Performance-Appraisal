@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-hodsnh',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HodsnhComponent implements OnInit {
 
-  constructor() { }
+  //constructor() { }
+
+  userForm: FormGroup | any;
+  minmax: any;
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
+
   categoryList = {
     g1: {
       qty_of_class: {
@@ -366,7 +373,81 @@ export class HodsnhComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    const fb = this.fb;
+    this.userForm = fb.group({
+      qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_class_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rf_book_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      qty_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      pass: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      pass_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_in: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      workshop_seminar: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      ugc_care_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    })
   }
+
+
+  get f() { return this.userForm.controls; }
+  
   async setmap() {
     await this.opt_data();
     console.log(this.categoryList);
@@ -570,5 +651,11 @@ export class HodsnhComponent implements OnInit {
     }else{
       this.active_flag = (this.active_flag > 0) ? this.active_flag - 1 : this.active_flag;
     }
+  }
+
+  async mToastMsg(tag: boolean, title: any, message: any) {
+    await this.toastr[ (tag) ? 'success' : 'error'](title, message, {
+      timeOut: 3000,
+    });
   }
 }
