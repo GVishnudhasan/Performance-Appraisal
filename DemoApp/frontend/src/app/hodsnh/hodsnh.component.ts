@@ -460,7 +460,7 @@ export class HodsnhComponent implements OnInit {
       membership: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       grants_rec: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       awards: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-      membrship1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      membership1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_cocurr: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       val_added: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_extracurr: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
