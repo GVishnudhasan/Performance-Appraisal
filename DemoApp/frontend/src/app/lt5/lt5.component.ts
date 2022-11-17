@@ -12,7 +12,11 @@ import { ToastrService } from 'ngx-toastr';
 export class Lt5Component implements OnInit {
   // constructor() {}
 
-  userForm: FormGroup | any;
+  academic_Activities: FormGroup | any;
+  skillDevelopment_Activities: FormGroup | any;
+  researchDevelopment_Activities: FormGroup | any;
+  administrativeExtension_Activities: FormGroup | any;
+
   minmax: any;
   constructor(private fb: FormBuilder, private toastr: ToastrService) { }
 
@@ -453,7 +457,7 @@ export class Lt5Component implements OnInit {
 
   ngOnInit(): void {
     const fb = this.fb;
-    this.userForm = fb.group({
+    this.academic_Activities = fb.group({
       qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -548,6 +552,10 @@ export class Lt5Component implements OnInit {
       d_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       d_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       d_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    }),
+
+    this.skillDevelopment_Activities = fb.group({
+
       training_at_industry: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       training_outcome: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       guest_lecture: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -559,6 +567,9 @@ export class Lt5Component implements OnInit {
       vac_industry_resources: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       a: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       b: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    }),
+
+    this.researchDevelopment_Activities = fb.group({
       course_comp_cert: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       course_comp_cert_elite: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -573,6 +584,9 @@ export class Lt5Component implements OnInit {
       more_than_one: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       patents_published: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       consultancy_work: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    }),
+
+    this.administrativeExtension_Activities = fb.group({
       dept_lvl_resp: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       rating_for_eff_hod: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       ins_lvl_resp: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -580,10 +594,13 @@ export class Lt5Component implements OnInit {
       part_ext_act: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       awards_recieved: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
 
-    });
+    })
   }
 
-  get f() { return this.userForm.controls; }
+  get f() { return this.academic_Activities.controls; }
+  get f1() { return this.skillDevelopment_Activities.controls; }
+  get f2() { return this.researchDevelopment_Activities.controls; }
+  get f3() { return this.administrativeExtension_Activities.controls; }
 
   async setmap() {
     await this.opt_data();
