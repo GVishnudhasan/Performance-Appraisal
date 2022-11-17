@@ -2618,117 +2618,7 @@
             </div>
         </div>
         </div>
-        <!-- G5 -->
-        <div *ngIf="active_flag == 4">
-            <div class="acad" style="text-align: center;">
-                <h1>Rating by Principal - 100</h1>
-            </div>
-            <br>
-            <br>
-
-            <div>
-                <div class="acad" style="text-align: center;">
-                    <hr>
-                    <h3>Parameters & Guidelines</h3>
-                    <hr>
-                </div>
-    
-            <table align="center" border="1" width="100%">
-                <thead>
-                    <tr>
-                        <th>Parameters</th>
-                        <th colspan="20">HoD</th>
-                        <th colspan="20">Director</th>
-                        <th colspan="20">Max. Score</th>
-                        <th colspan="20">Obtained Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dedication and Taking responsibility by self</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20">25</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                    <tr>
-                        <td>Document Maintenance and regular Updation</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20">25</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                    <tr>
-                        <td>Involvement towards department development</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20">25</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                    <tr>
-                        <td>Completion of work on time without follow up</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                        <td colspan="20">25</td>
-                        <td colspan="20"><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-
-
-                </tbody>
-                <tfoot>
-                    <th colspan="30" rowspan="5">Total: </th>
-                </tfoot>
-
-            </table>
-
-            <!-- <div class="acad" style="text-align: center;">
-                <br>
-                <h1>Rating by Principal</h1>
-                <br>
-            </div>
-
-            <table align="center" border="1" width="100%">
-                <thead>
-                    <tr>
-                        <th>Rating by Principal</th>
-                        <th colspan="30">Total - 200</th>
-                        <th>Marks obtained</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-
-                    <tr>
-                        <td>Dedication and Taking responsibility by self</td>
-                        <td colspan="30">25</td>
-                        <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                    <tr>
-                        <td>Document Maintenance and ragular Updation</td>
-                        <td colspan="30">25</td>
-                        <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                    <tr>
-                        <td>Involvement towards department development</td>
-                        <td colspan="30">25</td>
-                        <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>Complention of work on time without follow up</td>
-                        <td colspan="30">25</td>
-                        <td colspan=""><input type="number" style="width: 30px;" name="marks" required></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="form-group" onclick="window.location.href = 'HOD.html';">
-                <input type="submit" value="SUBMIT" class="btn">
-            </div>
-        </div>
-        Note -->
-        <!-- <div class="note">
+     <!-- <div class="note">
             <h4>Note:</h4>
             <h4>Overall Performance is generated based on the following conditions:</h4>
             <li>If total consolidated score % is <b>85%</b> and above then the result is <b>EXCELLENT</b></li>
@@ -2738,4 +2628,151 @@
             <li>If total consolidated score % is <b>below 60%</b> and then the result is <b>POOR</b></li>
         </div>
     </div>
-</div> --> 
+</div>  -->
+
+
+
+
+<div *ngIf="active_flag == 4">
+    <div class="acad" style="text-align: center;">
+        <br>
+        <h1>Rating by HoD, Director & Principal - 100</h1>
+        <br>
+    </div>
+
+    <table align="center" border="1" width="100%">
+        <tbody>
+            <tr>
+                <td>Dedication and Taking responsibility by self</td>
+                <td colspan="30">{{categoryList4.g1.dept_lvl_resp.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20" min="0"
+                        [(ngModel)]="categoryList4.g1.dept_lvl_resp.marks"
+                        formControlName="dept_lvl_resp">
+                                    <div class="invalid-feedback">
+                                        <div *ngIf="
+                                                f.dept_lvl_resp.touched && f.dept_lvl_resp.errors?.required
+                                              ">
+                                            Number Required
+                                        </div>
+                                        <div *ngIf="f.dept_lvl_resp.hasError('max')">
+                                            Maximum required marks is 20.
+                                        </div>
+                                        <div *ngIf="f.dept_lvl_resp.hasError('min')">
+                                            Minimum required marks is 0.
+                                        </div>
+                                    </div>
+                        </td>
+
+            </tr>
+            <tr>
+                <td>Document Maintenance and regular Updation</td>
+                <td colspan="30">{{categoryList4.g2.doc_main_reg_upd.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20" min="0"
+                        [(ngModel)]="categoryList4.g2.doc_main_reg_upd.marks"
+                        formControlName="doc_main_reg_upd">
+                                    <div class="invalid-feedback">
+                                        <div *ngIf="
+                                                f.doc_main_reg_upd.touched && f.doc_main_reg_upd.errors?.required
+                                              ">
+                                            Number Required
+                                        </div>
+                                        <div *ngIf="f.doc_main_reg_upd.hasError('max')">
+                                            Maximum required marks is 20.
+                                        </div>
+                                        <div *ngIf="f.doc_main_reg_upd.hasError('min')">
+                                            Minimum required marks is 0.
+                                        </div>
+                                        </div>
+                                        </td>
+
+            </tr>
+            <tr>
+                <td>Involvement towards department development</td>
+                <td colspan="30">{{categoryList4.g3.inv_dept_dev.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20" min="0"
+                        [(ngModel)]="categoryList4.g3.inv_dept_dev.marks"
+                        formControlName="inv_dept_dev">
+                                    <div class="invalid-feedback">
+                                        <div *ngIf="
+                                                f.inv_dept_dev.touched && f.inv_dept_dev.errors?.required
+                                              ">
+                                            Number Required
+                                        </div>
+                                        <div *ngIf="f.inv_dept_dev.hasError('max')">
+                                            Maximum required marks is 20.
+                                        </div>
+                                        <div *ngIf="f.inv_dept_dev.hasError('min')">
+                                            Minimum required marks is 0.
+                                        </div>
+                                        </div>
+                                        
+                        </td>
+
+            </tr>
+            <tr>
+                <td>Completion of work on time without follow up</td>
+                <td colspan="30">{{categoryList4.g4.comp_wrk_withot_follow.overall_total}}</td>
+                <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20" min="0"
+                        [(ngModel)]="categoryList4.g4.comp_wrk_withot_follow.marks"
+                        formControlName="comp_wrk_withot_follow">
+                                    <div class="invalid-feedback">
+                                        <div *ngIf="
+                                                f.comp_wrk_withot_follow.touched && f.comp_wrk_withot_follow.errors?.required
+                                              ">
+                                            Number Required
+                                        </div>
+                                        <div *ngIf="f.comp_wrk_withot_follow.hasError('max')">
+                                            Maximum required marks is 20.
+                                        </div>
+                                        <div *ngIf="f.comp_wrk_withot_follow.hasError('min')">
+                                            Minimum required marks is 0.
+                                        </div>
+                                        </div>
+                        </td>
+
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div class="acad" style="text-align: center;">
+        <hr>
+        <h1>Rating by HoD, Director & Principal</h1>
+        <hr>
+    </div>
+
+    <table align="center" border="1" width="100%">
+        <tbody>
+            <tr>
+                <td>Dedication and Taking responsibility by self</td>
+                <td colspan="20">20</td>
+                <td colspan="20">{{categoryList4.g1.dept_lvl_resp.marks}}</td>
+            </tr>
+            <tr>
+                <td>Document Maintenance and regular Updation</td>
+                <td colspan="20">20</td>
+                <td colspan="20">{{categoryList4.g2.doc_main_reg_upd.marks}}</td>
+            </tr>
+            <tr>
+                <td>Involvement towards department development</td>
+                <td colspan="20">20</td>
+                <td colspan="20">{{categoryList4.g3.inv_dept_dev.marks}}</td>
+            </tr>
+            <tr>
+                <td>Completion of work on time without follow up</td>
+                <td colspan="20">20</td>
+                <td colspan="20">{{categoryList4.g4.comp_wrk_withot_follow.marks}}</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <th colspan="30" rowspan="5">Total: </th>
+        </tfoot>
+
+    </table>
+    <div class="form-group">
+        <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
+    </div>
+</div>
+</div>
+</div>
