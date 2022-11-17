@@ -508,7 +508,6 @@ export class WithphdComponent implements OnInit {
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
-      // Academic Activities
       qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -636,7 +635,21 @@ export class WithphdComponent implements OnInit {
       comp_wrk_withot_follow: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       rating_princi_manage: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
 
-      
+
+
+
+      training_at_t1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      training_at_t23: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      training_outcome: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      guest_lecture: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mou_signed: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      impact_of_ic: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      vac_faculty_team: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      vac_faculty_teams: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      vac_industry_resources: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      impact_of_mentoring: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      a: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      b: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     })
   }
 
