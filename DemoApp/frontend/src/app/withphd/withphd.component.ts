@@ -508,6 +508,7 @@ export class WithphdComponent implements OnInit {
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
+      // Academic Activities
       qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -602,6 +603,40 @@ export class WithphdComponent implements OnInit {
       d_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       d_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       d_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      // Research and Development
+      course_comp_cert: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      course_comp_cert_elite: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_in: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      workshop_seminar: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      peer_reviewed_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      ugc_care_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      sci_ind_wos_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      national_intl_conference: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      book_publication: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      proposal_submission: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      less_than_one: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      one_five_lakh: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      more_than_five: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      patents_published: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      consultancy_work_less: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
+      //AEA
+      dept_lvl_resp: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rating_for_eff_hod: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      ins_lvl_resp: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rating_for_eff_pric: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      part_ext_act: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      awards_recieved: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
+      //Rating by HoD, Prinipal
+      dept_lvl_resp_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      inv_dept_dev: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_wrk_withot_follow: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      rating_princi_manage: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      
     })
   }
 
