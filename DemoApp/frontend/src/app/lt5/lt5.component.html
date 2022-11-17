@@ -3,24 +3,24 @@
     <div class="header" style="text-align: center">
       <img style="width: 1000px" src="Screenshot 2022-09-10 212840.jpg" alt="" />
     </div>
-    <br />
-    <br />
+    <br>
+    <br>
     <div style="float: left">
       <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
     </div>
     <div style="float: right">
       <a (click)="mActive(true)" class="next">Next &raquo;</a>
     </div>
-    <br />
-    <br />
+    <br>
+    <br>
 
     <!-- G1 -->
     <div *ngIf="active_flag == 0">
       <div class="acad" style="text-align: center">
         <h1>Academic activities - 400</h1>
       </div>
-      <br />
-      <br />
+      <br>
+      <br>
 
       <div class="acad" style="text-align: center">
         <hr />
@@ -2018,7 +2018,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g1.training_at_industry.marks" formControlName="training_at_industry" />
+                [(ngModel)]="categoryList1.g1.training_at_industry.marks" formControlName="training_at_industry">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.training_at_industry.touched &&
@@ -2044,7 +2044,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g1.training_outcome.marks" formControlName="training_outcome" />
+                [(ngModel)]="categoryList1.g1.training_outcome.marks" formControlName="training_outcome">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.training_outcome.touched &&
@@ -2074,7 +2074,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g2.guest_lecture.marks" formControlName="guest_lecture" />
+                [(ngModel)]="categoryList1.g2.guest_lecture.marks" formControlName="guest_lecture">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.guest_lecture.touched && f.guest_lecture.errors?.required
@@ -2100,7 +2100,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g2.outcome_achieved.marks" formControlName="outcome_achieved" />
+                [(ngModel)]="categoryList1.g2.outcome_achieved.marks" formControlName="outcome_achieved">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.outcome_achieved.touched &&
@@ -2131,7 +2131,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g3.mou_signed.marks" formControlName="mou_signed" />
+                [(ngModel)]="categoryList1.g3.mou_signed.marks" formControlName="mou_signed">
               <div class="invalid-feedback">
                 <div *ngIf="f.mou_signed.touched && f.mou_signed.errors?.required">
                   Number Required
@@ -2155,7 +2155,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g3.impact_of_ic.marks" formControlName="impact_of_ic" />
+                [(ngModel)]="categoryList1.g3.impact_of_ic.marks" formControlName="impact_of_ic">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.impact_of_ic.touched && f.impact_of_ic.errors?.required
@@ -2185,7 +2185,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g4.vac_faculty_team.marks" formControlName="vac_faculty_team" />
+                [(ngModel)]="categoryList1.g4.vac_faculty_team.marks" formControlName="vac_faculty_team">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.vac_faculty_team.touched &&
@@ -2209,7 +2209,7 @@
             </td>
             <td colspan="">
               <input type="number" style="width: 40px" name="marks" required
-                [(ngModel)]="categoryList1.g4.vac_faculty_industry.marks" formControlName="vac_faculty_teams" />
+                [(ngModel)]="categoryList1.g4.vac_faculty_industry.marks" formControlName="vac_faculty_teams">
               <div class="invalid-feedback">
                 <div *ngIf="
                     f.vac_faculty_teams.touched &&
