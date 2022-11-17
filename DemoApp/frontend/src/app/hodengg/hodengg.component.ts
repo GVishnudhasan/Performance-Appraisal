@@ -184,12 +184,13 @@ export class HodenggComponent implements OnInit {
       grand_total: 0,
     },
     g3: {
-      sci_indexed_journal: {
+      
+      ugc_care_journal: {
         marks: 0,
         sum: 0,
         overall_total: 40,
       },
-      ugc_care_journal: {
+      sci_indexed_journal: {
         marks: 0,
         sum: 0,
         overall_total: 40,
@@ -222,6 +223,11 @@ export class HodenggComponent implements OnInit {
         marks: 0,
         sum: 0,
         overall_total: 40,
+      },
+      one_five_lakh:{
+        marks:0,
+        sum:0,
+        overall_total:40,
       },
       more_than_five: {
         marks: 0,
@@ -384,14 +390,14 @@ export class HodenggComponent implements OnInit {
       },
     },
     g3: {
-      cert_courses: {
+      cert_courses1: {
         marks: 0,
         sum: 0,
         overall_total: 10,
       },
     },
     g4: {
-      membership: {
+      membership1: {
         marks: 0,
         sum: 0,
         overall_total: 10,
@@ -457,6 +463,98 @@ export class HodenggComponent implements OnInit {
       qty_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      prep_of_videomaterial_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_videomaterial_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      gate_or_refbook_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      usage_of_bt_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_qp_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prep_of_ppt_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      using_various_ptm_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      using_various_ptm_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      mid_sem_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      end_sem_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      arm_fb_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      on_time_sub_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_of_cf_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      pass: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      pass_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fdp_in: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      workshop_seminar: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      ugc_care_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      sci_ind_wos_journal: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      national_intl_conference: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      book_publication: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      proposal_submission: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      less_than_one: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      one_five_lakh: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      more_than_five: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      overall_dept_result:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      placement_higher_edu:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      fds_sttp:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      cert_courses:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      guest_lecture:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      funding_prop:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      conf_book_proposal:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      journal_publ:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+      ind_training:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+
+      mou_signed:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      impact_of_ind:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      training:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      membership:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      patent_prod_dev:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      grants_rec:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      awards:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      inplant_training:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
+      project_intern:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      cert_courses1:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      membership1:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      part_in_project:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      part_in_cocurr:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      val_added:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      part_in_extracurr:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      prizes:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
+
+
+
     });
     
   }
