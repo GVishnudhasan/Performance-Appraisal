@@ -26,7 +26,7 @@
                     <hr>
                 </div>
 
-                <form [formGroup]="userForm">
+                <form [formGroup]="academic_Activities">
                     <table align="center" border="1" width="100%">
                         <thead>
                             <tr>
@@ -1278,6 +1278,9 @@
                 <h3>Parameters & Guidelines</h3>
                 <hr>
             </div>
+
+            <form [formGroup]="researchDevelopment_Activities">
+                </form>
             <table align="center" border="1" width="100%">
                 <thead>
                     <tr>
@@ -1301,13 +1304,13 @@
                             <input type="number" style="width: 40px" name="marks" required
                                 [(ngModel)]="categoryList2.g1.fdp_out.marks" formControlName="fdp_out" />
                             <div class="invalid-feedback">
-                                <div *ngIf="f.fdp_out.touched && f.fdp_out.errors?.required">
+                                <div *ngIf="f1.fdp_out.touched && f1.fdp_out.errors?.required">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.fdp_out.hasError('max')">
+                                <div *ngIf="f1.fdp_out.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.fdp_out.hasError('min')">
+                                <div *ngIf="f1.fdp_out.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1322,13 +1325,13 @@
                             <input type="number" style="width: 40px" name="marks" required
                                 [(ngModel)]="categoryList2.g1.fdp_in.marks" formControlName="fdp_in" />
                             <div class="invalid-feedback">
-                                <div *ngIf="f.fdp_in.touched && f.fdp_in.errors?.required">
+                                <div *ngIf="f1.fdp_in.touched && f1.fdp_in.errors?.required">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.fdp_in.hasError('max')">
+                                <div *ngIf="f1.fdp_in.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.fdp_in.hasError('min')">
+                                <div *ngIf="f1.fdp_in.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1345,12 +1348,12 @@
                                 formControlName="workshop_seminar" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.workshop_seminar.touched &&
-                                f.workshop_seminar.errors?.required
+                                f1.workshop_seminar.touched &&
+                                f1.workshop_seminar.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.workshop_seminar.hasError('max')">
+                                <div *ngIf="f1.workshop_seminar.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
                                 <div *ngIf="f.workshop_seminar.hasError('min')">
@@ -1374,15 +1377,15 @@
                                 formControlName="ugc_care_journal" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.ugc_care_journal.touched &&
-                                f.ugc_care_journal.errors?.required
+                                f1.ugc_care_journal.touched &&
+                                f1.ugc_care_journal.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.ugc_care_journal.hasError('max')">
+                                <div *ngIf="f1.ugc_care_journal.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.ugc_care_journal.hasError('min')">
+                                <div *ngIf="f1.ugc_care_journal.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1396,15 +1399,15 @@
                                 formControlName="sci_ind_wos_journal">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.sci_ind_wos_journal.touched &&
-                                        f.sci_ind_wos_journal.errors?.required
+                                        f1.sci_ind_wos_journal.touched &&
+                                        f1.sci_ind_wos_journal.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.sci_ind_wos_journal.hasError('max')">
+                                <div *ngIf="f1.sci_ind_wos_journal.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.sci_ind_wos_journal.hasError('min')">
+                                <div *ngIf="f1.sci_ind_wos_journal.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1426,15 +1429,15 @@
                                 formControlName="national_intl_conference" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.national_intl_conference.touched &&
-                                f.national_intl_conference.errors?.required
+                                f1.national_intl_conference.touched &&
+                                f1.national_intl_conference.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.national_intl_conference.hasError('max')">
+                                <div *ngIf="f1.national_intl_conference.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.national_intl_conference.hasError('min')">
+                                <div *ngIf="f1.national_intl_conference.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1451,15 +1454,15 @@
                                 formControlName="book_publication" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.book_publication.touched &&
-                                f.book_publication.errors?.required
+                                f1.book_publication.touched &&
+                                f1.book_publication.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.book_publication.hasError('max')">
+                                <div *ngIf="f1.book_publication.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.book_publication.hasError('min')">
+                                <div *ngIf="f1.book_publication.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1481,15 +1484,15 @@
                                 formControlName="proposal_submission" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.proposal_submission.touched &&
-                                f.proposal_submission.errors?.required
+                                f1.proposal_submission.touched &&
+                                f1.proposal_submission.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.proposal_submission.hasError('max')">
+                                <div *ngIf="f1.proposal_submission.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.proposal_submission.hasError('min')">
+                                <div *ngIf="f1.proposal_submission.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1510,14 +1513,14 @@
                                 [(ngModel)]="categoryList2.g5.less_than_one.marks" formControlName="less_than_one" />
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                f.less_than_one.touched && f.less_than_one.errors?.required
+                                f1.less_than_one.touched && f1.less_than_one.errors?.required
                               ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.less_than_one.hasError('max')">
+                                <div *ngIf="f1.less_than_one.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.less_than_one.hasError('min')">
+                                <div *ngIf="f1.less_than_one.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1530,14 +1533,14 @@
                                 [(ngModel)]="categoryList2.g5.one_five_lakh.marks" formControlName="one_five_lakh">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                    f.one_five_lakh.touched && f.one_five_lakh.errors?.required
+                                    f1.one_five_lakh.touched && f1.one_five_lakh.errors?.required
                                   ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.one_five_lakh.hasError('max')">
+                                <div *ngIf="f1.one_five_lakh.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.one_five_lakh.hasError('min')">
+                                <div *ngIf="f1.one_five_lakh.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1550,14 +1553,14 @@
                                 [(ngModel)]="categoryList2.g5.more_than_five.marks" formControlName="more_than_five">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.more_than_five.touched && f.more_than_five.errors?.required
+                                        f1.more_than_five.touched && f1.more_than_five.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.more_than_five.hasError('max')">
+                                <div *ngIf="f1.more_than_five.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.more_than_five.hasError('min')">
+                                <div *ngIf="f1.more_than_five.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1627,6 +1630,8 @@
                 <h3>Parameters & Guidelines</h3>
                 <hr>
             </div>
+
+            <form [formGroup]="firstDevelopment_Activities"></form>
             <br>
             <br>
             <table align="center" border="1" width="100%">
@@ -1651,14 +1656,14 @@
                                 formControlName="overall_firstyear_result">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.overall_firstyear_result && f.overall_firstyear_result.errors?.required
+                                        f2.overall_firstyear_result && f2.overall_firstyear_result.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.overall_firstyear_result.hasError('max')">
+                                <div *ngIf="f2.overall_firstyear_result.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.overall_firstyear_result.hasError('min')">
+                                <div *ngIf="f2.overall_firstyear_result.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1675,14 +1680,14 @@
                                 formControlName="overall_dept_result">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                            f.overall_dept_result && f.overall_dept_result.errors?.required
+                                            f2.overall_dept_result && f2.overall_dept_result.errors?.required
                                           ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.overall_dept_result.hasError('max')">
+                                <div *ngIf="f2.overall_dept_result.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.overall_dept_result.hasError('min')">
+                                <div *ngIf="f2.overall_dept_result.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1699,14 +1704,14 @@
                                 [(ngModel)]="categoryList3.g2.fds_sttp.marks" formControlName="fdp_sttp">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.fdp_sttp && f.fdp_sttp.errors?.required
+                                        f2.fdp_sttp && f2.fdp_sttp.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.fdp_sttp.hasError('max')">
+                                <div *ngIf="f2.fdp_sttp.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.fdp_sttp.hasError('min')">
+                                <div *ngIf="f2.fdp_sttp.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1722,14 +1727,14 @@
                                 [(ngModel)]="categoryList3.g3.cert_courses.marks" formControlName="cert_courses">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.cert_courses && f.cert_courses.errors?.required
+                                        f2.cert_courses && f2.cert_courses.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.cert_courses.hasError('max')">
+                                <div *ngIf="f2.cert_courses.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.cert_courses.hasError('min')">
+                                <div *ngIf="f2.cert_courses.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1748,14 +1753,14 @@
                                 [(ngModel)]="categoryList3.g4.guest_lecture.marks" formControlName="guest_lecture">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.guest_lecture && f.guest_lecture.errors?.required
+                                        f2.guest_lecture && f2.guest_lecture.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.guest_lecture.hasError('max')">
+                                <div *ngIf="f2.guest_lecture.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.guest_lecture.hasError('min')">
+                                <div *ngIf="f2.guest_lecture.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1771,14 +1776,14 @@
                                 [(ngModel)]="categoryList3.g5.funding_prop.marks" formControlName="funding_prop">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.funding_prop && f.funding_prop.errors?.required
+                                        f2.funding_prop && f2.funding_prop.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.funding_prop.hasError('max')">
+                                <div *ngIf="f2.funding_prop.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.funding_prop.hasError('min')">
+                                <div *ngIf="f2.funding_prop.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1798,14 +1803,14 @@
                                 formControlName="conf_book_proposal">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.conf_book_proposal && f.conf_book_proposal.errors?.required
+                                        f2.conf_book_proposal && f2.conf_book_proposal.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.conf_book_proposal.hasError('max')">
+                                <div *ngIf="f2.conf_book_proposal.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.conf_book_proposal.hasError('min')">
+                                <div *ngIf="f2.conf_book_proposal.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1826,14 +1831,14 @@
                                 [(ngModel)]="categoryList3.g7.journal_publ.marks" formControlName="journal_publ">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.journal_publ && f.journal_publ.errors?.required
+                                        f2.journal_publ && f2.journal_publ.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.journal_publ.hasError('max')">
+                                <div *ngIf="f2.journal_publ.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.journal_publ.hasError('min')">
+                                <div *ngIf="f2.journal_publ.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1848,14 +1853,14 @@
                                 [(ngModel)]="categoryList3.g8.membership.marks" formControlName="membership">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.membership && f.membership.errors?.required
+                                        f2.membership && f2.membership.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.membership.hasError('max')">
+                                <div *ngIf="f2.membership.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.membership.hasError('min')">
+                                <div *ngIf="f2.membership.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1873,14 +1878,14 @@
                                 [(ngModel)]="categoryList3.g9.grants_rec.marks" formControlName="grants_rec">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.grants_rec && f.grants_rec.errors?.required
+                                        f2.grants_rec && f2.grants_rec.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.grants_rec.hasError('max')">
+                                <div *ngIf="f2.grants_rec.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.grants_rec.hasError('min')">
+                                <div *ngIf="f2.grants_rec.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -1897,14 +1902,14 @@
                                 [(ngModel)]="categoryList3.g10.awards.marks" formControlName="awards">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.awards && f.awards.errors?.required
+                                        f2.awards && f2.awards.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.awards.hasError('max')">
+                                <div *ngIf="f2.awards.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.awards.hasError('min')">
+                                <div *ngIf="f2.awards.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -2004,6 +2009,8 @@
                 <h3>Parameters & Guidelines</h3>
                 <hr>
             </div>
+
+            <form [formGroup]="StudentDevelopment_Activities"></form>
             <table align="center" border="1" width="100%">
                 <thead>
                     <tr>
@@ -2027,14 +2034,14 @@
                                 [(ngModel)]="categoryList4.g1.membership.marks" formControlName="membership1">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.membership1 && f.membership1.errors?.required
+                                        f3.membership1 && f3.membership1.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.membership1.hasError('max')">
+                                <div *ngIf="f3.membership1.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.membership1.hasError('min')">
+                                <div *ngIf="f3.membership1.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -2064,14 +2071,14 @@
                                 [(ngModel)]="categoryList4.g2.part_in_cocurr.marks" formControlName="part_in_cocurr">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.part_in_cocurr && f.part_in_cocurr.errors?.required
+                                        f3.part_in_cocurr && f3.part_in_cocurr.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.part_in_cocurr.hasError('max')">
+                                <div *ngIf="f3.part_in_cocurr.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.part_in_cocurr.hasError('min')">
+                                <div *ngIf="f3.part_in_cocurr.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -2088,14 +2095,14 @@
                                 [(ngModel)]="categoryList4.g3.val_added.marks" formControlName="val_added">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.val_added && f.val_added.errors?.required
+                                        f3.val_added && f3.val_added.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.val_added.hasError('max')">
+                                <div *ngIf="f3.val_added.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.val_added.hasError('min')">
+                                <div *ngIf="f3.val_added.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -2121,14 +2128,14 @@
                                 formControlName="part_in_extracurr">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.part_in_extracurr && f.part_in_extracurr.errors?.required
+                                        f3.part_in_extracurr && f3.part_in_extracurr.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.part_in_extracurr.hasError('max')">
+                                <div *ngIf="f3.part_in_extracurr.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.part_in_extracurr.hasError('min')">
+                                <div *ngIf="f3.part_in_extracurr.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>
@@ -2145,14 +2152,14 @@
                                 [(ngModel)]="categoryList4.g5.prizes.marks" formControlName="prizes">
                             <div class="invalid-feedback">
                                 <div *ngIf="
-                                        f.prizes && f.prizes.errors?.required
+                                        f3.prizes && f3.prizes.errors?.required
                                       ">
                                     Number Required
                                 </div>
-                                <div *ngIf="f.prizes.hasError('max')">
+                                <div *ngIf="f3.prizes.hasError('max')">
                                     Maximum required marks is 20.
                                 </div>
-                                <div *ngIf="f.prizes.hasError('min')">
+                                <div *ngIf="f3.prizes.hasError('min')">
                                     Minimum required marks is 0.
                                 </div>
                             </div>

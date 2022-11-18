@@ -11,7 +11,10 @@ export class HodsnhComponent implements OnInit {
 
   //constructor() { }
 
-  userForm: FormGroup | any;
+  academic_Activities: FormGroup | any;
+  researchDevelopment_Activities: FormGroup | any;
+  firstDevelopment_Activities: FormGroup | any;
+  StudentDevelopment_Activities: FormGroup | any;
   minmax: any;
   constructor(private fb: FormBuilder, private toastr: ToastrService) {}
 
@@ -375,7 +378,7 @@ export class HodsnhComponent implements OnInit {
   ngOnInit(): void {
 
     const fb = this.fb;
-    this.userForm = fb.group({
+    this.academic_Activities = fb.group({
       qty_of_class_os1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_os2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       qty_of_class_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -438,6 +441,9 @@ export class HodsnhComponent implements OnInit {
       comp_of_cf_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       pass: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       pass_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    }),
+    this.researchDevelopment_Activities = fb.group({
+    
       fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       fdp_in: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       workshop_seminar: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -449,6 +455,8 @@ export class HodsnhComponent implements OnInit {
       less_than_one: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       one_five_lakh: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       more_than_five: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+    }),
+    this.firstDevelopment_Activities = fb.group({
       overall_firstyear_result: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       overall_dept_result: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       fds_sttp: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -460,17 +468,22 @@ export class HodsnhComponent implements OnInit {
       membership: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       grants_rec: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       awards: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+
+    }),
+    this.StudentDevelopment_Activities= fb.group({
       membership1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_cocurr: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       val_added: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_extracurr: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       prizes: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-    })
+    });
   }
 
 
-  get f() { return this.userForm.controls; }
-  
+  get f() { return this.academic_Activities.controls; }
+  get f1() { return this.researchDevelopment_Activities.controls; }
+  get f2() { return this.firstDevelopment_Activities.controls; }
+  get f3() { return this.StudentDevelopment_Activities.controls; }
   async setmap() {
     await this.opt_data();
     console.log(this.categoryList);
