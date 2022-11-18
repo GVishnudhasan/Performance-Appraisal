@@ -441,6 +441,38 @@ export class HodenggComponent implements OnInit {
     grand_total: 0,
   };
 
+  categoryList4= {
+    g1: {
+      dept_lvl_resp: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g2:{
+      doc_main_reg_upd: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g3:{
+    
+      inv_dept_dev: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+    g4:{
+      comp_wrk_withot_follow: {
+        marks: 0,
+        sum: 0,
+        overall_total: 20,
+      },
+    },
+  };
+
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
@@ -551,6 +583,11 @@ export class HodenggComponent implements OnInit {
       val_added:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_extracurr:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       prizes:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      dept_lvl_resp:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      doc_main_reg_upd:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      inv_dept_dev:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      comp_wrk_withot_follow:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      
       
 
 
