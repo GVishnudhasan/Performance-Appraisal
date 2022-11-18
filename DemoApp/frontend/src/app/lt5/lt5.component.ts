@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
-
 @Component({
   selector: "app-lt5",
   templateUrl: "./lt5.component.html",
@@ -17,9 +16,7 @@ export class Lt5Component implements OnInit {
   researchDevelopment_Activities: FormGroup | any;
   administrativeExtension_Activities: FormGroup | any;
 
-  minmax: any;
   constructor(private fb: FormBuilder, private toastr: ToastrService) { }
-
 
   categoryList = {
     g1: {
@@ -594,7 +591,7 @@ export class Lt5Component implements OnInit {
       part_ext_act: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       awards_recieved: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
 
-    })
+    });
   }
 
   get f() { return this.academic_Activities.controls; }
@@ -941,3 +938,5 @@ export class Lt5Component implements OnInit {
     });
   }
 }
+
+
