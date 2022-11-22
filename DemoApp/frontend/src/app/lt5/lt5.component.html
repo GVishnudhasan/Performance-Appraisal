@@ -1,31 +1,31 @@
 <div class="mcontainer">
   <div class="bg_color">
     <div class="header" style="text-align: center">
-      <img style="width: 1000px" src="Screenshot 2022-09-10 212840.jpg" alt="" />
+      <!-- <img style="width: 1000px" src="Screenshot 2022-09-10 212840.jpg" alt="" /> -->
     </div>
-    <br />
-    <br />
+    <br>
+    <br>
     <div style="float: left">
       <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
     </div>
     <div style="float: right">
       <a (click)="mActive(true)" class="next">Next &raquo;</a>
     </div>
-    <br />
-    <br />
+    <br>
+    <br>
 
     <!-- G1 -->
     <div *ngIf="active_flag == 0">
       <div class="acad" style="text-align: center">
         <h1>Academic activities - 400</h1>
       </div>
-      <br />
-      <br />
+      <br>
+      <br>
 
       <div class="acad" style="text-align: center">
-        <hr />
+        <hr>
         <h3>Parameters & Guidelines</h3>
-        <hr />
+        <hr>
       </div>
 
       <form [formGroup]="academic_Activities">
@@ -1248,7 +1248,7 @@
                 <li>1. If Pass % is <60% - zero points</li>
                 <li>
                   2. Score = (pass % x 80) + increment/decrement in previous IA
-                  <br />
+                  <br>
                   Note: Only two IA-1 and IA-2 are considered
                 </li>
               </td>
@@ -1626,7 +1626,7 @@
 
             <tr>
               <td>
-                Certification in NPTEL/MOOCS <br />
+                Certification in NPTEL/MOOCS <br>
                 A = 2 * (No. of students completed courses/Total no. of
                 students) x 10
               </td>
@@ -1696,7 +1696,7 @@
             </tr>
             <tr>
               <td>
-                Performance in Internal Assessment (A) <br />
+                Performance in Internal Assessment (A) <br>
                 B = (No. of students pass/ Total no. of students) x 10
               </td>
               <td colspan="20">
@@ -1766,7 +1766,7 @@
             <tr>
               <td>
                 Performance in End semester Assessment(first class)
-                <br />
+                <br>
                 C = (No. of students in first class/ Total no. of students) x 20
               </td>
               <td colspan="20">
@@ -1836,7 +1836,7 @@
             <tr>
               <td>
                 Performance in End semester Assessment(Distinction)
-                <br />
+                <br>
                 D = 4 * (No. of students in Distinction /Total no. of students)
                 x 10
               </td>
@@ -1908,9 +1908,9 @@
         </table>
       </form>
       <div class="acad" style="text-align: center">
-        <br />
+        <br>
         <h1>Academic Activities - 400</h1>
-        <br />
+        <br>
       </div>
 
       <table align="center" border="1" width="100%">
@@ -2011,7 +2011,7 @@
                 <b>Industrial Training Undergone(Min. 2 Days)</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>Training at Industry</td>
               <td colspan="30">
@@ -2067,7 +2067,7 @@
                 <b>Academic activities in collaboration with Industries</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>Guest Lecture / Industrial Visit(each-15)</td>
               <td colspan="30">
@@ -2118,13 +2118,13 @@
                 </div>
               </td>
             </tr>
-  
+
             <tr>
               <td colspan="40" align="center">
                 <b>Initiatives on Industrial collaboration</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>MoU Signed with Industry</td>
               <td colspan="30">
@@ -2172,13 +2172,13 @@
                 </div>
               </td>
             </tr>
-  
+
             <tr>
               <td colspan="40" align="center">
                 <b>Value Added Courses Conducted by Faculty(Min 30 Hours)</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>VAC conducted by the faculty team (Max. 3 Faculty)</td>
               <td colspan="30">
@@ -2238,7 +2238,8 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList1.g4.vac_industry_resources.marks" formControlName="vac_industry_resources" />
+                  [(ngModel)]="categoryList1.g4.vac_industry_resources.marks"
+                  formControlName="vac_industry_resources" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f1.vac_industry_resources.touched &&
@@ -2255,25 +2256,24 @@
                 </div>
               </td>
             </tr>
-  
+
             <tr>
               <td colspan="40" align="center">
                 <b>Impact of mentoring in Skill Development</b>
               </td>
             </tr>
-            <tr></tr>
             <tr>
               <td>
                 <li>
                   Impact of mentoring in Skill Development can be measured in term
                   of the following activities
-                  <br />
-                  <a>&ThickSpace; 1. Paper Presentation <br /></a>
-                  <a>&ThickSpace; 2. Participation in any technical event <br /></a>
-                  <a>&ThickSpace; 3. Internship/IPT <br /></a>
-                  <a>&ThickSpace; 4. Participation in VAC <br /></a>
+                  <br>
+                  <a>&ThickSpace; 1. Paper Presentation <br></a>
+                  <a>&ThickSpace; 2. Participation in any technical event <br></a>
+                  <a>&ThickSpace; 3. Internship/IPT <br></a>
+                  <a>&ThickSpace; 4. Participation in VAC <br></a>
                   <a>&ThickSpace; 5.Participation in project/Desing
-                    contest/Hackathon <br /></a>
+                    contest/Hackathon <br></a>
                 </li>
               </td>
               <td colspan="30">
@@ -2349,45 +2349,45 @@
       <div class="acad" style="text-align: center">
         <h1>Skill Development Activities - 200</h1>
       </div>
-        <table align="center" border="1" width="100%">
-          <thead>
-            <tr>
-              <th>Academic Performance Parameters</th>
-              <th colspan="20">Max. Score</th>
-              <th colspan="20">Obtained Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Industrial Training Undergone</td>
-              <td colspan="20">20</td>
-              <td colspan="20">{{ categoryList1.g1.grand_total }}</td>
-            </tr>
-            <tr>
-              <td>Academic activities in collaboration with Industries</td>
-              <td colspan="20">40</td>
-              <td colspan="20">{{ categoryList1.g2.grand_total }}</td>
-            </tr>
-            <tr>
-              <td>Initiatives on Industrial collaboration</td>
-              <td colspan="20">60</td>
-              <td colspan="20">{{ categoryList1.g3.grand_total }}</td>
-            </tr>
-            <tr>
-              <td>Value Added Courses Conducted by Faculty</td>
-              <td colspan="20">20</td>
-              <td colspan="20">{{ categoryList1.g4.grand_total }}</td>
-            </tr>
-            <tr>
-              <td>Impact of mentoring in Skill Development</td>
-              <td colspan="20">60</td>
-              <td colspan="20">{{ categoryList1.g5.grand_total }}</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <th colspan="30" rowspan="5">Total:</th>
-          </tfoot>
-        </table>
+      <table align="center" border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Academic Performance Parameters</th>
+            <th colspan="20">Max. Score</th>
+            <th colspan="20">Obtained Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Industrial Training Undergone</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList1.g1.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Academic activities in collaboration with Industries</td>
+            <td colspan="20">40</td>
+            <td colspan="20">{{ categoryList1.g2.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Initiatives on Industrial collaboration</td>
+            <td colspan="20">60</td>
+            <td colspan="20">{{ categoryList1.g3.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Value Added Courses Conducted by Faculty</td>
+            <td colspan="20">20</td>
+            <td colspan="20">{{ categoryList1.g4.grand_total }}</td>
+          </tr>
+          <tr>
+            <td>Impact of mentoring in Skill Development</td>
+            <td colspan="20">60</td>
+            <td colspan="20">{{ categoryList1.g5.grand_total }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th colspan="30" rowspan="5">Total:</th>
+        </tfoot>
+      </table>
 
       <div class="form-group">
         <div class="btn" (click)="setmap()">Submit</div>
@@ -2399,15 +2399,15 @@
       <div class="acad" style="text-align: center">
         <h1>Research & Development Activities - 200</h1>
       </div>
-      <br />
-      <br />
+      <br>
+      <br>
       <div class="acad" style="text-align: center">
-        <hr />
+        <hr>
         <h3>Parameters & Guidelines</h3>
-        <hr />
+        <hr>
       </div>
 
-      <form [formGroup]="skillDevelopment_Activities">
+      <form [formGroup]="researchDevelopment_Activities">
         <table align="center" border="1" width="100%">
           <thead>
             <tr>
@@ -2422,7 +2422,7 @@
                 <b>Certificate Course Completed(NPTEL/SWAYAM/etc)</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>Course completion certificate</td>
               <td colspan="30">
@@ -2454,7 +2454,8 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList2.g1.course_comp_cert_elite.marks" formControlName="course_comp_cert_elite" />
+                  [(ngModel)]="categoryList2.g1.course_comp_cert_elite.marks"
+                  formControlName="course_comp_cert_elite" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f2.course_comp_cert_elite.touched &&
@@ -2503,8 +2504,8 @@
                 {{ categoryList2.g2.fdp_in.overall_total }}
               </td>
               <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required [(ngModel)]="categoryList2.g2.fdp_in.marks"
-                  formControlName="fdp_in" />
+                <input type="number" style="width: 40px" name="marks" required
+                  [(ngModel)]="categoryList2.g2.fdp_in.marks" formControlName="fdp_in" />
                 <div class="invalid-feedback">
                   <div *ngIf="f2.fdp_in.touched && f2.fdp_in.errors?.required">
                     Number Required
@@ -2871,7 +2872,7 @@
                   level)</b>
               </td>
             </tr>
-  
+
             <tr>
               <td>Department Level Responsibility(each 15)</td>
               <td colspan="30">
@@ -2964,7 +2965,7 @@
                 </div>
               </td>
             </tr>
-  
+
             <tr>
               <td colspan="40" align="center">
                 <b>Participation in Extension Activities</b>
@@ -3017,7 +3018,7 @@
                     ">
                     Number Required
                   </div>
-                  <div *ngIf="f3.awards_recievedhasError('max')">
+                  <div *ngIf="f3.awards_recieved.hasError('max')">
                     Maximum required marks is 20.
                   </div>
                   <div *ngIf="f3.awards_recieved.hasError('min')">

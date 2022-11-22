@@ -14,6 +14,7 @@ export class WithphdComponent implements OnInit {
   skillDevelopment_Activities: FormGroup | any;
   researchDevelopment_Activities: FormGroup | any;
   administrativeExtension_Activities: FormGroup | any;
+  ratingByHoDPrincipal: FormGroup | any;
 
 
   minmax: any;
@@ -478,6 +479,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
     g2:{
       doc_main_reg_upd: {
@@ -485,6 +487,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
     g3:{
     
@@ -493,6 +496,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
     g4:{
       comp_wrk_withot_follow: {
@@ -500,6 +504,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
     g5:{
       rating_princi_manage: {
@@ -507,6 +512,7 @@ export class WithphdComponent implements OnInit {
         sum: 0,
         overall_total: 20,
       },
+      grand_total: 0,
     },
   };
 
@@ -649,15 +655,18 @@ export class WithphdComponent implements OnInit {
       mou_signed: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       impact_of_ic: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_faculty_team: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-      vac_faculty_teams: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      vac_faculty_industry: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_industry_resources: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       impact_of_mentoring: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       a: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       b: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      }),
 
 
        //Rating by HoD, Prinipal
+       this.ratingByHoDPrincipal = fb.group({
        dept_lvl_resp_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+       doc_main_reg_upd: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
        inv_dept_dev: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
        comp_wrk_withot_follow: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
        rating_princi_manage: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -668,6 +677,7 @@ export class WithphdComponent implements OnInit {
   get f1() { return this.skillDevelopment_Activities.controls; }
   get f2() { return this.researchDevelopment_Activities.controls; }
   get f3() { return this.administrativeExtension_Activities.controls; }
+  get f4() { return this.ratingByHoDPrincipal.controls; }
 
 
   async setmap() {

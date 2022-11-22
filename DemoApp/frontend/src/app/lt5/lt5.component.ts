@@ -550,7 +550,6 @@ export class Lt5Component implements OnInit {
       d_es1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       d_es2: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     }),
-
     this.skillDevelopment_Activities = fb.group({
 
       training_at_industry: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -559,6 +558,7 @@ export class Lt5Component implements OnInit {
       outcome_achieved: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       mou_signed: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       impact_of_ic: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      impact_of_mentoring: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_faculty_team: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_faculty_teams: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_industry_resources: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),

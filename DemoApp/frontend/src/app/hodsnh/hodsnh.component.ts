@@ -442,6 +442,8 @@ export class HodsnhComponent implements OnInit {
       pass: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       pass_1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     }),
+
+
     this.researchDevelopment_Activities = fb.group({
     
       fdp_out: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -456,6 +458,8 @@ export class HodsnhComponent implements OnInit {
       one_five_lakh: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       more_than_five: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     }),
+
+
     this.firstDevelopment_Activities = fb.group({
       overall_firstyear_result: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       overall_dept_result: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -470,6 +474,8 @@ export class HodsnhComponent implements OnInit {
       awards: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
 
     }),
+
+    
     this.StudentDevelopment_Activities= fb.group({
       membership1: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       part_in_cocurr: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),

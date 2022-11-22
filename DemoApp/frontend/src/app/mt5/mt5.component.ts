@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 export class Mt5Component implements OnInit {
   // constructor() {}
 
-  userForm: FormGroup | any;
   academic_Activities: FormGroup | any;
   skillDevelopment_Activities: FormGroup | any;
   researchDevelopment_Activities: FormGroup | any;
@@ -634,7 +633,7 @@ export class Mt5Component implements OnInit {
       guest_lecture: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       mou_signed: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       impact_of_ic: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-      vac_faculty_team: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      vac_faculty_teams: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_faculty_industry: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       vac_industry_resources: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       impact_of_mentoring: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
@@ -660,7 +659,7 @@ export class Mt5Component implements OnInit {
       patents_published: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       consultancy_work_less: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       consultancy_work_more: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-      initiative_taken: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
+      init_tow_start: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     }),
 
     this.administrativeExtension_Activities = fb.group({
@@ -673,7 +672,7 @@ export class Mt5Component implements OnInit {
     });
   } 
 
-  get f() { return this.userForm.controls; }
+  get f() { return this.academic_Activities.controls; }
   get f1() { return this.skillDevelopment_Activities.controls; }
   get f2() { return this.researchDevelopment_Activities.controls; }
   get f3() { return this.administrativeExtension_Activities.controls; }
@@ -991,7 +990,7 @@ export class Mt5Component implements OnInit {
   }
 
   active_flag = 0;
-  max_list = 5;
+  max_list = 4;
   mActive(arg:any){
     if(arg){
       this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;

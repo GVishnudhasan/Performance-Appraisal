@@ -14,11 +14,6 @@ export class HodenggComponent implements OnInit {
   StudentDevelopment_Activities: FormGroup | any;
   rating_by_principal:FormGroup | any;
 
-  
-
-  
-  
-  minmax: any;
   constructor(private fb: FormBuilder, private toastr: ToastrService) {}
 
 
@@ -614,11 +609,6 @@ export class HodenggComponent implements OnInit {
       doc_main_reg_upd:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       inv_dept_dev:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
       comp_wrk_withot_follow:fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
-      
-      
-
-
-
     });
     
   }
