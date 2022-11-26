@@ -682,7 +682,21 @@ export class WithphdComponent implements OnInit {
 
   async setmap() {
     await this.opt_data();
-    console.log(this.categoryList);
+    if (this.active_flag == 0){
+      console.log(this.categoryList);
+    }
+    if (this.active_flag == 1){
+      console.log(this.categoryList1);
+    }
+    if (this.active_flag == 2){
+      console.log(this.categoryList2);
+    }
+    if (this.active_flag == 3){
+      console.log(this.categoryList3);
+    }
+    if (this.active_flag == 4){
+      console.log(this.categoryList4);
+    }
   }
 
   async opt_data() {

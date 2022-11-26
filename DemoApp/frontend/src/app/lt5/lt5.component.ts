@@ -601,7 +601,18 @@ export class Lt5Component implements OnInit {
 
   async setmap() {
     await this.opt_data();
-    console.log(this.categoryList);
+    if (this.active_flag == 0){
+      console.log(this.categoryList);
+    }
+    if (this.active_flag == 1){
+      console.log(this.categoryList1);
+    }
+    if (this.active_flag == 2){
+      console.log(this.categoryList2);
+    }
+    if (this.active_flag == 3){
+      console.log(this.categoryList3);
+    }
   }
 
   async opt_data() {
@@ -913,6 +924,8 @@ export class Lt5Component implements OnInit {
   active_flag = 0;
   max_list = 4;
   mActive(arg: any) {
+
+
     if (arg) {
       this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
     } else {

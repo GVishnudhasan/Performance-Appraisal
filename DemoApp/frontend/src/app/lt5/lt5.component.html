@@ -5,11 +5,19 @@
     </div>
     <br>
     <br>
+    <!-- <div style="float: left">
+      <a (click)="mActive(false)" class="previous">&laquo; Previous </a>
+    </div> -->
     <div style="float: left">
-      <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
+      <a [class.disable]="active_flag==0" (click)="active_flag!=0 && mActive(false)" class="previous">&laquo; Previous
+      </a>
     </div>
-    <div style="float: right">
+    <!-- <div style="float: right">
       <a (click)="mActive(true)" class="next">Next &raquo;</a>
+    </div> -->
+    <div style="float: right">
+      <a [class.disable]="active_flag>=max_list" (click)="active_flag<max_list && mActive(true)" class="next">Next
+        &raquo;</a>
     </div>
     <br>
     <br>
@@ -539,7 +547,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.usage_of_bt.os2" formControlName="usage_of_bt_os1" />
+                  [(ngModel)]="categoryList.g3.usage_of_bt.os2" formControlName="usage_of_bt_os2" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.usage_of_bt_os2.touched &&
@@ -557,7 +565,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.usage_of_bt.es1" formControlName="usage_of_bt_os1" />
+                  [(ngModel)]="categoryList.g3.usage_of_bt.es1" formControlName="usage_of_bt_es1" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.usage_of_bt_es1.touched &&
@@ -575,7 +583,7 @@
               </td>
               <td colspan="20">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.usage_of_bt.es2" formControlName="usage_of_bt_os1" />
+                  [(ngModel)]="categoryList.g3.usage_of_bt.es2" formControlName="usage_of_bt_es2" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.usage_of_bt_es2.touched &&
@@ -617,7 +625,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.on_time_sub_qp.os2" formControlName="qty_of_class_os1" />
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.os2" formControlName="on_time_sub_qp_os2" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.on_time_sub_qp_os2.touched &&
@@ -635,7 +643,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es1" formControlName="qty_of_class_os1" />
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es1" formControlName="on_time_sub_qp_es1" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.on_time_sub_qp_es1.touched &&
@@ -653,7 +661,7 @@
               </td>
               <td colspan="20">
                 <input type="number" style="width: 40px" name="marks" required max="5" min="0"
-                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es2" formControlName="qty_of_class_es2" />
+                  [(ngModel)]="categoryList.g3.on_time_sub_qp.es2" formControlName="on_time_sub_qp_es2" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.on_time_sub_qp_es2.touched &&
@@ -1445,7 +1453,7 @@
               </td>
               <td colspan="20">
                 <input type="number" style="width: 40px" name="marks" required max="20" min="0"
-                  [(ngModel)]="categoryList.g9.std_of_lab.es2" formControlName="std_of_lab_es1" />
+                  [(ngModel)]="categoryList.g9.std_of_lab.es2" formControlName="std_of_lab_es2" />
                 <div class="invalid-feedback">
                   <div *ngIf="
                       f.std_of_lab_es2.touched &&
@@ -1719,7 +1727,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required max="10" min="0"
-                  [(ngModel)]="categoryList.g10.b.os2" formControlName="b_os1" />
+                  [(ngModel)]="categoryList.g10.b.os2" formControlName="b_os2" />
                 <div class="invalid-feedback">
                   <div *ngIf="f.b_os2.touched && f.b_os2.errors?.required">
                     Number Required
