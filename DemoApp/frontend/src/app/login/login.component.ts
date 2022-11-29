@@ -35,7 +35,13 @@ export class LoginComponent implements OnInit {
       this.mToastMsg(false, "Error", "please check your credentials.");
       return;
     }
-
+    let a = {'t1': 1, 't2': 0};
+    this.mServer.test(a).subscribe(res => {
+      console.log("data >>", res);
+    }, err => {
+      console.log("error >>", err.error);
+    });
+    
     if (true) {
       this.mToastMsg(true, "success", "login successful.");
       this.router.navigate(['/home']);
