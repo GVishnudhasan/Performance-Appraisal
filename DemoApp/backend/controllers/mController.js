@@ -1,4 +1,36 @@
 //const mDb = require('../service/database');
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb+srv://Vishnudhasan:abcd1234@cluster0.i6a9cer.mongodb.net/performanceAppraisal";
+
+class mDB {
+    constructor() {
+        this.database_name = 'performanceAppraisal';
+        this.collection_name = null;
+    }
+
+    findOne(collection) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                MongoClient.connect(url, (err, db) => {
+                    if (err) {
+                        reject(err);
+                    }
+                    var dbo = db.db(this.database_name);
+                    dbo.collection(collection).findOne({}, (err, result) => {
+                        if (err) {
+                            reject(err);
+                        };
+                        console.log(result.name);
+                        db.close();
+                        resolve(true);
+                    });
+                });
+            } catch (err) {
+                reject(err);
+            }
+        });
+    }
+}
 
 exports.login = async(req, res, next) => {
     try {
