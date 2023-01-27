@@ -1,93 +1,121 @@
-//const mDb = require('../service/database');
+const express = require("express");
+const { check, validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const router = express.Router();
+
+const User = require("../model/User");
+
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://Vishnudhasan:abcd1234@cluster0.i6a9cer.mongodb.net/performanceAppraisal";
 
-class mDB {
-    constructor() {
-        this.database_name = 'performanceAppraisal';
-        this.collection_name = null;
-    }
 
-    findOne(collection) {
-        return new Promise(async (resolve, reject) => {
-            try {
-                MongoClient.connect(url, (err, db) => {
-                    if (err) {
-                        reject(err);
-                    }
-                    var dbo = db.db(this.database_name);
-                    dbo.collection(collection).findOne({}, (err, result) => {
-                        if (err) {
-                            reject(err);
-                        };
-                        console.log(result.name);
-                        db.close();
-                        resolve(true);
-                    });
+exports.login = async (req, res, next) => {
+    const { facultyid, password } = req.body;
+    try {
+        let user = await User.findOne({
+            facultyid
+        });
+        if (!user)
+            return res.status(400).json({
+                message: "User Not Exist"
+            });
+
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch)
+            return res.status(400).json({
+                message: "Incorrect Password !"
+            });
+
+        const payload = {
+            user: {
+                id: user.id
+            }
+        };
+
+        jwt.sign(
+            payload,
+            "randomString",
+            {
+                expiresIn: 3600
+            },
+            (err, token) => {
+                if (err) throw err;
+                res.status(200).json({
+                    token
                 });
-            } catch (err) {
-                reject(err);
             }
+        );
+
+    } catch (e) {
+        console.error(e);
+        res.status(500).json({
+            message: "Server Error"
         });
     }
 }
 
-exports.login = async(req, res, next) => {
+exports.signup = async (req, res, next) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({
+            errors: errors.array()
+        });
+    }
+
+    const {
+        facultyid,
+        name,
+        totalexperience,
+        mobileno,
+        email,
+        password
+    } = req.body;
     try {
-        var result = {};
-        let data = req.body.data.data;
-        if (data.email === 'admin' && data.password === 'admin') {
-            console.log("data >>", data);
-            result = {
-                token : "Bearer <token>",
-                user_name: "testuser",
-                user_type: "string",
-                login_id: 1
-            }
-        } else {
-            throw new Error('Auth Error1');
+        let user = await User.findOne({
+            facultyid
+        });
+        if (user) {
+            return res.status(400).json({
+                msg: "User Already Exists"
+            });
         }
-        res.status(200).json({
-            status: true,
-            message: 'login success!',
-            data: result
-        });
-    } catch (e) {
-        res.status(401).json({
-            status: false,
-            message: e.message
-        });
-    }
-}
 
-exports.signup = async(req, res, next) => {
-    try {
-        let data = req.body.data.data;
-        console.log(data);
-        res.status(200).json({
-            status: true,
-            message: 'signup success!'
+        user = new User({
+            facultyid,
+            name,
+            totalexperience,
+            mobileno,
+            email,
+            password
         });
-    } catch (e) {
-        res.status(401).json({
-            status: false,
-            message: e.message
-        });
-    }
-}
-exports.test = async(req, res, next) => {
-    try {
-        let data = req.body.data.data;
-        console.log(data);
-        res.status(200).json({
-            status: true,
-            message: 'test success!'
-        });
-    } catch (e) {
-        res.status(401).json({
-            status: false,
-            message: e.message
-        });
-    }
-}
 
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(password, salt);
+
+        await user.save();
+
+        const payload = {
+            user: {
+                id: user.id
+            }
+        };
+
+        jwt.sign(
+            payload,
+            "randomString", {
+            expiresIn: 10000
+        },
+            (err, token) => {
+                if (err) throw err;
+                res.status(200).json({
+                    token
+                });
+            }
+        );
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send("Error in Saving");
+    }
+}

@@ -15,16 +15,14 @@ export class LoginComponent implements OnInit {
 
   userForm: FormGroup | any;
 
-  email: any;
+  facultyid: any;
   password: any;
-  // minmax: any;
 
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
-      email: fb.control('', [Validators.required, Validators.email, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+      facultyid: fb.control('', [Validators.required, Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/)]),
       password: fb.control('', [Validators.required, Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
-      // minmax: fb.control('', [Validators.required, Validators.min(0), Validators.max(20)]),
     });
   }
 
@@ -35,8 +33,11 @@ export class LoginComponent implements OnInit {
       this.mToastMsg(false, "Error", "please check your credentials.");
       return;
     }
-    let a = {'t1': 1, 't2': 0};
-    this.mServer.test(a).subscribe(res => {
+    let data = {
+      facultyid: this.facultyid,
+      password: this.password,
+    }
+    this.mServer.login(data).subscribe(res => {
       console.log("data >>", res);
     }, err => {
       console.log("error >>", err.error);
@@ -46,15 +47,15 @@ export class LoginComponent implements OnInit {
       this.mToastMsg(true, "success", "login successful.");
       this.router.navigate(['/home']);
     } else {
-      let data = {
-        email: this.email,
-        password: this.password,
-      }
-      this.mServer.login(data).subscribe(res => {
-        console.log("data >>", res);
-      }, err => {
-        console.log("error >>", err.error);
-      });
+      // let data = {
+      //   facultyid: this.facultyid,
+      //   password: this.password,
+      // }
+      // this.mServer.login(data).subscribe(res => {
+      //   console.log("data >>", res);
+      // }, err => {
+      //   console.log("error >>", err.error);
+      // });
     }
   }
 

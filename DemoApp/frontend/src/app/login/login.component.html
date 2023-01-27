@@ -9,10 +9,10 @@
 
                     <h2 class="form__title">Login</h2>
 
-                    <input type="email" [(ngModel)]="email" placeholder="Email" class="input" formControlName="email" />
-                    <div class="invalid-feedback" *ngIf="f.email.touched">
-                        <div *ngIf="f.email.errors?.required">Email is required</div>
-                        <div *ngIf="f.email.errors?.pattern || f.email.errors?.email">Email must be a valid email address</div>
+                    <input type="facultyid" [(ngModel)]="facultyid" placeholder="Faculty ID" class="input" formControlName="facultyid" />
+                    <div class="invalid-feedback" *ngIf="f.facultyid.touched">
+                        <div *ngIf="f.facultyid.errors?.required">Faculty ID is required</div>
+                        <div *ngIf="f.facultyid.errors?.pattern || f.facultyid.errors?.facultyid">Enter valid Faculty ID</div>
                     </div>
 
                     <input type="password" [(ngModel)]="password" placeholder="Password" class="input" formControlName="password" />
@@ -24,23 +24,8 @@
                             Check your Password
                         </div>
                     </div>
-
-                    <!-- <input type="number" [(ngModel)]="minmax" placeholder="Example min/max" class="input" formControlName="minmax" />
-                    <div class="invalid-feedback">
-                        <div *ngIf="f.minmax.touched && f.minmax.errors?.required">
-                            Number Required
-                        </div>
-                        <div *ngIf="f.minmax.hasError('max')">
-                            Maximum required marks is 20.
-                        </div>
-                        <div *ngIf="f.minmax.hasError('min')">
-                            Minimum required marks is 0.
-                        </div>
-                    </div> -->
-
                     <br>
                     <br>
-
                     <input class="btn" type="submit" value="Login" [disabled]="!userForm.valid" />
                     <hr>
 
