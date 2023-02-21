@@ -1,6 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+// import html2canvas from 'html2canvas';
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts'; 
+import jsPDF from 'jspdf';
+import autoTable from "jspdf-autotable";
+import { deflateSync } from "zlib";
+import { DeclareFunctionStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-lt5",
@@ -9,14 +16,15 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class Lt5Component implements OnInit {
-  // constructor() {}
 
   academic_Activities: FormGroup | any;
   skillDevelopment_Activities: FormGroup | any;
   researchDevelopment_Activities: FormGroup | any;
   administrativeExtension_Activities: FormGroup | any;
 
-  constructor(private fb: FormBuilder, private toastr: ToastrService) { }
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {
+    (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+   }
 
   categoryList = {
     g1: {
@@ -933,23 +941,23 @@ export class Lt5Component implements OnInit {
     }
   }
 
-  // mCheck(tag:string,min:number,max:number, data:any){
-  //   console.log(tag, min, max, data);
-
-  //   if(data<= min || data >= max){
-  //     this.toastr.error('everything is broken', 'Major Error', {
-  //       timeOut: 1000,
-  //     });
-
-  //   }
-  //   return true;
-  // }
-
   async mToastMsg(tag: boolean, title: any, message: any) {
     await this.toastr[(tag) ? 'success' : 'error'](title, message, {
       timeOut: 3000,
     });
   }
+
+  // Generate PDF
+  async mGeneratePDF() {
+    const doc = new jsPDF();
+    doc.text('Academic Performance Parameters', 10, 10);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 400', 'Marks obtained in ODD-S1', 'Marks obtained in ODD-S2', 'Marks obtained in EVEN-S1', 'Marks obtained in EVEN-S2']],
+      body: [
+        ['Quality of class notes', this.categoryList.g1.qty_of_class.overall_total, this.categoryList.g1.qty_of_class.os1, this.categoryList.g1.qty_of_class.os2, this.categoryList.g1.qty_of_class.es1, this.categoryList.g1.qty_of_class.es2],
+        ['QB quality', this.categoryList.g1.qb.overall_total, this.categoryList.g1.qb.os1, this.categoryList.g1.qb.os2, this.categoryList.g1.qb.es1, this.categoryList.g1.qb.es2]
+      ]
+    });
+    doc.save('academic-report.pdf');
+    }
 }
-
-
