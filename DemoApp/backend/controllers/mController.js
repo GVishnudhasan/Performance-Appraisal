@@ -11,7 +11,8 @@ var url = "mongodb+srv://Vishnudhasan:abcd1234@cluster0.i6a9cer.mongodb.net/perf
 
 
 exports.login = async (req, res, next) => {
-    const { facultyid, password } = req.body;
+    const { facultyid, password } = await req.body;
+    // console.log("hello", facultyid, password, req.body);
     try {
         let user = await User.findOne({
             facultyid
@@ -67,7 +68,11 @@ exports.signup = async (req, res, next) => {
     const {
         facultyid,
         name,
+        branch,
+        designation,
         totalexperience,
+        dateOfBirth,
+        dateOfJoining,
         mobileno,
         email,
         password
@@ -85,13 +90,17 @@ exports.signup = async (req, res, next) => {
         user = new User({
             facultyid,
             name,
+            branch,
+            designation,
             totalexperience,
+            dateOfBirth,
+            dateOfJoining,
             mobileno,
             email,
             password
         });
 
-        const salt = await bcrypt.genSalt(10);
+        const salt = await bcrypt.genSaltSync(10);
         user.password = await bcrypt.hash(password, salt);
 
         await user.save();

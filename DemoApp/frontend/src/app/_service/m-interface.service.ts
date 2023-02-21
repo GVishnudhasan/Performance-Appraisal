@@ -17,7 +17,7 @@ export class MInterfaceService {
     return this.http
       .post(
         environment.appurl + connUrl,
-        { data: data },
+        data,
         { headers: this.getHeaders() }
       )
       .pipe(

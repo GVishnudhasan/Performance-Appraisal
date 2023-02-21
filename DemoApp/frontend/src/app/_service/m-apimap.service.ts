@@ -9,10 +9,10 @@ export class MAPImapService {
   constructor(private server: MInterfaceService) { }
 
   login(data: any) {
-    return this.server.apiConnect({ data : data }, '/v1/login');
+    return this.server.apiConnect(data, '/v1/login');
   }
   signup(data: any) {
-    return this.server.apiConnect({ data : data }, '/v1/signup');
+    return this.server.apiConnect(data, '/v1/signup');
   }
   // test(data: any) {
   //   return this.server.apiConnect({ data : data }, '/v1/test');
