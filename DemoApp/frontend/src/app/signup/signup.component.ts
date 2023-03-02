@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
     { id: 1, name: "CSE" },
     { id: 2, name: "EEE" },
     { id: 3, name: "IT" },
-    { id: 4, name: "Mechanical" },
+    { id: 4, name: "Mech" },
     { id: 5, name: "ECE" },
     { id: 6, name: "BME" },
   ];
@@ -60,6 +60,25 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
+      facultyid: fb.control("", [
+        Validators.required,
+        Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/),
+      ]),
+      name: fb.control("", [Validators.required]),
+      // branch: fb.control("", [Validators.required]),
+      // designation: fb.control("", [Validators.required]),
+      totalexperience: fb.control("", [Validators.required]),
+      dateOfBirth: new FormControl("", [
+        Validators.pattern(
+          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
+        ),
+      ]),
+      dateOfJoining: new FormControl("", [
+        Validators.pattern(
+          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
+        ),
+      ]),
+      mobileno: fb.control("", [Validators.required]),
       email: fb.control("", [
         Validators.required,
         Validators.email,
@@ -67,24 +86,6 @@ export class SignupComponent implements OnInit {
           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         ),
       ]),
-      facultyid: fb.control("", [
-        Validators.required,
-        Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/),
-      ]),
-      name: fb.control("", [Validators.required]),
-      totalexperience: fb.control("", [Validators.required]),
-      mobileno: fb.control("", [Validators.required]),
-      dob: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
-      doj: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
-
       password: fb.control("", [
         Validators.required,
         Validators.pattern(
@@ -99,30 +100,39 @@ export class SignupComponent implements OnInit {
     return this.userForm.controls;
   }
 
-  login() {
+  signup() {
     if (this.userForm.invalid) {
-      this.mToastMsg(false, "Error", "please check your credentials.");
+      this.submitted = true;
       return;
     }
-
-    if (true) {
-      this.mToastMsg(true, "success", "login successful.");
-      this.router.navigate(["/home"]);
-    } else {
-      let data = {
-        facultyid: this.facultyid,
-        password: this.password,
-      };
-      this.mServer.login(data).subscribe(
-        (res) => {
-          console.log("data >>", res);
-        },
-        (err) => {
-          console.log("error >>", err.error);
-        }
-      );
-    }
+  
+    // Construct the data to be sent to the backend
+    const data = {
+      facultyid: this.userForm.value.facultyid,
+      name: this.userForm.value.name,
+      branch: this.userForm.value.branch,
+      designation: this.userForm.value.designation,
+      totalexperience: this.userForm.value.totalexperience,
+      dateOfBirth: this.userForm.value.dateOfBirth,
+      dateOfJoining: this.userForm.value.dateOfJoining,
+      mobileno: this.userForm.value.mobileno,
+      email: this.userForm.value.email,
+      password: this.userForm.value.password
+    };
+  
+    // Send the data to the backend using HttpClient
+    this.mServer.signup(data).subscribe(
+      (res) => {
+        console.log("Registered successfully:", res);
+        this.mToastMsg(true, "Success", "Registered successfully!");
+      },
+      (err) => {
+        console.log("Error registering:", err.error);
+        this.mToastMsg(false, "Error", "Failed to register user.");
+      }
+    );
   }
+  
 
   goto() {
     this.router.navigate(["/signup"]);
