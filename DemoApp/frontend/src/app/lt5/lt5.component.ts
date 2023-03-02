@@ -1011,17 +1011,52 @@ export class Lt5Component implements OnInit {
         ['Impact of mentoring in Skill Development can be measured in term of the following activities 1. Paper Presentation 2. Participation in any technical event 3. Internship/IPT 4. Participation in VAC 5.Participation in project/Desing contest/Hackathon', this.categoryList1.g5.impact_of_mentoring.overall_total,this.categoryList1.g5.impact_of_mentoring.marks],
         ['A = (No. of students in any of the three mentioned activities /Total no. of students) x 40', this.categoryList1.g5.a.overall_total,this.categoryList1.g5.a.marks],
         ['B = (No. of students won prize in any of the activities /Total no. of students) x 20', this.categoryList1.g5.b.overall_total,this.categoryList1.g5.b.marks],
-
-        
-
-      ]
-    
-    
+       ]
     });
-    doc.text('Research & Development Activities - 200', 10, 260);
+    doc.text('Research & Development Activities - 200', 10, 255);
     autoTable(doc, {
+      head: [['Parameter', 'Total - 200', 'Mark obtained']],
+      body:[
+        ['Certificate Course Completed(NPTEL/SWAYAM/etc)'],
+        ['Course completion certificate',this.categoryList2.g1.course_comp_cert.overall_total,this.categoryList2.g1.course_comp_cert.marks],
+        ['Course completion certificate with Elite score and above',this.categoryList2.g1.course_comp_cert_elite.overall_total,this.categoryList2.g1.course_comp_cert_elite.marks],
+        ['FDP(Minimum 5 Days)/Workshop/Seminar attended'],
+        ['FDP outside State',this.categoryList2.g2.fdp_out.overall_total,this.categoryList2.g2.fdp_out.marks],
+        ['FDP within State',this.categoryList2.g2.fdp_in.overall_total,this.categoryList2.g2.fdp_in.marks],
+        ['Workshop/Seminar',this.categoryList2.g2.workshop_seminar.overall_total,this.categoryList2.g2.workshop_seminar.marks],
+        ['Journal Publications'],
+        ['Peer Reviewed Journal(each)',this.categoryList2.g3.peer_reviewed_journal.overall_total,this.categoryList2.g3.peer_reviewed_journal.marks],
+        ['UGC CARE Journal(each)',this.categoryList2.g3.ugc_care_journal.overall_total,this.categoryList2.g3.ugc_care_journal.marks],
+        ['Conference/Technical Book Publications(With ISBN Number)'],
+        ['National/International Conference',this.categoryList2.g4.national_intl_conference.overall_total,this.categoryList2.g4.national_intl_conference.marks],
+        ['Book/Book Chapter Publications',this.categoryList2.g4.book_publication.overall_total,this.categoryList2.g4.book_publication.marks],
+        ['Seminar/Workshop proposals submitted to Funding Agency'],
+        ['Proposal Submission',this.categoryList2.g5.proposal_submission.overall_total,this.categoryList2.g5.proposal_submission.marks],
+        ['Grant Recieved from Funding Agencies'],
+        ['Less than 1 Lakh(each-10)',this.categoryList2.g6.less_than_one.overall_total,this.categoryList2.g6.less_than_one.marks],
+        ['More than 1 Lakh',this.categoryList2.g6.more_than_one.overall_total,this.categoryList2.g6.more_than_one.marks],
+        ['Patents / Consultancy works'],
+        ['Patents Published',this.categoryList2.g7.patents_published.overall_total,this.categoryList2.g7.patents_published.marks],
+        ['Consultancy work',this.categoryList2.g7.consultancy_work.overall_total,this.categoryList2.g7.consultancy_work.marks],
+      ]
       
-    })
+    });
+    doc.text('Administrative & Extension Activities - 100', 10, 170);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 100', 'Mark obtained']],
+      body:[
+        ['Administrative Responsibilities (Departments & Institution level)'],
+        ['Department Level Responsibility(each 15)',this.categoryList3.g1.dept_lvl_resp.overall_total,this.categoryList3.g1.dept_lvl_resp.marks],
+        ['Rating for the effectiveness by HoD',this.categoryList3.g1.rating_for_eff_hod.overall_total,this.categoryList3.g1.rating_for_eff_hod.marks],
+        ['Institutional level Responsibility',this.categoryList3.g1.ins_lvl_resp.overall_total,this.categoryList3.g1.ins_lvl_resp.marks],
+        ['Rating for the effectiveness by Principal',this.categoryList3.g1.rating_for_eff_pric.overall_total,this.categoryList3.g1.rating_for_eff_pric.marks],
+        ['Administrative Responsibilities (Departments & Institution level)'],
+        ['Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga, eco Club, Rotary, JCI etc. (each 15)',this.categoryList3.g2.part_ext_act.overall_total,this.categoryList3.g2.part_ext_act.marks],
+        ['Any other Achivements(Specify if any)'],
+        ['Awards recieved, 100% result, Guest lecture delivered, Resource persons for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution etc.',this.categoryList3.g3.awards_recieved.overall_total,this.categoryList3.g3.awards_recieved.marks],
+      ]
+    });
+
     doc.save('academic-report.pdf');
     }
 }
