@@ -30,7 +30,7 @@
       </div>
 
       <form [formGroup]="academic_Activities">
-        <table align="center" border="1" width="100%">
+        <table id="acad" align="center" border="1" width="100%">
           <thead>
             <tr>
               <th>Academic Performance Parameters</th>
@@ -1981,7 +1981,7 @@
       <div class="form-group">
         <input class="btn" type="submit" value="SAVE" (click)="setmap()" />
       </div>
-      <div (click)="mGeneratePDF()">
+      <div (click)="mGeneratePDF1()">
         <button style="position: center;">Generate PDF</button>
       </div>
     </div>
@@ -3078,8 +3078,14 @@
       </div>
     </div>
     <!-- Generate PDF -->
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF1()">
+      <button style="position: center;">Generate PDF for Academic Activities</button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF2()">
+      <button style="position: center;">Generate PDF for Skill Development Activities</button>
+    </div>
     <div *ngIf="active_flag == 4" (click)="mGeneratePDF()">
-      <button style="position: center;">Generate PDF</button>
+      <button style="position: center;">Generate Overall PDF</button>
     </div>
   </div>
 </div>

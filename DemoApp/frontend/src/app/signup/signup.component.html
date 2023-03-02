@@ -30,7 +30,7 @@
                 </div>
 
                 <fieldset class="form-group">
-                    <label>Select Department</label><br /><br />
+                    <label>Department</label><br /><br />
                     <select class="input" [(ngModel)]="selectedBranch" [formControl]="userForm.controls.branch">
                         <option disabled>--Select--</option>
                         <option *ngFor="let category of Branches" [value]="category">{{category}}</option>
@@ -38,7 +38,7 @@
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Select Designation</label><br /><br />
+                    <label>Designation</label><br /><br />
                     <select class="input" [(ngModel)]="selectedDesignation"
                         [formControl]="userForm.controls.designation">
                         <option disabled>--Select--</option>
