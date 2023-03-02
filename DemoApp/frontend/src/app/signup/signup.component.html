@@ -12,72 +12,81 @@
                 <div class="form-group">
                     <label for="facultyid">Faculty Id</label>
                     <!-- <input type="facultyid" class="input" id="Faculty Id" name="facultyid" formControlName="facultyid"/> -->
-                    <input type="facultyid" class="input" id="Faculty Id" name="facultyid" [formControl]="userForm.controls.facultyid"/>
-                    
+                    <input type="facultyid" class="input" id="Faculty Id" name="facultyid"
+                        [formControl]="userForm.controls.facultyid" />
+
                 </div>
                 <div class="invalid-feedback" *ngIf="f.facultyid.touched">
                     <div *ngIf="f.facultyid.errors?.required">Faculty ID is required</div>
                 </div>
-    
+
                 <div class="form-group">
                     <label for="Name">Name</label>
                     <!-- <input type="text" class="input" [(ngModel)]="name" name="Name" formControlName="name"/> -->
-                    <input type="text" class="input" name="Name" [formControl]="userForm.controls.name"/>
+                    <input type="text" class="input" name="Name" [formControl]="userForm.controls.name" />
                 </div>
                 <div class="invalid-feedback" *ngIf="f.name.touched">
                     <div *ngIf="f.name.errors?.required">Name is required</div>
                 </div>
-                <div class="form-group">
-                    <label for="branch">Department</label>
-                    <select id="branch" name="branch" class="form-control">
-                        <option *ngFor="let branch of Branches" [value]="branch.id">
-                            {{branch.name}}
-                        </option>
+
+                <fieldset class="form-group">
+                    <label>Select Department</label><br /><br />
+                    <select class="input" [(ngModel)]="selectedBranch" [formControl]="userForm.controls.branch">
+                        <option disabled>--Select--</option>
+                        <option *ngFor="let category of Branches" [value]="category">{{category}}</option>
                     </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="designation">Designation</label>
-                    <select id="designation" name="designation" class="form-control">
-                        <option *ngFor="let designation of Designations" [value]="designation.id">
-                            {{designation.name}}
-                        </option>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Select Designation</label><br /><br />
+                    <select class="input" [(ngModel)]="selectedDesignation"
+                        [formControl]="userForm.controls.designation">
+                        <option disabled>--Select--</option>
+                        <option *ngFor="let category of Designations" [value]="category">{{category}}</option>
                     </select>
-                </div>
+                </fieldset>
+
                 <div class="form-group">
                     <label for="totalexperience">Total Experience</label>
                     <!-- <input type="number" class="form-control" id="totalexperience" name="totalexperience" [(ngModel)]="totalexperience" formControlName="totalexperience"/> -->
-                    <input type="number" class="form-control" id="totalexperience" name="totalexperience" [formControl]="userForm.controls.totalexperience"/>
+                    <input type="number" class="form-control" id="totalexperience" name="totalexperience"
+                        [formControl]="userForm.controls.totalexperience" />
                 </div>
                 <div class="invalid-feedback" *ngIf="f.totalexperience.touched">
                     <div *ngIf="f.totalexperience.errors?.required">Total Experience is required</div>
                 </div>
                 <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" class="form-control" id="dob" name="dob" required [formControl]="userForm.controls.dateOfBirth"/>
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required
+                        [formControl]="userForm.controls.dateOfBirth" />
                 </div>
                 <div class="form-group">
-                    <label for="doj">Date of joining</label>
-                    <input type="date" class="form-control" id="doj" name="doj" required [formControl]="userForm.controls.dateOfJoining"/>
+                    <label for="dateOfJoining">Date of joining</label>
+                    <input type="date" class="form-control" id="dateOfJoining" name="dateOfJoining" required
+                        [formControl]="userForm.controls.dateOfJoining" />
                 </div>
                 <div class="form-group">
                     <label for="mobileno">Mobile No</label>
-                    <input type="phone" class="form-control" id="mobileno" name="mobileno" [formControl]="userForm.controls.mobileno" />
+                    <input type="phone" class="form-control" id="mobileno" name="mobileno"
+                        [formControl]="userForm.controls.mobileno" />
                 </div>
                 <div class="invalid-feedback" *ngIf="f.mobileno.touched">
                     <div *ngIf="f.mobileno.errors?.required">Mobile Number is required</div>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" [formControl]="userForm.controls.email"/>
+                    <input type="email" class="form-control" id="email" name="email"
+                        [formControl]="userForm.controls.email" />
                 </div>
                 <div class="invalid-feedback" *ngIf="f.email.touched">
                     <div *ngIf="f.email.errors?.required">Email is required</div>
-                    <div *ngIf="f.email.errors?.pattern || f.email.errors?.email">Email must be a valid email address</div>
+                    <div *ngIf="f.email.errors?.pattern || f.email.errors?.email">Email must be a valid email address
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="input" id="password" name="password" [formControl]="userForm.controls.password"/>
+                    <input type="password" class="input" id="password" name="password"
+                        [formControl]="userForm.controls.password" />
                 </div>
                 <div class="invalid-feedback">
                     <div *ngIf="f.password.touched && f.password.errors?.required">

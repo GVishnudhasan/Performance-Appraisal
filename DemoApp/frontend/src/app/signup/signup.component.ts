@@ -20,22 +20,32 @@ export class SignupComponent implements OnInit {
   RegisterStudent(studentForm: NgForm): void {
     console.log(studentForm.value);
   }
+  selectedBranch: string = "";
+  selectedDesignation: string = "";
 
-  Branches: any[] = [
-    { id: 1, name: "CSE" },
-    { id: 2, name: "EEE" },
-    { id: 3, name: "IT" },
-    { id: 4, name: "Mech" },
-    { id: 5, name: "ECE" },
-    { id: 6, name: "BME" },
-  ];
+  // Branches: any[] = [
+  //   { id: 1, name: "CSE" },
+  //   { id: 2, name: "EEE" },
+  //   { id: 3, name: "IT" },
+  //   { id: 4, name: "Mech" },
+  //   { id: 5, name: "ECE" },
+  //   { id: 6, name: "BME" },
+  // ];
+  Branches: any[] = ["CSE", "EEE", "IT", "Mech", "ECE", "BME"];
 
+  // Designations: any[] = [
+  //   { id: 1, name: "Assistant Professor" },
+  //   { id: 2, name: "Associate Professor" },
+  //   { id: 3, name: "Head of the Department" },
+  //   { id: 4, name: "Director" },
+  //   { id: 5, name: "Principal" },
+  // ];
   Designations: any[] = [
-    { id: 1, name: "Assistant Professor" },
-    { id: 2, name: "Associate Professor" },
-    { id: 3, name: "Head of the Department" },
-    { id: 4, name: "Director" },
-    { id: 5, name: "Principal" },
+    "Assistant Professor",
+    "Associate Professor",
+    "Head of the Department",
+    "Director",
+    "Principal",
   ];
 
   form: FormGroup | any;
@@ -50,9 +60,11 @@ export class SignupComponent implements OnInit {
   userForm: FormGroup | any;
   facultyid: any;
   name: any;
+  branch: any;
+  designation: any;
   totalexperience: any;
-  dob: Date | undefined;
-  doj: Date | undefined;
+  dateOfBirth: Date | undefined;
+  dateOfJoining: Date | undefined;
   mobileno: any;
   email: any;
   password: any;
@@ -65,19 +77,11 @@ export class SignupComponent implements OnInit {
         Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/),
       ]),
       name: fb.control("", [Validators.required]),
-      // branch: fb.control("", [Validators.required]),
-      // designation: fb.control("", [Validators.required]),
+      branch: fb.control("", [Validators.required]),
+      designation: fb.control("", [Validators.required]),
       totalexperience: fb.control("", [Validators.required]),
-      dateOfBirth: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
-      dateOfJoining: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
+      dateOfBirth: fb.control("", [Validators.required]),
+      dateOfJoining: fb.control("", [Validators.required]),
       mobileno: fb.control("", [Validators.required]),
       email: fb.control("", [
         Validators.required,
@@ -101,11 +105,15 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
+    for (let controller in this.userForm.controls) {
+      this.userForm.get(controller).markAsTouched();
+    }
+
     if (this.userForm.invalid) {
       this.submitted = true;
       return;
     }
-  
+
     // Construct the data to be sent to the backend
     const data = {
       facultyid: this.userForm.value.facultyid,
@@ -117,14 +125,15 @@ export class SignupComponent implements OnInit {
       dateOfJoining: this.userForm.value.dateOfJoining,
       mobileno: this.userForm.value.mobileno,
       email: this.userForm.value.email,
-      password: this.userForm.value.password
+      password: this.userForm.value.password,
     };
-  
+
     // Send the data to the backend using HttpClient
     this.mServer.signup(data).subscribe(
       (res) => {
         console.log("Registered successfully:", res);
         this.mToastMsg(true, "Success", "Registered successfully!");
+        this.router.navigate(["/login"]);
       },
       (err) => {
         console.log("Error registering:", err.error);
@@ -132,10 +141,9 @@ export class SignupComponent implements OnInit {
       }
     );
   }
-  
 
   goto() {
-    this.router.navigate(["/signup"]);
+    this.router.navigate(["/login"]);
   }
 
   async mToastMsg(tag: boolean, title: any, message: any) {
@@ -143,4 +151,7 @@ export class SignupComponent implements OnInit {
       timeOut: 3000,
     });
   }
+}
+function hasDropDownError() {
+  throw new Error("Function not implemented.");
 }
