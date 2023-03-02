@@ -1,6 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+// import html2canvas from 'html2canvas';
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts'; 
+import jsPDF from 'jspdf';
+import autoTable from "jspdf-autotable";
+import { deflateSync } from "zlib";
+import { DeclareFunctionStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-mt5",
@@ -1003,7 +1010,7 @@ export class Mt5Component implements OnInit {
   }
 
   active_flag = 0;
-  max_list = 4;
+  max_list = 5;
   mActive(arg:any){
     if(arg){
       this.active_flag = (this.active_flag < this.max_list) ? this.active_flag + 1 : this.active_flag;
@@ -1017,6 +1024,39 @@ export class Mt5Component implements OnInit {
       timeOut: 3000,
     });
   }
+
+  // Generate PDF
+  async mGeneratePDF() {
+    const doc = new jsPDF();
+    doc.text('Academic Performance Parameters', 10, 10);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 400', 'Marks obtained in ODD-S1', 'Marks obtained in ODD-S2', 'Marks obtained in EVEN-S1', 'Marks obtained in EVEN-S2']],
+      body: [
+        ['Quality of class notes', this.categoryList.g1.qty_of_class.overall_total, this.categoryList.g1.qty_of_class.os1, this.categoryList.g1.qty_of_class.os2, this.categoryList.g1.qty_of_class.es1, this.categoryList.g1.qty_of_class.es2],
+        ['Question bank (Univ., 2 marks & 16 marks)', this.categoryList.g1.qb.overall_total, this.categoryList.g1.qb.os1, this.categoryList.g1.qb.os2, this.categoryList.g1.qb.es1, this.categoryList.g1.qb.es2],
+        ['Ref. Book / Univ. QP Problem solving', this.categoryList.g1.rf_book.overall_total, this.categoryList.g1.rf_book.os1, this.categoryList.g1.rf_book.os2, this.categoryList.g1.rf_book.es1, this.categoryList.g1.rf_book.es2],
+        ['Ref. Book / Univ. QP Problem solving', this.categoryList.g1.rf_book.overall_total, this.categoryList.g1.rf_book.os1, this.categoryList.g1.rf_book.os2, this.categoryList.g1.rf_book.es1, this.categoryList.g1.rf_book.es2],
+        ['Preparation of video material - 20'],
+        ['Quality of video material', this.categoryList.g2.qty_of_videomaterial.overall_total, this.categoryList.g2.qty_of_videomaterial.os1, this.categoryList.g2.qty_of_videomaterial.os2, this.categoryList.g2.qty_of_videomaterial.es1, this.categoryList.g2.qty_of_videomaterial.es2],
+        ['Preparation of video material', this.categoryList.g2.prep_of_videomaterial.overall_total, this.categoryList.g2.prep_of_videomaterial.os1, this.categoryList.g2.prep_of_videomaterial.os2, this.categoryList.g2.prep_of_videomaterial.es1, this.categoryList.g2.prep_of_videomaterial.es2],
+        ['Standard of IA / Assignment / Tutorial QP - 20'],
+        ['GATE / Ref. Book Questions', this.categoryList.g3.gate_or_refbook.overall_total, this.categoryList.g3.gate_or_refbook.os1, this.categoryList.g3.gate_or_refbook.os2, this.categoryList.g3.gate_or_refbook.es1, this.categoryList.g3.gate_or_refbook.es2],
+        ['Usage of Blooms Taxonomy', this.categoryList.g3.usage_of_bt.overall_total, this.categoryList.g3.usage_of_bt.os1, this.categoryList.g3.usage_of_bt.os2, this.categoryList.g3.usage_of_bt.es1, this.categoryList.g3.usage_of_bt.es2],
+        ['On time submission of Question Papers', this.categoryList.g3.on_time_sub_qp.overall_total, this.categoryList.g3.on_time_sub_qp.os1, this.categoryList.g3.on_time_sub_qp.os2, this.categoryList.g3.on_time_sub_qp.es1, this.categoryList.g3.on_time_sub_qp.es2],
+        ['Innovation in Teaching & Learning - 20'],
+        ['Preparation of PPT', this.categoryList.g4.prep_of_ppt.overall_total, this.categoryList.g4.prep_of_ppt.os1, this.categoryList.g4.prep_of_ppt.os2, this.categoryList.g4.prep_of_ppt.es1, this.categoryList.g4.prep_of_ppt.es2],
+        ['Using various Pedagogical teaching methods', this.categoryList.g4.using_various_ptm.overall_total, this.categoryList.g4.using_various_ptm.os1, this.categoryList.g4.using_various_ptm.os2, this.categoryList.g4.using_various_ptm.es1, this.categoryList.g4.using_various_ptm.es2],
+        ['Students Feedback - 20'],
+        ['Mid-semester feedback', this.categoryList.g5.mid_sem_fb.overall_total, this.categoryList.g5.mid_sem_fb.os1, this.categoryList.g5.mid_sem_fb.os2, this.categoryList.g5.mid_sem_fb.es1, this.categoryList.g5.mid_sem_fb.es2],
+        ['End-semester feedback', this.categoryList.g5.end_sem_fb.overall_total, this.categoryList.g5.end_sem_fb.os1, this.categoryList.g5.end_sem_fb.os2, this.categoryList.g5.end_sem_fb.es1, this.categoryList.g5.end_sem_fb.es2],
+        ['Academic Review Meeting feedback', this.categoryList.g5.arm_fb.overall_total, this.categoryList.g5.arm_fb.os1, this.categoryList.g5.arm_fb.os2, this.categoryList.g5.arm_fb.es1, this.categoryList.g5.arm_fb.es2],
+        ['Submission of Course Files - 20'],
+        ['On time Submission', this.categoryList.g6.on_time_sub.overall_total, this.categoryList.g6.on_time_sub.os1, this.categoryList.g6.on_time_sub.os2, this.categoryList.g6.on_time_sub.es1, this.categoryList.g6.on_time_sub.es2],
+        ['Completeness of Course file', this.categoryList.g6.comp_of_cf.overall_total, this.categoryList.g6.comp_of_cf.os1, this.categoryList.g6.comp_of_cf.os2, this.categoryList.g6.comp_of_cf.es1, this.categoryList.g6.comp_of_cf.es2],
+      ]
+    });
+    doc.save('academic-report.pdf');
+    }
 }
 
 
