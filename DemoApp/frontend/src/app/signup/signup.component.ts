@@ -20,22 +20,32 @@ export class SignupComponent implements OnInit {
   RegisterStudent(studentForm: NgForm): void {
     console.log(studentForm.value);
   }
+  selectedBranch: string = "";
+  selectedDesignation: string = "";
 
-  Branches: any[] = [
-    { id: 1, name: "CSE" },
-    { id: 2, name: "EEE" },
-    { id: 3, name: "IT" },
-    { id: 4, name: "Mechanical" },
-    { id: 5, name: "ECE" },
-    { id: 6, name: "BME" },
-  ];
+  // Branches: any[] = [
+  //   { id: 1, name: "CSE" },
+  //   { id: 2, name: "EEE" },
+  //   { id: 3, name: "IT" },
+  //   { id: 4, name: "Mech" },
+  //   { id: 5, name: "ECE" },
+  //   { id: 6, name: "BME" },
+  // ];
+  Branches: any[] = ["CSE", "EEE", "IT", "Mech", "ECE", "BME"];
 
+  // Designations: any[] = [
+  //   { id: 1, name: "Assistant Professor" },
+  //   { id: 2, name: "Associate Professor" },
+  //   { id: 3, name: "Head of the Department" },
+  //   { id: 4, name: "Director" },
+  //   { id: 5, name: "Principal" },
+  // ];
   Designations: any[] = [
-    { id: 1, name: "Assistant Professor" },
-    { id: 2, name: "Associate Professor" },
-    { id: 3, name: "Head of the Department" },
-    { id: 4, name: "Director" },
-    { id: 5, name: "Principal" },
+    "Assistant Professor",
+    "Associate Professor",
+    "Head of the Department",
+    "Director",
+    "Principal",
   ];
 
   form: FormGroup | any;
@@ -50,9 +60,11 @@ export class SignupComponent implements OnInit {
   userForm: FormGroup | any;
   facultyid: any;
   name: any;
+  branch: any;
+  designation: any;
   totalexperience: any;
-  dob: Date | undefined;
-  doj: Date | undefined;
+  dateOfBirth: Date | undefined;
+  dateOfJoining: Date | undefined;
   mobileno: any;
   email: any;
   password: any;
@@ -60,6 +72,17 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     const fb = this.fb;
     this.userForm = fb.group({
+      facultyid: fb.control("", [
+        Validators.required,
+        Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/),
+      ]),
+      name: fb.control("", [Validators.required]),
+      branch: fb.control("", [Validators.required]),
+      designation: fb.control("", [Validators.required]),
+      totalexperience: fb.control("", [Validators.required]),
+      dateOfBirth: fb.control("", [Validators.required]),
+      dateOfJoining: fb.control("", [Validators.required]),
+      mobileno: fb.control("", [Validators.required]),
       email: fb.control("", [
         Validators.required,
         Validators.email,
@@ -67,24 +90,6 @@ export class SignupComponent implements OnInit {
           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         ),
       ]),
-      facultyid: fb.control("", [
-        Validators.required,
-        Validators.pattern(/(?=.*[a-z])(?=.*[0-9]).{8,}/),
-      ]),
-      name: fb.control("", [Validators.required]),
-      totalexperience: fb.control("", [Validators.required]),
-      mobileno: fb.control("", [Validators.required]),
-      dob: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
-      doj: new FormControl("", [
-        Validators.pattern(
-          /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/
-        ),
-      ]),
-
       password: fb.control("", [
         Validators.required,
         Validators.pattern(
@@ -99,33 +104,46 @@ export class SignupComponent implements OnInit {
     return this.userForm.controls;
   }
 
-  login() {
+  signup() {
+    for (let controller in this.userForm.controls) {
+      this.userForm.get(controller).markAsTouched();
+    }
+
     if (this.userForm.invalid) {
-      this.mToastMsg(false, "Error", "please check your credentials.");
+      this.submitted = true;
       return;
     }
 
-    if (true) {
-      this.mToastMsg(true, "success", "login successful.");
-      this.router.navigate(["/home"]);
-    } else {
-      let data = {
-        facultyid: this.facultyid,
-        password: this.password,
-      };
-      this.mServer.login(data).subscribe(
-        (res) => {
-          console.log("data >>", res);
-        },
-        (err) => {
-          console.log("error >>", err.error);
-        }
-      );
-    }
+    // Construct the data to be sent to the backend
+    const data = {
+      facultyid: this.userForm.value.facultyid,
+      name: this.userForm.value.name,
+      branch: this.userForm.value.branch,
+      designation: this.userForm.value.designation,
+      totalexperience: this.userForm.value.totalexperience,
+      dateOfBirth: this.userForm.value.dateOfBirth,
+      dateOfJoining: this.userForm.value.dateOfJoining,
+      mobileno: this.userForm.value.mobileno,
+      email: this.userForm.value.email,
+      password: this.userForm.value.password,
+    };
+
+    // Send the data to the backend using HttpClient
+    this.mServer.signup(data).subscribe(
+      (res) => {
+        console.log("Registered successfully:", res);
+        this.mToastMsg(true, "Success", "Registered successfully!");
+        this.router.navigate(["/login"]);
+      },
+      (err) => {
+        console.log("Error registering:", err.error);
+        this.mToastMsg(false, "Error", "Failed to register user.");
+      }
+    );
   }
 
   goto() {
-    this.router.navigate(["/signup"]);
+    this.router.navigate(["/login"]);
   }
 
   async mToastMsg(tag: boolean, title: any, message: any) {
@@ -133,4 +151,7 @@ export class SignupComponent implements OnInit {
       timeOut: 3000,
     });
   }
+}
+function hasDropDownError() {
+  throw new Error("Function not implemented.");
 }

@@ -955,9 +955,108 @@ export class Lt5Component implements OnInit {
       head: [['Parameter', 'Total - 400', 'Marks obtained in ODD-S1', 'Marks obtained in ODD-S2', 'Marks obtained in EVEN-S1', 'Marks obtained in EVEN-S2']],
       body: [
         ['Quality of class notes', this.categoryList.g1.qty_of_class.overall_total, this.categoryList.g1.qty_of_class.os1, this.categoryList.g1.qty_of_class.os2, this.categoryList.g1.qty_of_class.es1, this.categoryList.g1.qty_of_class.es2],
-        ['QB quality', this.categoryList.g1.qb.overall_total, this.categoryList.g1.qb.os1, this.categoryList.g1.qb.os2, this.categoryList.g1.qb.es1, this.categoryList.g1.qb.es2]
+        ['Question bank (Univ., 2 marks & 16 marks)', this.categoryList.g1.qb.overall_total, this.categoryList.g1.qb.os1, this.categoryList.g1.qb.os2, this.categoryList.g1.qb.es1, this.categoryList.g1.qb.es2],
+        ['Ref. Book / Univ. QP Problem solving', this.categoryList.g1.rf_book.overall_total, this.categoryList.g1.rf_book.os1, this.categoryList.g1.rf_book.os2, this.categoryList.g1.rf_book.es1, this.categoryList.g1.rf_book.es2],
+        ['', '', 'Preparation', 'of video', ' material', ' - 20'],
+        ['Quality of video material', this.categoryList.g2.qty_of_videomaterial.overall_total, this.categoryList.g2.qty_of_videomaterial.os1, this.categoryList.g2.qty_of_videomaterial.os2, this.categoryList.g2.qty_of_videomaterial.es1, this.categoryList.g2.qty_of_videomaterial.es2],
+        ['Preparation of video material	l', this.categoryList.g2.prep_of_videomaterial.overall_total, this.categoryList.g2.prep_of_videomaterial.os1, this.categoryList.g2.prep_of_videomaterial.os2, this.categoryList.g2.prep_of_videomaterial.es1, this.categoryList.g2.prep_of_videomaterial.es2],
+        ['Standard of IA / Assignment / Tutorial QP - 20'],
+        ['GATE / Ref. Book Questions', this.categoryList.g3.gate_or_refbook.overall_total, this.categoryList.g3.gate_or_refbook.os1, this.categoryList.g3.gate_or_refbook.os2, this.categoryList.g3.gate_or_refbook.es1, this.categoryList.g3.gate_or_refbook.es2],
+        ['Usage of Blooms Taxonomy', this.categoryList.g3.usage_of_bt.overall_total, this.categoryList.g3.usage_of_bt.os1, this.categoryList.g3.usage_of_bt.os2, this.categoryList.g3.usage_of_bt.es1, this.categoryList.g3.usage_of_bt.es2],
+        ['On time submission of Question Papers', this.categoryList.g3.on_time_sub_qp.overall_total, this.categoryList.g3.on_time_sub_qp.os1, this.categoryList.g3.on_time_sub_qp.os2, this.categoryList.g3.on_time_sub_qp.es1, this.categoryList.g3.on_time_sub_qp.es2],
+        ['Innovation in Teaching & Learning - 20'],
+        ['Preparation of PPT', this.categoryList.g4.prep_of_ppt.overall_total, this.categoryList.g4.prep_of_ppt.os1, this.categoryList.g4.prep_of_ppt.os2, this.categoryList.g4.prep_of_ppt.es1, this.categoryList.g4.prep_of_ppt.es2],
+        ['Using various Pedagogical teaching methods', this.categoryList.g4.using_various_ptm.overall_total, this.categoryList.g4.using_various_ptm.os1, this.categoryList.g4.using_various_ptm.os2, this.categoryList.g4.using_various_ptm.es1, this.categoryList.g4.using_various_ptm.es2],
+        ['Students Feedback - 20'],
+        ['Mid-semester feedback', this.categoryList.g5.mid_sem_fb.overall_total, this.categoryList.g5.mid_sem_fb.os1, this.categoryList.g5.mid_sem_fb.os2, this.categoryList.g5.mid_sem_fb.es1, this.categoryList.g5.mid_sem_fb.es2],
+        ['End-semester feedback', this.categoryList.g5.end_sem_fb.overall_total, this.categoryList.g5.end_sem_fb.os1, this.categoryList.g5.end_sem_fb.os2, this.categoryList.g5.end_sem_fb.es1, this.categoryList.g5.end_sem_fb.es2],
+        ['Academic Review Meeting feedback', this.categoryList.g5.arm_fb.overall_total, this.categoryList.g5.arm_fb.os1, this.categoryList.g5.arm_fb.os2, this.categoryList.g5.arm_fb.es1, this.categoryList.g5.arm_fb.es2],
+        ['Submission of Course Files - 20'],
+        ['On time Submission', this.categoryList.g6.on_time_sub.overall_total, this.categoryList.g6.on_time_sub.os1, this.categoryList.g6.on_time_sub.os2, this.categoryList.g6.on_time_sub.es1, this.categoryList.g6.on_time_sub.es2],
+        ['Completeness of Course file', this.categoryList.g6.comp_of_cf.overall_total, this.categoryList.g6.comp_of_cf.os1, this.categoryList.g6.comp_of_cf.os2, this.categoryList.g6.comp_of_cf.es1, this.categoryList.g6.comp_of_cf.es2],
+        ['Performance in Internal Assessment - 80'],
+        ['1. If Pass % is <60% - zero points 2. Score = (pass % x 80) + increment/decrement in previous IA Note: Only two IA-1 and IA-2 are considered', this.categoryList.g7.pass],
+        ['Performance in End Semester Exams - 80'],
+        ['1. If Pass % is <60% - zero points 2. Score = (pass % x 80) + Average of increment/decrement in Internal Assesments',  this.categoryList.g8.pass],
+        ['Effectiveness of Lab conduction - 60'],
+        ['Lab Manual Preparation', this.categoryList.g9.lab_manual_prep.overall_total, this.categoryList.g9.lab_manual_prep.os1, this.categoryList.g9.lab_manual_prep.os2, this.categoryList.g9.lab_manual_prep.es1, this.categoryList.g9.lab_manual_prep.es2],
+        ['Standard of Prelab and Postlab Questions and Conduction', this.categoryList.g9.std_of_lab.overall_total, this.categoryList.g9.std_of_lab.os1, this.categoryList.g9.std_of_lab.os2, this.categoryList.g9.std_of_lab.es1, this.categoryList.g9.std_of_lab.es2],
+        ['Content Beyond Syllabus', this.categoryList.g9.content_beyond_syll.overall_total, this.categoryList.g9.content_beyond_syll.os1, this.categoryList.g9.content_beyond_syll.os2, this.categoryList.g9.content_beyond_syll.es1, this.categoryList.g9.content_beyond_syll.es2],
+        ['On time completion of Exercises', this.categoryList.g9.on_time_comp.overall_total, this.categoryList.g9.on_time_comp.os1, this.categoryList.g9.on_time_comp.os2, this.categoryList.g9.on_time_comp.es1, this.categoryList.g9.on_time_comp.es2],
+        ['Impact of mentoring in academic performance - 40'],
+        ['Certification in NPTEL/MOOCSA = 2 * (No. of students completed courses/Total no. of students) x 10', this.categoryList.g10.a.overall_total, this.categoryList.g10.a.os1, this.categoryList.g10.a.os2, this.categoryList.g10.a.es1, this.categoryList.g10.a.es2],
+        ['Performance in Internal Assessment (A) B = (No. of students pass/ Total no. of students) x 10', this.categoryList.g10.b.overall_total, this.categoryList.g10.b.os1, this.categoryList.g10.b.os2, this.categoryList.g10.b.es1, this.categoryList.g10.b.es2],
+        ['Performance in End semester Assessment(first class) C = (No. of students in first class/ Total no. of students) x 20', this.categoryList.g10.c.overall_total, this.categoryList.g10.c.os1, this.categoryList.g10.c.os2, this.categoryList.g10.c.es1, this.categoryList.g10.c.es2],
+        ['Performance in End semester Assessment(Distinction)   D = 4 * (No. of students in Distinction /Total no. of students) x 10', this.categoryList.g10.d.overall_total, this.categoryList.g10.d.os1, this.categoryList.g10.d.os2, this.categoryList.g10.d.es1, this.categoryList.g10.d.es2],
+        ]
+    });
+    doc.text('Skill Development Activities - 200', 10, 95);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 200', 'Mark obtained']],
+      body: [
+        ['Industrial Training Undergone(Min. 2 Days)'],
+        ['Training at Industry', this.categoryList1.g1.training_at_industry.overall_total,this.categoryList1.g1.training_at_industry.marks],
+        ['Training outcome (Guest Lecture, IPT, Project, consultancy etc)', this.categoryList1.g1.training_outcome.overall_total,this.categoryList1.g1.training_outcome.marks],
+        ['Academic activities in collaboration with Industries'],
+        ['Guest Lecture / Industrial Visit(each-15)', this.categoryList1.g2.guest_lecture.overall_total,this.categoryList1.g2.guest_lecture.marks],
+        ['Outcome achieved (Mini Project/Case Study/ Paper Presentation etc) (each-5)', this.categoryList1.g2.outcome_achieved.overall_total,this.categoryList1.g2.outcome_achieved.marks],
+        ['Initiatives on Industrial collaboration'],
+        ['MoU Signed with Industry', this.categoryList1.g3.mou_signed.overall_total,this.categoryList1.g3.mou_signed.marks],
+        ['Impact of Industrial collaboration through training to faculty, IPT, VAC, Project, Guest Lecture, Consultancy etc.', this.categoryList1.g3.impact_of_ic.overall_total,this.categoryList1.g3.impact_of_ic.marks],
+        ['Value Added Courses Conducted by Faculty(Min 30 Hours)'],
+        ['VAC conducted by the faculty team (Max. 3 Faculty)', this.categoryList1.g4.vac_faculty_team.overall_total,this.categoryList1.g4.vac_faculty_team.marks],
+        ['VAC organised by the faculty in association with industry', this.categoryList1.g4.vac_faculty_industry.overall_total,this.categoryList1.g4.vac_faculty_industry.marks],
+        ['VAC organised joined with industry and resourses Sharing mode (eg:15 hrs our faculty and remaining 15 hrs by experts from industry)', this.categoryList1.g4.vac_industry_resources.overall_total,this.categoryList1.g4.vac_industry_resources.marks],
+        ['Impact of mentoring in Skill Development'],
+        ['Impact of mentoring in Skill Development can be measured in term of the following activities 1. Paper Presentation 2. Participation in any technical event 3. Internship/IPT 4. Participation in VAC 5.Participation in project/Desing contest/Hackathon', this.categoryList1.g5.impact_of_mentoring.overall_total,this.categoryList1.g5.impact_of_mentoring.marks],
+        ['A = (No. of students in any of the three mentioned activities /Total no. of students) x 40', this.categoryList1.g5.a.overall_total,this.categoryList1.g5.a.marks],
+        ['B = (No. of students won prize in any of the activities /Total no. of students) x 20', this.categoryList1.g5.b.overall_total,this.categoryList1.g5.b.marks],
+       ]
+    });
+    doc.text('Research & Development Activities - 200', 10, 255);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 200', 'Mark obtained']],
+      body:[
+        ['Certificate Course Completed(NPTEL/SWAYAM/etc)'],
+        ['Course completion certificate',this.categoryList2.g1.course_comp_cert.overall_total,this.categoryList2.g1.course_comp_cert.marks],
+        ['Course completion certificate with Elite score and above',this.categoryList2.g1.course_comp_cert_elite.overall_total,this.categoryList2.g1.course_comp_cert_elite.marks],
+        ['FDP(Minimum 5 Days)/Workshop/Seminar attended'],
+        ['FDP outside State',this.categoryList2.g2.fdp_out.overall_total,this.categoryList2.g2.fdp_out.marks],
+        ['FDP within State',this.categoryList2.g2.fdp_in.overall_total,this.categoryList2.g2.fdp_in.marks],
+        ['Workshop/Seminar',this.categoryList2.g2.workshop_seminar.overall_total,this.categoryList2.g2.workshop_seminar.marks],
+        ['Journal Publications'],
+        ['Peer Reviewed Journal(each)',this.categoryList2.g3.peer_reviewed_journal.overall_total,this.categoryList2.g3.peer_reviewed_journal.marks],
+        ['UGC CARE Journal(each)',this.categoryList2.g3.ugc_care_journal.overall_total,this.categoryList2.g3.ugc_care_journal.marks],
+        ['Conference/Technical Book Publications(With ISBN Number)'],
+        ['National/International Conference',this.categoryList2.g4.national_intl_conference.overall_total,this.categoryList2.g4.national_intl_conference.marks],
+        ['Book/Book Chapter Publications',this.categoryList2.g4.book_publication.overall_total,this.categoryList2.g4.book_publication.marks],
+        ['Seminar/Workshop proposals submitted to Funding Agency'],
+        ['Proposal Submission',this.categoryList2.g5.proposal_submission.overall_total,this.categoryList2.g5.proposal_submission.marks],
+        ['Grant Recieved from Funding Agencies'],
+        ['Less than 1 Lakh(each-10)',this.categoryList2.g6.less_than_one.overall_total,this.categoryList2.g6.less_than_one.marks],
+        ['More than 1 Lakh',this.categoryList2.g6.more_than_one.overall_total,this.categoryList2.g6.more_than_one.marks],
+        ['Patents / Consultancy works'],
+        ['Patents Published',this.categoryList2.g7.patents_published.overall_total,this.categoryList2.g7.patents_published.marks],
+        ['Consultancy work',this.categoryList2.g7.consultancy_work.overall_total,this.categoryList2.g7.consultancy_work.marks],
+      ]
+      
+    });
+    doc.text('Administrative & Extension Activities - 100', 10, 170);
+    autoTable(doc, {
+      head: [['Parameter', 'Total - 100', 'Mark obtained']],
+      body:[
+        ['Administrative Responsibilities (Departments & Institution level)'],
+        ['Department Level Responsibility(each 15)',this.categoryList3.g1.dept_lvl_resp.overall_total,this.categoryList3.g1.dept_lvl_resp.marks],
+        ['Rating for the effectiveness by HoD',this.categoryList3.g1.rating_for_eff_hod.overall_total,this.categoryList3.g1.rating_for_eff_hod.marks],
+        ['Institutional level Responsibility',this.categoryList3.g1.ins_lvl_resp.overall_total,this.categoryList3.g1.ins_lvl_resp.marks],
+        ['Rating for the effectiveness by Principal',this.categoryList3.g1.rating_for_eff_pric.overall_total,this.categoryList3.g1.rating_for_eff_pric.marks],
+        ['Administrative Responsibilities (Departments & Institution level)'],
+        ['Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga, eco Club, Rotary, JCI etc. (each 15)',this.categoryList3.g2.part_ext_act.overall_total,this.categoryList3.g2.part_ext_act.marks],
+        ['Any other Achivements(Specify if any)'],
+        ['Awards recieved, 100% result, Guest lecture delivered, Resource persons for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution etc.',this.categoryList3.g3.awards_recieved.overall_total,this.categoryList3.g3.awards_recieved.marks],
       ]
     });
+
     doc.save('academic-report.pdf');
     }
 }
