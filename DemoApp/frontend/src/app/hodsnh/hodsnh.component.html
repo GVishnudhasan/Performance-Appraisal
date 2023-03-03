@@ -2220,5 +2220,9 @@
                 <input class="btn" type="submit" value="SAVE" (click)="setmap()" />
             </div>
         </div>
+        <!-- Generate PDF -->
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF()">
+        <button style="position: center;">Generate PDF</button>
+      </div>
     </div>
 </div>
