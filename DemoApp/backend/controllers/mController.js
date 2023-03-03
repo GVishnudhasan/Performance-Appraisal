@@ -10,7 +10,7 @@ const passwordResetToken = require('../model/resetToken');
 const User = require("../model/User");
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://Vishnudhasan:abcd1234@cluster0.i6a9cer.mongodb.net/performanceAppraisal";
+var url = "mongodb+srv://Vishnudhasan:abcd1234@cluster0.i6a9cer.mongodb.net/performanceAppraisal?authSource=admin&compressors=zlib&retryWrites=true&w=majority&ssl=true";
 
 
 exports.login = async (req, res, next) => {

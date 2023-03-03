@@ -2632,6 +2632,8 @@
                 </div>
             </div>
         </div>
+
+        
         <!-- <div class="note">
             <h4>Note:</h4>
             <h4>Overall Performance is generated based on the following conditions:</h4>
@@ -2789,5 +2791,9 @@
                 <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
             </div>
         </div>
+         <!-- Generate PDF -->
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF()">
+        <button style="position: center;">Generate PDF</button>
+      </div>
     </div>
 </div>
