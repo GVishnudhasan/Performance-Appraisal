@@ -47,7 +47,7 @@
                         <tr>
                             <td>Quality of class notes</td>
                             <td colspan="20">{{categoryList.g1.qty_of_class.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qty_of_class.os1"
                                     formControlName="qty_of_class_os1" />
                                 <div class="invalid-feedback">
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qty_of_class.os2"
                                     formControlName="qty_of_class_os2" />
                                 <div class="invalid-feedback">
@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qty_of_class.es1"
                                     formControlName="qty_of_class_es1" />
                                 <div class="invalid-feedback">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan="20"><input type="number" style="width: 40px;" name="marks" required max="20"
+                            <td colspan="20"><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qty_of_class.es2"
                                     formControlName="qty_of_class_es2" />
                                 <div class="invalid-feedback">
@@ -119,7 +119,7 @@
                         <tr>
                             <td>Question bank (Univ., 2 marks & 16 marks)</td>
                             <td colspan="20">{{categoryList.g1.qb.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="10"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qb.os1" formControlName="qb_os1" />
                                 <div class="invalid-feedback">
                                     <div *ngIf="
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="10"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qb.os2" formControlName="qb_os2" />
                                 <div class="invalid-feedback">
                                     <div *ngIf="
@@ -151,7 +151,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="10"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qb.es1" formControlName="qb_es1" />
                                 <div class="invalid-feedback">
                                     <div *ngIf="
@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan="20"><input type="number" style="width: 40px;" name="marks" required max="10"
+                            <td colspan="20"><input type="number" style="width: 40px;" name="marks" required
                                     [(ngModel)]="categoryList.g1.qb.es2" formControlName="qb_es2" />
                                 <div class="invalid-feedback">
                                     <div *ngIf="
@@ -1972,8 +1972,7 @@
                             <tr>
                                 <td>Training at Tier-II/Tier-III industry</td>
                                 <td colspan="30">{{categoryList1.g1.training_tier_2_tier_3_ind.overall_total}}</td>
-                                <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="5"
-                                        min="0" [(ngModel)]="categoryList1.g1.training_tier_2_tier_3_ind.marks"
+                                <td colspan=""><input type="number" style="width: 40px;" name="marks" required [(ngModel)]="categoryList1.g1.training_tier_2_tier_3_ind.marks"
                                         formControlName="training_tier_2_tier_3_ind">
                                     <div class="invalid-feedback">
                                         <div *ngIf="
