@@ -1128,8 +1128,6 @@ export class Mt5Component implements OnInit {
         ['Ratiing by Principal/Mangement',this.categoryList4.g5.rating_princi_manage.overall_total,this.categoryList4.g5.rating_princi_manage.marks],
     ]
     });
-
-
     doc.save('academic-report.pdf');
     }
 }
