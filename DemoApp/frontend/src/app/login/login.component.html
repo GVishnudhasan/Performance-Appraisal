@@ -1,4 +1,4 @@
-<div class="fs_div1" [ngStyle]="{background:'url(.../assets/image/1592672598campus-1.jpg)'}">
+<div class="fs_div1">
     <h2
         style="text-align:center;">
         Self Appraisal Form</h2>
@@ -30,7 +30,7 @@
                     <input class="btn" type="submit" value="Login" [disabled]="!userForm.valid" />
                     <hr>
 
-                    <a href="#" class="link">Forgot password?</a>
+                    <a href="#" class="link" (click)="gotoreset()" >Forgot password?</a>
                 </form>
 
             </div>

@@ -6,7 +6,7 @@
     "dev": "node init.js && nodemon server.js ",
     "devauth": "nodemon authServer.js",
     "start": "node init.js && node server.js",
-    "service":"nodemon mongo1.js" 
+    "service": "nodemon mongo1.js"
   },
   "keywords": [],
   "author": "",

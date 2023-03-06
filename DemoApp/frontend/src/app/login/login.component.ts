@@ -71,6 +71,10 @@ export class LoginComponent implements OnInit {
     this.router.navigate(["/signup"]);
   }
 
+  gotoreset() {
+    this.router.navigate(["/request-reset-password"]);
+  }
+
   async mToastMsg(tag: boolean, title: any, message: any) {
     await this.toastr[tag ? "success" : "error"](title, message, {
       timeOut: 3000,
