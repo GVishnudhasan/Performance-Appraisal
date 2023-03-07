@@ -1,0 +1,47 @@
+<div class="container">
+    <div *ngIf="CurrentState=='NotVerified'">
+        <h2> Invalid URL.</h2>
+    </div>
+    <!-- <div *ngIf="CurrentState=='Verified'"> -->
+        <h5>Set New Password</h5>
+        <div id="errorMsg" *ngIf="errorMessage">
+            <span>{{errorMessage}}</span>
+        </div>
+        <div id="successMsg" *ngIf="successMessage">
+            <span>{{successMessage}}</span>
+        </div>
+        <form action="" [formGroup]="ResponseResetForm" (ngSubmit)="ResetPassword()">
+            <div class="form-group">
+                <input _ngcontent-c0="" class="form-control" placeholder="Password" type="password" id="password"
+                    [formControl]="ResponseResetForm.controls.newPassword" />
+                <div class="invalid-feedback">
+                    <div *ngIf="f.password.touched && f.password.errors?.required">
+                        Password Required
+                    </div>
+                    <div *ngIf="f.password.errors?.['pattern']">
+                        Check your Password
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input _ngcontent-c0="" class="form-control" placeholder="Confirm Password" type="password"
+                    id="cpassword" [formControl]="ResponseResetForm.controls.confirmPassword" />
+                <div class="invalid-feedback">
+                    <div *ngIf="f.password.touched && f.password.errors?.required">
+                        Password Required
+                    </div>
+                    <div *ngIf="f.password.errors?.['pattern']">
+                        Check your Password
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+
+                    <button type="submit" class="  btn btn-primary">Update
+                        Password</button>
+                </div>
+            </div>
+        </form>
+    <!-- </div> -->
+</div>

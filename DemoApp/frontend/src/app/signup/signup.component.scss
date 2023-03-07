@@ -1,8 +1,26 @@
+// .center{
+// 	position:absolute;
+// 	top:50%;
+// 	left:50%;
+// 	transform:translate(-50%, -50%);
+// }
 .container{
+	position:absolute;
+	// top:-1%;
+	// transform:translate(-1%);
+	top:70%;
+	left:50%;
+	// margin-left: auto;
+	margin-right:-50%;
+	transform:translate(-50%,-50%);
+	margin: 18% auto 0;
+	text-align: center;
+	align-items: center;
+    justify-content: center;
 	max-width: 500px;
 	width: 100%;
     overflow-x:hidden;
-    height: auto;
+    height:auto;
 	border-radius: var(--button-radius);
 	border-color: #008997;
 	background-color: var(--white);
@@ -19,9 +37,12 @@
 	text-align: center;
 
 }
+
 .container .form .form-group
 {
+
 	margin-bottom: 15px;
+	margin:auto;
 	display: flex;
 	align-items: center;
 }

@@ -1,14 +1,18 @@
 <div class="mcontainer">
   <div class="bg_color">
-
+    <div class="header" style="text-align: center">
+      <img style="width: 1000px" src="Screenshot 2022-09-10 212840.jpg" alt="" />
+    </div>
+    <br />
+    <br />
     <div style="float: left">
       <a (click)="mActive(false)" class="previous">&laquo; Previous</a>
     </div>
-
     <div style="float: right">
       <a (click)="mActive(true)" class="next">Next &raquo;</a>
     </div>
-
+    <br />
+    <br />
     <!-- G1 -->
     <div *ngIf="active_flag == 0">
       <div class="acad" style="text-align: center">
@@ -18,9 +22,9 @@
       <br />
 
       <div class="acad" style="text-align: center">
-        <hr>
+        <hr />
         <h3>Parameters & Guidelines</h3>
-        <hr>
+        <hr />
       </div>
 
       <form [formGroup]="academic_Activities">
@@ -1907,7 +1911,7 @@
         <h1>Academic Activities - 400</h1>
         <br />
       </div>
-
+      
 
       <table align="center" border="1" width="100%">
         <thead>
@@ -1993,14 +1997,14 @@
                 <th>Marks obtained</th>
               </tr>
             </thead>
-
+  
             <tbody>
               <tr>
                 <td colspan="40" align="center">
                   <b>Industrial Training Undergone(Min. 2 Days)</b>
                 </td>
               </tr>
-
+  
               <tr>
                 <td>Training at Tier-I industry</td>
                 <td colspan="30">
@@ -2078,7 +2082,7 @@
                   <b>Academic activities in collaboration with Industries</b>
                 </td>
               </tr>
-
+  
               <tr>
                 <td>Guest Lecture / Industrial Visit(each-15)</td>
                 <td colspan="30">
@@ -2108,7 +2112,7 @@
                   <b>Initiatives on Industrial collaboration</b>
                 </td>
               </tr>
-
+  
               <tr>
                 <td>MoU Signed with Industry</td>
                 <td colspan="30">
@@ -2160,13 +2164,13 @@
                   </div>
                 </td>
               </tr>
-
+  
               <tr>
                 <td colspan="40" align="center">
                   <b>Value Added Courses Conducted by Faculty(Min 30 Hours)</b>
                 </td>
               </tr>
-
+  
               <tr>
                 <td>VAC conducted by the faculty team (Maximum three Faculty)</td>
                 <td colspan="30">
@@ -2226,8 +2230,7 @@
                 </td>
                 <td colspan="">
                   <input type="number" style="width: 40px" name="marks" required
-                    [(ngModel)]="categoryList1.g4.vac_industry_resources.marks"
-                    formControlName="vac_industry_resources">
+                    [(ngModel)]="categoryList1.g4.vac_industry_resources.marks" formControlName="vac_industry_resources">
                   <div class="invalid-feedback">
                     <div *ngIf="
                                   f1.vac_industry_resources.touched &&
@@ -2244,7 +2247,7 @@
                   </div>
                 </td>
               </tr>
-
+  
               <tr>
                 <td colspan="40" align="center">
                   <b>Impact of mentoring in Skill Development</b>
@@ -2339,7 +2342,7 @@
             </tbody>
           </table>
         </form>
-
+        
       </div>
 
       <div class="acad" style="text-align: center">
@@ -2412,7 +2415,7 @@
                 <b>Certificate Course Completed(NPTEL/SWAYAM/etc)</b>
               </td>
             </tr>
-
+  
             <tr>
               <td>Course completion certificate</td>
               <td colspan="30">
@@ -2420,7 +2423,7 @@
               </td>
               <td colspan="">
                 <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList2.g1.course_comp_cert.marks" formControlName="course_comp_cert">
+                  [(ngModel)]="categoryList2.g1.course_comp_cert.marks" formControlName="impact_of_mentoring">
                 <div class="invalid-feedback">
                   <div *ngIf="
                         f2.course_comp_cert.touched && 
@@ -2489,8 +2492,8 @@
               <td>FDP within State</td>
               <td colspan="30">{{ categoryList2.g2.fdp_in.overall_total }}</td>
               <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList2.g2.fdp_in.marks" formControlName="fdp_in">
+                <input type="number" style="width: 40px" name="marks" required [(ngModel)]="categoryList2.g2.fdp_in.marks"
+                  formControlName="fdp_in">
                 <div class="invalid-feedback">
                   <div *ngIf="
                         f2.fdp_in.touched && 
@@ -2803,7 +2806,7 @@
       </form>
 
 
-
+      
       <div class="acad" style="text-align: center;">
         <hr>
         <h1>Research & Development Activities - 200</h1>
@@ -2870,173 +2873,172 @@
         <h1>Administrative & Extension Activities - 200</h1>
       </div>
 
-      <form [formGroup]="administrativeExtension_Activities">
-        <table>
-          <thead>
-            <tr>
-              <th>Administrative & Extension Activities</th>
-              <th colspan="30">Total - 200</th>
-              <th>Marks obtained</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="40" align="center">
-                <b>Administrative Responsibilities (Departments & Institution level)</b>
-              </td>
-            </tr>
+      <form [formGroup]="administrativeExtension_Activities"></form>
+      <table>
+        <thead>
+          <tr>
+            <th>Administrative & Extension Activities</th>
+            <th colspan="30">Total - 200</th>
+            <th>Marks obtained</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Administrative Responsibilities (Departments & Institution level)</b>
+            </td>
+          </tr>
 
-            <tr>
-              <td>Department Level Responsibility(each 15)</td>
-              <td colspan="30">{{ categoryList3.g1.dept_lvl_resp.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g1.dept_lvl_resp.marks" formControlName="dept_lvl_resp">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.dept_lvl_resp.touched && 
-                        f3.dept_lvl_resp.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.dept_lvl_resp.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.dept_lvl_resp.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+          <tr>
+            <td>Department Level Responsibility(each 15)</td>
+            <td colspan="30">{{ categoryList3.g1.dept_lvl_resp.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g1.dept_lvl_resp.marks" formControlName="dept_lvl_resp">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.dept_lvl_resp.touched && 
+                      f3.dept_lvl_resp.errors?.required">
+                  Number Required
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Rating for the effectiveness by HoD</td>
-              <td colspan="30">
-                {{ categoryList3.g1.rating_for_eff_hod.overall_total }}
-              </td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g1.rating_for_eff_hod.marks" formControlName="rating_for_eff_hod">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.rating_for_eff_hod.touched && 
-                        f3.rating_for_eff_hod.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.rating_for_eff_hod.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.rating_for_eff_hod.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+                <div *ngIf="f3.dept_lvl_resp.hasError('max')">
+                  Maximum required marks is 20.
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Institutional level Responsibility</td>
-              <td colspan="30">{{ categoryList3.g1.ins_lvl_resp.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g1.ins_lvl_resp.marks" formControlName="ins_lvl_resp">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.ins_lvl_resp.touched && 
-                        f3.ins_lvl_resp.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.ins_lvl_resp.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.ins_lvl_resp.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+                <div *ngIf="f3.dept_lvl_resp.hasError('min')">
+                  Minimum required marks is 0.
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Rating for the effectiveness by Principal</td>
-              <td colspan="30">
-                {{ categoryList3.g1.rating_for_eff_pric.overall_total }}
-              </td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g1.rating_for_eff_pric.marks" formControlName="rating_for_eff_pric">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.rating_for_eff_pric.touched && 
-                        f3.rating_for_eff_pric.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.rating_for_eff_pric.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.rating_for_eff_pric.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Rating for the effectiveness by HoD</td>
+            <td colspan="30">
+              {{ categoryList3.g1.rating_for_eff_hod.overall_total }}
+            </td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g1.rating_for_eff_hod.marks" formControlName="rating_for_eff_hod">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.rating_for_eff_hod.touched && 
+                      f3.rating_for_eff_hod.errors?.required">
+                  Number Required
                 </div>
-              </td>
-            </tr>
+                <div *ngIf="f3.rating_for_eff_hod.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f3.rating_for_eff_hod.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Institutional level Responsibility</td>
+            <td colspan="30">{{ categoryList3.g1.ins_lvl_resp.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g1.ins_lvl_resp.marks" formControlName="ins_lvl_resp">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.ins_lvl_resp.touched && 
+                      f3.ins_lvl_resp.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f3.ins_lvl_resp.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f3.ins_lvl_resp.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Rating for the effectiveness by Principal</td>
+            <td colspan="30">
+              {{ categoryList3.g1.rating_for_eff_pric.overall_total }}
+            </td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g1.rating_for_eff_pric.marks" formControlName="rating_for_eff_pric">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.rating_for_eff_pric.touched && 
+                      f3.rating_for_eff_pric.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f3.rating_for_eff_pric.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f3.rating_for_eff_pric.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
 
-            <tr>
-              <td colspan="40" align="center">
-                <b>Participation in Extension Activities</b>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga,
-                eco Club, Rotary, JCI etc. (each 15)
-              </td>
-              <td colspan="30">{{ categoryList3.g2.part_ext_act.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g2.part_ext_act.marks" formControlName="part_ext_act">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.part_ext_act.touched && 
-                        f3.part_ext_act.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.part_ext_act.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.part_ext_act.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Participation in Extension Activities</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Participation in Extension Activities conducted by NSS, NCC, UBA, Yoga,
+              eco Club, Rotary, JCI etc. (each 15)
+            </td>
+            <td colspan="30">{{ categoryList3.g2.part_ext_act.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g2.part_ext_act.marks" formControlName="part_ext_act">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.part_ext_act.touched && 
+                      f3.part_ext_act.errors?.required">
+                  Number Required
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="40" align="center">
-                <b>Any other Achivements(Specify if any)</b>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Awards recieved, 100% result, Guest lecture delivered, Resource persons
-                for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC
-                Member in other institution etc.
-              </td>
-              <td colspan="30">{{ categoryList3.g3.awards_recieved.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList3.g3.awards_recieved.marks" formControlName="awards_recieved">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f3.awards_recieved.touched && 
-                        f3.awards_recieved.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f3.awards_recieved.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f3.awards_recieved.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
+                <div *ngIf="f3.part_ext_act.hasError('max')">
+                  Maximum required marks is 20.
                 </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
+                <div *ngIf="f3.part_ext_act.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="40" align="center">
+              <b>Any other Achivements(Specify if any)</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Awards recieved, 100% result, Guest lecture delivered, Resource persons
+              for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC
+              Member in other institution etc.
+            </td>
+            <td colspan="30">{{ categoryList3.g3.awards_recieved.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList3.g3.awards_recieved.marks" formControlName="awards_recieved">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f3.awards_recieved.touched && 
+                      f3.awards_recieved.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f3.awards_recieved.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f3.awards_recieved.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <div class="acad" style="text-align: center">
         <hr />
@@ -3089,124 +3091,109 @@
         <h3>Rating by HoD, Director & Principal - 100</h3>
         <hr>
       </div>
-      <form [formGroup]="ratingByHoDPrincipal">
-        <table align="center" border="1" width="100%">
-          <tbody>
-            <tr>
-              <td>Dedication and Taking responsibility by self</td>
-              <td colspan="30">{{ categoryList4.g1.dept_lvl_resp.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList4.g1.dept_lvl_resp.marks" formControlName="dept_lvl_resp_1">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f4.dept_lvl_resp_1.touched && 
-                        f4.dept_lvl_resp_1.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f4.dept_lvl_resp_1.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f4.dept_lvl_resp_1.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Document Maintenance and regular Updation</td>
-              <td colspan="30">
-                {{ categoryList4.g2.doc_main_reg_upd.overall_total }}
-              </td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList4.g2.doc_main_reg_upd.marks" formControlName="doc_main_reg_upd"/>
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                          f4.doc_main_reg_upd.touched && 
-                          f4.doc_main_reg_upd.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f4.doc_main_reg_upd.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f4.doc_main_reg_upd.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Involvement towards department development</td>
-              <td colspan="30">{{ categoryList4.g3.inv_dept_dev.overall_total }}</td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList4.g3.inv_dept_dev.marks" formControlName="inv_dept_dev">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f4.inv_dept_dev.touched && 
-                        f4.inv_dept_dev.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f4.inv_dept_dev.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f4.inv_dept_dev.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Completion of work on time without follow up</td>
-              <td colspan="30">
-                {{ categoryList4.g4.comp_wrk_withot_follow.overall_total }}
-              </td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList4.g4.comp_wrk_withot_follow.marks" formControlName="comp_wrk_withot_follow">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f4.comp_wrk_withot_follow.touched && 
-                        f4.comp_wrk_withot_follow.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f4.comp_wrk_withot_follow.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f4.comp_wrk_withot_follow.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Rating by Principal/Mangement</td>
-              <td colspan="30">
-                {{ categoryList4.g5.rating_princi_manage.overall_total }}
-              </td>
-              <td colspan="">
-                <input type="number" style="width: 40px" name="marks" required
-                  [(ngModel)]="categoryList4.g5.rating_princi_manage.marks" formControlName="rating_princi_manage">
-                <div class="invalid-feedback">
-                  <div *ngIf="
-                        f4.rating_princi_manage.touched && 
-                        f4.rating_princi_manage.errors?.required">
-                    Number Required
-                  </div>
-                  <div *ngIf="f4.rating_princi_manage.hasError('max')">
-                    Maximum required marks is 20.
-                  </div>
-                  <div *ngIf="f4.rating_princi_manage.hasError('min')">
-                    Minimum required marks is 0.
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
 
+      <table align="center" border="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Dedication and Taking responsibility by self</td>
+            <td colspan="30">{{ categoryList4.g1.dept_lvl_resp.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList4.g1.dept_lvl_resp.marks" formControlName="dept_lvl_resp_1">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f.dept_lvl_resp_1.touched && 
+                      f.dept_lvl_resp_1.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f.dept_lvl_resp_1.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f.dept_lvl_resp_1.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Document Maintenance and regular Updation</td>
+            <td colspan="30">
+              {{ categoryList4.g2.doc_main_reg_upd.overall_total }}
+            </td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList4.g2.doc_main_reg_upd.marks" />
+            </td>
+          </tr>
+          <tr>
+            <td>Involvement towards department development</td>
+            <td colspan="30">{{ categoryList4.g3.inv_dept_dev.overall_total }}</td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList4.g3.inv_dept_dev.marks" formControlName="inv_dept_dev">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f.inv_dept_dev.touched && 
+                      f.inv_dept_dev.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f.inv_dept_dev.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f.inv_dept_dev.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Completion of work on time without follow up</td>
+            <td colspan="30">
+              {{ categoryList4.g4.comp_wrk_withot_follow.overall_total }}
+            </td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList4.g4.comp_wrk_withot_follow.marks" formControlName="comp_wrk_withot_follow">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f.comp_wrk_withot_follow.touched && 
+                      f.comp_wrk_withot_follow.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f.comp_wrk_withot_follow.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f.comp_wrk_withot_follow.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Rating by Principal/Mangement</td>
+            <td colspan="30">
+              {{ categoryList4.g5.rating_princi_manage.overall_total }}
+            </td>
+            <td colspan="">
+              <input type="number" style="width: 40px" name="marks" required
+                [(ngModel)]="categoryList4.g5.rating_princi_manage.marks" formControlName="rating_princi_manage">
+              <div class="invalid-feedback">
+                <div *ngIf="
+                      f.rating_princi_manage.touched && 
+                      f.rating_princi_manage.errors?.required">
+                  Number Required
+                </div>
+                <div *ngIf="f.rating_princi_manage.hasError('max')">
+                  Maximum required marks is 20.
+                </div>
+                <div *ngIf="f.rating_princi_manage.hasError('min')">
+                  Minimum required marks is 0.
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <div class="acad" style="text-align: center">
         <hr />
         <h3>Rating by HoD, Director & Principal</h3>
@@ -3250,6 +3237,10 @@
       <div class="form-group">
         <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
       </div>
+
+      <div (click)="mGeneratePDF()">
+        <button style="position: center;">Generate PDF</button>
+    </div>
     </div>
   </div>
 </div>

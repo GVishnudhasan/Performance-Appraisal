@@ -7,7 +7,7 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "mserve":"set NODE_OPTIONS=--max_old_space_size=8192 & ng serve --open"
+        "mserve": "set NODE_OPTIONS=--max_old_space_size=8192 & ng serve --open"
     },
     "private": true,
     "dependencies": {
@@ -20,7 +20,10 @@
         "@angular/platform-browser-dynamic": "~13.3.0",
         "@angular/router": "~13.3.0",
         "bootstrap": "^5.2.2",
+        "jspdf": "^2.5.1",
+        "jspdf-autotable": "^3.5.28",
         "ngx-toastr": "^14.3.0",
+        "pdfmake": "^0.2.7",
         "rxjs": "~7.5.0",
         "tslib": "^2.3.0",
         "validation-utils": "^7.0.0",
@@ -32,7 +35,9 @@
         "@angular/cli": "~13.3.1",
         "@angular/compiler-cli": "~13.3.0",
         "@types/jasmine": "~3.10.0",
+        "@types/jspdf": "^2.0.0",
         "@types/node": "^12.11.1",
+        "@types/pdfmake": "^0.2.2",
         "jasmine-core": "~4.0.0",
         "karma": "~6.3.0",
         "karma-chrome-launcher": "~3.1.0",

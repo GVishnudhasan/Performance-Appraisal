@@ -28,13 +28,13 @@ header {
 body {
     align-items: center;
     background-color: var(--white);
-    background-image: url(https://www.ksriet.ac.in/admin/uploads/slider/1592672598campus-1.jpg);
+    background-image: url(https://ksriet.ac.in/admin/uploads/slider/1672917434iet-slide-3.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
-    height: 100vh;
+    height: 130vh;
     place-items: center;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .overlay {
     background-color: var(--lightblue);
-    background: url("https://ksriet.ac.in/admin/uploads/slider/1592672598campus-1.jpg");
+    background: url(https://ksriet.ac.in/admin/uploads/slider/1672917434iet-slide-3.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ body {
     justify-content: center;
     position: absolute;
     text-align: center;
-    top: 0;
+    top:0;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
     width: 50%;
@@ -194,6 +194,7 @@ body {
     padding: 0 3rem;
     height: 100%;
     text-align: center;
+    
 }
 
 .input {

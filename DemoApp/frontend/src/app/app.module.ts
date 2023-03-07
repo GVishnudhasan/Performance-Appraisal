@@ -18,6 +18,8 @@ import { WithphdComponent } from './withphd/withphd.component';
 import { HodenggComponent } from './hodengg/hodengg.component';
 import { HodsnhComponent } from './hodsnh/hodsnh.component';
 import { ToastrModule } from 'ngx-toastr';
+import { RequestResetComponent } from './request-reset/request-reset.component';
+import { ResponseResetComponent } from './response-reset/response-reset.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ToastrModule } from 'ngx-toastr';
     Mt5Component,
     WithphdComponent,
     HodenggComponent,
-    HodsnhComponent
+    HodsnhComponent,
+    RequestResetComponent,
+    ResponseResetComponent
   ],
   imports: [
     CommonModule,

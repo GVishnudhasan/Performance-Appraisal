@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan')
 const bodyParser = require('body-parser');
-const InitiateMongoServer = require("./service/database1");
-const user = require("./routes/user");
+const InitiateMongoServer = require("./init");
 const mainRoutes = require('./routes/mRoutes');
 
 // Initiate Mongo Server
@@ -39,7 +38,6 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 app.use("/v1", mainRoutes);
-app.use("/user", user);
 
 http.listen(3000, () => {
     console.log('Server is listening :', http.address().port);
