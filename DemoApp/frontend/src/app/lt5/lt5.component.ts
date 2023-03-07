@@ -468,6 +468,11 @@ export class Lt5Component implements OnInit {
   obtainedScoreG3: number = 0;
   obtainedScoreG4: number = 0;
   consolidatedScore: number = 0;
+  flagG1: string = '';
+  flagG2: string = '';
+  flagG3: string = '';
+  flagG4: string = '';
+  consolidatedFlag: string = '';
 
   ngOnInit(): void {
     const fb = this.fb;
@@ -1475,6 +1480,37 @@ export class Lt5Component implements OnInit {
       this.obtainedScoreG2 +
       this.obtainedScoreG3 +
       this.obtainedScoreG4;
+
+      if (this.obtainedScoreG1 >= 260) {
+        this.flagG1 = 'Yes';
+      }
+      else{
+        this.flagG1 = 'No';
+      }
+      if (this.obtainedScoreG2 >= 130) {
+        this.flagG2 = 'Yes';
+      }
+      else{
+        this.flagG2 = 'No';
+      }
+      if (this.obtainedScoreG3 >= 130) {
+        this.flagG3 = 'Yes';
+      }
+      else{
+        this.flagG3 = 'No';
+      }
+      if (this.obtainedScoreG4 >= 65) {
+        this.flagG4 = 'Yes';
+      }
+      else{
+        this.flagG4 = 'No';
+      }
+      if (this.consolidatedScore >= 650) {
+        this.consolidatedFlag = 'Yes';
+      }
+      else{
+        this.consolidatedFlag = 'No';
+      }
   }
 
 
@@ -2096,13 +2132,14 @@ export class Lt5Component implements OnInit {
         ["S. No.", "category", "Max. Score", "Min. Target", "Score Obtained", "Achivement of Target (Yes/No)"],
       ],
       body: [
-        [1, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
-        [2, "Skill Development Activites", 200, 130, this.obtainedScoreG1, "Yes"],
-        [3, "Research and Development Activites", 200, 130, this.obtainedScoreG1, "Yes"],
-        [4, "Administrative and Extension Activites", 100, 65, this.obtainedScoreG1, "Yes"],
-        [5, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
-        ["", "Total", 1000, 650, this.consolidatedScore, "Yes"]
-      ]
-    })
+        [1, "Academic Activites", 400, 260, this.obtainedScoreG1, this.flagG1],
+        [2, "Skill Development Activites", 200, 130, this.obtainedScoreG2, this.flagG2],
+        [3, "Research and Development Activites", 200, 130, this.obtainedScoreG3, this.flagG3],
+        [4, "Administrative and Extension Activites", 100, 65, this.obtainedScoreG4, this.flagG4],
+        // [5, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
+        ["", "Total", 1000, 650, this.consolidatedScore, this.consolidatedFlag],
+      ],
+    });
+    doc.save("consolidated-report.pdf");
   }
 }
