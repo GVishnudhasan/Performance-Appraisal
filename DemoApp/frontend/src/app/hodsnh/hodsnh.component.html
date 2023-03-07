@@ -1896,7 +1896,7 @@
                             <td colspan="20">1. State Leave (each 4)
                                 <br>2. National Leavel (each 5)
                             <td colspan="20">{{categoryList3.g10.awards.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="10" min="0"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required 
                                     [(ngModel)]="categoryList3.g10.awards.marks" formControlName="awards">
                                 <div class="invalid-feedback">
                                     <div *ngIf="
@@ -2066,7 +2066,7 @@
                                 <br><b>Minimum Target = 70%</b>
                             </td>
                             <td colspan="30">{{categoryList4.g2.part_in_cocurr.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="20" min="0"
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required max="30" min="0"
                                     [(ngModel)]="categoryList4.g2.part_in_cocurr.marks" formControlName="part_in_cocurr">
                                 <div class="invalid-feedback">
                                     <div *ngIf="

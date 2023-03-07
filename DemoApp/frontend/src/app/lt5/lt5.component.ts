@@ -1680,8 +1680,6 @@ export class Lt5Component implements OnInit {
         ],
       ],
     });
-    doc.text("Research & Development Activities - 200", 10, 260);
-    autoTable(doc, {});
     doc.save("academic-report.pdf");
   }
 

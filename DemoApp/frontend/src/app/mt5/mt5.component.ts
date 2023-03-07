@@ -1004,11 +1004,16 @@ export class Mt5Component implements OnInit {
   }
 
   // Generate PDF
-  async mGeneratePDF() {
+  async mGeneratePDF1() {
     const doc = new jsPDF();
     doc.text('Academic Performance Parameters', 10, 10);
     autoTable(doc, {
-      head: [['Parameter', 'Total - 400', 'Marks obtained in ODD-S1', 'Marks obtained in ODD-S2', 'Marks obtained in EVEN-S1', 'Marks obtained in EVEN-S2']],
+      head: [['Parameter', 
+              'Total - 400', 
+              'Marks obtained in ODD-S1', 
+              'Marks obtained in ODD-S2', 
+              'Marks obtained in EVEN-S1', 
+              'Marks obtained in EVEN-S2']],
       body: [
         ['Standard of Class notes - 40'],
         ['Quality of class notes', this.categoryList.g1.qty_of_class.overall_total, this.categoryList.g1.qty_of_class.os1, this.categoryList.g1.qty_of_class.os2, this.categoryList.g1.qty_of_class.es1, this.categoryList.g1.qty_of_class.es2],
@@ -1048,6 +1053,11 @@ export class Mt5Component implements OnInit {
         // ['Performance in End semester Assessment(Distinction)   D = 4 * (No. of students in Distinction /Total no. of students) x 10', this.categoryList.g10.d.overall_total, this.categoryList.g10.d.os1, this.categoryList.g10.d.os2, this.categoryList.g10.d.es1, this.categoryList.g10.d.es2],
       ]
     });
+    doc.save('academic-report.pdf');
+    }
+
+    async mGeneratePDF2() {
+      const doc = new jsPDF();
     doc.text('Skill Development Activities - 200', 10, 100);
     autoTable(doc, {
       head: [['Parameter', 'Total - 200', 'Mark obtained']],
@@ -1071,6 +1081,11 @@ export class Mt5Component implements OnInit {
         ['B = (No. of students won prize in any of the activities /Total no. of students) x 20', this.categoryList1.g5.b.overall_total,this.categoryList1.g5.b.marks],
     ]
     });
+    doc.save('academic-report.pdf');
+    }
+
+    async mGeneratePDF3() {
+      const doc = new jsPDF();
     doc.text('Research & Development Activities - 200', 10, 265);
     autoTable(doc, {
       head: [['Parameter', 'Total - 200', 'Mark obtained']],
@@ -1102,6 +1117,11 @@ export class Mt5Component implements OnInit {
       ]
 
     });
+    doc.save('academic-report.pdf');
+    }
+
+    async mGeneratePDF4() {
+      const doc = new jsPDF();
     doc.text('Administrative & Extension Activities - 100', 10, 200);
     autoTable(doc, {
       head: [['Parameter', 'Total - 100', 'Mark obtained']],
@@ -1117,6 +1137,11 @@ export class Mt5Component implements OnInit {
         ['Awards recieved, 100% result, Guest lecture delivered, Resource persons for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution etc.',this.categoryList3.g3.awards_recieved.overall_total,this.categoryList3.g3.awards_recieved.marks],
       ]
     });
+    doc.save('academic-report.pdf');
+    }
+
+    async mGeneratePDF5() {
+      const doc = new jsPDF();
     doc.text('Rating by HoD, Director & Principal - 100', 10, 45);
     autoTable(doc, {
       head: [['Parameter', 'Total - 100', 'Mark obtained']],
@@ -1130,6 +1155,63 @@ export class Mt5Component implements OnInit {
     });
     doc.save('academic-report.pdf');
     }
+
+
+    async mGeneratePDF() {
+      const doc = new jsPDF();
+      doc.text("Academic Activities - 400", 10, 10);
+      autoTable(doc, {
+        head: [
+          ["Academic Performance Parameters", "Max. Score", "Obtained Score"]
+        ],
+        body: [
+          ["Standard of Class notes", 40, this.categoryList.g1.grand_total],
+          ["Preparation of video materials", 20, this.categoryList.g2.grand_total],
+          ["Standard of IA / Assignment / Tutorial QP", 20, this.categoryList.g3.grand_total],
+          ["Innovation in Teaching & Learning", 20, this.categoryList.g4.grand_total],
+          ["Students Feedback", 20, this.categoryList.g5.grand_total],
+          ["Submission of Course Files", 20, this.categoryList.g6.grand_total],
+          ["Performance in Internal Assessment", 80, this.categoryList.g7.pass],
+          ["Performance in End Semester Exams", 80, this.categoryList.g8.pass],
+          ["Effectiveness of Lab conduction", 60, this.categoryList.g9.grand_total],
+          ["Impact of mentoring in academic performance", 40, this.categoryList.g10.grand_total],
+        ]
+      });
+
+      doc.text("Skill Development Activities - 200", 10, 100);
+    autoTable(doc, {
+      head: [
+        ["Academic Performance Parameters", "Max. Score", "Obtained Score"]],
+      body: [
+        ["Industrial Training Undergone(Min. 2 Days)", 25, this.categoryList1.g1.grand_total],
+        ["Academic activities in collaboration with Industries", 40, this.categoryList1.g2.grand_total],
+        ["Initiatives on Industrial collaboration", 40, this.categoryList1.g3.grand_total],
+        ["Value Added Courses Conducted by Faculty(Min 30 Hours)", 60, this.categoryList1.g4.grand_total],
+        ["Impact of mentoring in Skill Development", 60, this.categoryList1.g5.grand_total],
+      ]
+    });
+    doc.text("Research and Development Activities - 200", 10, 190);
+    autoTable(doc, {
+      head: [["Academic Performance Parameters", "Max. Score", "Obtained Score"]],
+      body: [
+        ["Certificate Course Completed(NPTEL/SWAYAM/etc)", 30, this.categoryList2.g1.grand_total],
+        ["FDP(Minimum 5 Days)/Workshop/Seminar attended", 30, this.categoryList2.g2.grand_total],
+        ["Journal Publications", 40, this.categoryList2.g3.grand_total],
+        ["Conference/Technical Book Publications(With ISBN Number)", 40, this.categoryList2.g4.grand_total],
+        ["Seminar/Workshop proposals submitted to Funding Agency", 20, this.categoryList2.g4.grand_total],
+        ["Grant Recieved from Funding Agencies", 120, this.categoryList2.g4.grand_total],
+        ["Patents / Consultancy works", 70, this.categoryList2.g4.grand_total],
+      ] 
+    });
+    doc.text("Administrative and Extension Activities - 100", 10, 290);
+    autoTable(doc, {
+      head: [["Academic Performance Parameters", "Max. Score", "Obtained Score"]],
+      body: [
+        ["Administrative Responsibilities (Departments & Institution level)", 30, this.categoryList3.g1.grand_total],
+      ]
+      
+    })
+  }
 }
 
 
