@@ -463,6 +463,11 @@ export class Lt5Component implements OnInit {
       grand_total: 0,
     },
   };
+  obtainedScoreG1: number = 0;
+  obtainedScoreG2: number = 0;
+  obtainedScoreG3: number = 0;
+  obtainedScoreG4: number = 0;
+  consolidatedScore: number = 0;
 
   ngOnInit(): void {
     const fb = this.fb;
@@ -1347,6 +1352,16 @@ export class Lt5Component implements OnInit {
       this.categoryList.g10.b.sum +
       this.categoryList.g10.d.sum;
 
+    this.obtainedScoreG1 = this.categoryList.g1.grand_total +
+      this.categoryList.g2.grand_total +
+      this.categoryList.g3.grand_total +
+      this.categoryList.g4.grand_total +
+      this.categoryList.g5.grand_total +
+      this.categoryList.g6.grand_total +
+      this.categoryList.g7.pass +
+      this.categoryList.g8.pass +
+      this.categoryList.g9.grand_total +
+      this.categoryList.g10.grand_total;
     //cl1 - g1
 
     this.categoryList1.g1.grand_total =
@@ -1378,6 +1393,12 @@ export class Lt5Component implements OnInit {
       this.categoryList1.g5.impact_of_mentoring.marks +
       this.categoryList1.g5.a.marks +
       this.categoryList1.g5.b.marks;
+
+    this.obtainedScoreG2 = this.categoryList1.g1.grand_total +
+      this.categoryList1.g2.grand_total +
+      this.categoryList1.g3.grand_total +
+      this.categoryList1.g4.grand_total +
+      this.categoryList1.g5.grand_total;
 
     //cl2 - g1
 
@@ -1420,7 +1441,14 @@ export class Lt5Component implements OnInit {
     this.categoryList2.g7.grand_total =
       this.categoryList2.g7.patents_published.marks +
       this.categoryList2.g7.consultancy_work.marks;
-
+    
+    this.obtainedScoreG3 = this.categoryList2.g1.grand_total +
+      this.categoryList2.g2.grand_total +
+      this.categoryList2.g3.grand_total +
+      this.categoryList2.g4.grand_total +
+      this.categoryList2.g5.grand_total +
+      this.categoryList2.g6.grand_total +
+      this.categoryList2.g7.grand_total;
     //cl3 - g1
 
     this.categoryList3.g1.grand_total =
@@ -1438,7 +1466,17 @@ export class Lt5Component implements OnInit {
 
     this.categoryList3.g3.grand_total =
       this.categoryList3.g3.awards_recieved.marks;
+
+      this.obtainedScoreG4 = this.categoryList3.g1.grand_total +
+      this.categoryList3.g2.grand_total +
+      this.categoryList3.g3.grand_total;
+
+      this.consolidatedScore = this.obtainedScoreG1 +
+      this.obtainedScoreG2 +
+      this.obtainedScoreG3 +
+      this.obtainedScoreG4;
   }
+
 
   active_flag = 0;
   max_list = 4;
@@ -2048,5 +2086,23 @@ export class Lt5Component implements OnInit {
       ],
     });
     doc.save("overall-report.pdf");
+  }
+
+  async GeneratePDF() {
+    const doc = new jsPDF();
+    doc.text("Consolidated Report - 1000", 10, 10);
+    autoTable(doc, {
+      head: [
+        ["S. No.", "category", "Max. Score", "Min. Target", "Score Obtained", "Achivement of Target (Yes/No)"],
+      ],
+      body: [
+        [1, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
+        [2, "Skill Development Activites", 200, 130, this.obtainedScoreG1, "Yes"],
+        [3, "Research and Development Activites", 200, 130, this.obtainedScoreG1, "Yes"],
+        [4, "Administrative and Extension Activites", 100, 65, this.obtainedScoreG1, "Yes"],
+        [5, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
+        ["", "Total", 1000, 650, this.consolidatedScore, "Yes"]
+      ]
+    })
   }
 }
