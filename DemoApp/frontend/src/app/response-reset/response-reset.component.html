@@ -15,10 +15,10 @@
                 <input _ngcontent-c0="" class="form-control" placeholder="Password" type="password" id="password"
                     [formControl]="ResponseResetForm.controls.newPassword" />
                 <div class="invalid-feedback">
-                    <div *ngIf="f.password.touched && f.password.errors?.required">
+                    <div *ngIf="f.newPassword.touched && f.newPassword.errors?.required">
                         Password Required
                     </div>
-                    <div *ngIf="f.password.errors?.['pattern']">
+                    <div *ngIf="f.newPassword.errors?.['pattern']">
                         Check your Password
                     </div>
                 </div>
@@ -27,10 +27,10 @@
                 <input _ngcontent-c0="" class="form-control" placeholder="Confirm Password" type="password"
                     id="cpassword" [formControl]="ResponseResetForm.controls.confirmPassword" />
                 <div class="invalid-feedback">
-                    <div *ngIf="f.password.touched && f.password.errors?.required">
+                    <div *ngIf="f.confirmPassword.touched && f.confirmPassword.errors?.required">
                         Password Required
                     </div>
-                    <div *ngIf="f.password.errors?.['pattern']">
+                    <div *ngIf="f.confirmPassword.errors?.['pattern']">
                         Check your Password
                     </div>
                 </div>

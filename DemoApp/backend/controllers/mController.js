@@ -180,68 +180,41 @@ exports.ResetPassword = async (req, res) => {
         });
 };
 
-
-
-
-    exports.ValidPasswordToken = async (req, res) => {
-        if (!req.body.resettoken) {
-            return res
-                .status(500)
-                .json({ message: 'Token is required' });
-        }
-        const user = await passwordResetToken.findOne({
-            resettoken: req.body.resettoken
-        });
-        if (!user) {
-            return res
-                .status(409)
-                .json({ message: 'Invalid URL' });
-        }
-        User.findOneAndUpdate({ _id: user._userId }).then(() => {
-            res.status(200).json({ message: 'Token verified successfully.' });
-        }).catch((err) => {
-            return res.status(500).send({ msg: err.message });
-        });
-    },
-
-    exports.NewPassword = async (req, res) => {
-        passwordResetToken.findOne({ resettoken: req.body.resettoken }, function (err, userToken, next) {
-            if (!userToken) {
-                return res
-                    .status(409)
-                    .json({ message: 'Token has expired' });
-            }
-
-            User.findOne({
-                _id: userToken._userId
-            }, function (err, userEmail, next) {
-                if (!userEmail) {
-                    return res
-                        .status(409)
-                        .json({ message: 'User does not exist' });
-                }
-                return bcrypt.hash(req.body.newPassword, 10, (err, hash) => {
-                    if (err) {
-                        return res
-                            .status(400)
-                            .json({ message: 'Error hashing password' });
-                    }
-                    userEmail.password = hash;
-                    userEmail.save(function (err) {
-                        if (err) {
-                            return res
-                                .status(400)
-                                .json({ message: 'Password can not reset.' });
-                        } else {
-                            userToken.remove();
-                            return res
-                                .status(201)
-                                .json({ message: 'Password reset successfully' });
-                        }
-
-                    });
-                });
-            });
-
-        })
+exports.ValidPasswordToken = async (req, res) => {
+    if (!req.body.resettoken) {
+        return res.status(500).json({ message: 'Token is required' });
     }
+    const user = await passwordResetToken.findOne({ resettoken: req.body.resettoken }).exec();
+    if (!user) {
+        return res.status(409).json({ message: 'Invalid URL' });
+    }
+    User.findOneAndUpdate({ _id: user._userId }).then(() => {
+        res.status(200).json({ message: 'Token verified successfully.' });
+    }).catch((err) => {
+        return res.status(500).send({ msg: err.message });
+    });
+};
+
+exports.NewPassword = async (req, res) => {
+    try {
+        const userToken = await passwordResetToken.findOne({ resettoken: req.body.resettoken }).exec();
+        if (!userToken) {
+            return res.status(409).json({ message: 'Token has expired' });
+        }
+
+        const userEmail = await User.findOne({ _id: userToken._userId }).exec();
+        if (!userEmail) {
+            return res.status(409).json({ message: 'User does not exist' });
+        }
+
+        const hashedPassword = await bcrypt.hash(req.body.newPassword, 10);
+        userEmail.password = hashedPassword;
+        await userEmail.save();
+
+        await userToken.remove();
+        return res.status(201).json({ message: 'Password reset successfully' });
+
+    } catch (err) {
+        return res.status(400).json({ message: err.message });
+    }
+};

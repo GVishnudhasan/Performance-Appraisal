@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
     this.mServer.login(this.userForm.value).subscribe(
       (res) => {
         console.log("data >>", res);
-        this.mToastMsg(true, "success", "login successful.");
+        this.mToastMsg(true, "Success", "login successful.");
         this.router.navigate(["/home"]);
       },
       (err) => {
