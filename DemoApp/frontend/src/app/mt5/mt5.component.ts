@@ -514,6 +514,16 @@ export class Mt5Component implements OnInit {
       },
     },
   };
+  obtainedScoreG1: number = 0;
+  obtainedScoreG2: number = 0;
+  obtainedScoreG3: number = 0;
+  obtainedScoreG4: number = 0;
+  consolidatedScore: number = 0;
+  flagG1: string = '';
+  flagG2: string = '';
+  flagG3: string = '';
+  flagG4: string = '';
+  consolidatedFlag: string = '';
   
 
   ngOnInit(): void {
@@ -984,7 +994,47 @@ export class Mt5Component implements OnInit {
     this.categoryList3.g3.grand_total =
       this.categoryList3.g3.awards_recieved.marks;
 
+      this.categoryList3.g3.awards_recieved.marks;
 
+      this.obtainedScoreG4 = this.categoryList3.g1.grand_total +
+      this.categoryList3.g2.grand_total +
+      this.categoryList3.g3.grand_total;
+
+      this.consolidatedScore = this.obtainedScoreG1 +
+      this.obtainedScoreG2 +
+      this.obtainedScoreG3 +
+      this.obtainedScoreG4;
+
+      if (this.obtainedScoreG1 >= 260) {
+        this.flagG1 = 'Yes';
+      }
+      else{
+        this.flagG1 = 'No';
+      }
+      if (this.obtainedScoreG2 >= 130) {
+        this.flagG2 = 'Yes';
+      }
+      else{
+        this.flagG2 = 'No';
+      }
+      if (this.obtainedScoreG3 >= 130) {
+        this.flagG3 = 'Yes';
+      }
+      else{
+        this.flagG3 = 'No';
+      }
+      if (this.obtainedScoreG4 >= 65) {
+        this.flagG4 = 'Yes';
+      }
+      else{
+        this.flagG4 = 'No';
+      }
+      if (this.consolidatedScore >= 650) {
+        this.consolidatedFlag = 'Yes';
+      }
+      else{
+        this.consolidatedFlag = 'No';
+      }
   }
 
   active_flag = 0;
@@ -1004,7 +1054,7 @@ export class Mt5Component implements OnInit {
   }
 
   // Generate PDF
-  async mGeneratePDF() {
+  async mGeneratePDF1() {
     const doc = new jsPDF();
     doc.text('Academic Performance Parameters', 10, 10);
     autoTable(doc, {
@@ -1048,7 +1098,12 @@ export class Mt5Component implements OnInit {
         // ['Performance in End semester Assessment(Distinction)   D = 4 * (No. of students in Distinction /Total no. of students) x 10', this.categoryList.g10.d.overall_total, this.categoryList.g10.d.os1, this.categoryList.g10.d.os2, this.categoryList.g10.d.es1, this.categoryList.g10.d.es2],
       ]
     });
-    doc.text('Skill Development Activities - 200', 10, 100);
+    doc.save("aa-report.pdf");
+  }
+
+  async mGeneratePDF2(){
+    const doc = new jsPDF();
+    doc.text('Skill Development Activities - 200', 10, 10);
     autoTable(doc, {
       head: [['Parameter', 'Total - 200', 'Mark obtained']],
       body: [
@@ -1071,7 +1126,13 @@ export class Mt5Component implements OnInit {
         ['B = (No. of students won prize in any of the activities /Total no. of students) x 20', this.categoryList1.g5.b.overall_total,this.categoryList1.g5.b.marks],
     ]
     });
-    doc.text('Research & Development Activities - 200', 10, 265);
+
+    doc.save("sda-report.pdf");
+  }
+
+  async mGeneratePDF3(){
+    const doc = new jsPDF();
+    doc.text('Research & Development Activities - 200', 10, 10);
     autoTable(doc, {
       head: [['Parameter', 'Total - 200', 'Mark obtained']],
       body: [
@@ -1102,7 +1163,12 @@ export class Mt5Component implements OnInit {
       ]
 
     });
-    doc.text('Administrative & Extension Activities - 100', 10, 200);
+    doc.save("rda-report.pdf");
+  }
+
+  async mGeneratePDF4(){
+    const doc = new jsPDF();
+    doc.text('Administrative & Extension Activities - 100', 10, 10);
     autoTable(doc, {
       head: [['Parameter', 'Total - 100', 'Mark obtained']],
       body:[
@@ -1117,7 +1183,12 @@ export class Mt5Component implements OnInit {
         ['Awards recieved, 100% result, Guest lecture delivered, Resource persons for FDP/Seminar/Workshop/training,Jury/Chief guest for programs, BoS/DAC Member in other institution etc.',this.categoryList3.g3.awards_recieved.overall_total,this.categoryList3.g3.awards_recieved.marks],
       ]
     });
-    doc.text('Rating by HoD, Director & Principal - 100', 10, 45);
+    doc.save('Administrative-report.pdf');
+  }
+
+  async mGeneratePDF5(){
+    const doc = new jsPDF();
+    doc.text('Rating by HoD, Director & Principal - 100', 10, 10);
     autoTable(doc, {
       head: [['Parameter', 'Total - 100', 'Mark obtained']],
       body: [
@@ -1128,8 +1199,28 @@ export class Mt5Component implements OnInit {
         ['Ratiing by Principal/Mangement',this.categoryList4.g5.rating_princi_manage.overall_total,this.categoryList4.g5.rating_princi_manage.marks],
     ]
     });
-    doc.save('academic-report.pdf');
+    doc.save('rp-report.pdf');
     }
+
+    async GeneratePDF() {
+      const doc = new jsPDF();
+      doc.text("Consolidated Report - 1000", 10, 10);
+      autoTable(doc, {
+        head: [
+          ["S. No.", "category", "Max. Score", "Min. Target", "Score Obtained", "Achivement of Target (Yes/No)"],
+        ],
+        body: [
+          [1, "Academic Activites", 300, 260, this.obtainedScoreG1, this.flagG1],
+          [2, "Skill Development Activites", 200, 130, this.obtainedScoreG2, this.flagG2],
+          [3, "Research and Development Activites", 200, 130, this.obtainedScoreG3, this.flagG3],
+          [4, "Administrative and Extension Activites", 200, 65, this.obtainedScoreG4, this.flagG4],
+          [5, "Rating by HoD, Director & Principal - 100", 100, 65, this.obtainedScoreG4, this.flagG4],
+          // [6, "Academic Activites", 400, 260, this.obtainedScoreG1, "Yes"],
+          ["", "Total", 1000, 650, this.consolidatedScore, this.consolidatedFlag],
+        ],
+      });
+      doc.save("consolidated-report.pdf");
+  } 
 }
 
 
