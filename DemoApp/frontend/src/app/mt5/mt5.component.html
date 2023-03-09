@@ -47,7 +47,7 @@
                         <tr>
                             <td>Quality of class notes</td>
                             <td colspan="20">{{categoryList.g1.qty_of_class.overall_total}}</td>
-                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required
+                            <td colspan=""><input type="number" style="width: 40px;" name="marks" required min="0" max="20"
                                     [(ngModel)]="categoryList.g1.qty_of_class.os1"
                                     formControlName="qty_of_class_os1" />
                                 <div class="invalid-feedback">
@@ -3164,10 +3164,37 @@
             <div class="form-group">
                 <div class="btn" type="submit" value="SUBMIT" (click)="setmap()">Submit</div>
             </div>
-
-            <div (click)="mGeneratePDF()">
-                <button style="position: center;">Generate PDF</button>
-            </div>
         </div>
+
+        <!-- Generate PDF -->
+<div class="center">
+    
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF1()">
+      <button class="btn" style="text-align: center">
+        Generate PDF for Academic Activities
+      </button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF2()">
+      <button class="btn" style="text-align: center">
+        Generate PDF for Skill Development Activities
+      </button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF3()">
+      <button class="btn" style="text-align: center">
+        Generate PDF for Research and Development Activities
+      </button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF4()">
+      <button class="btn" style="text-align: center" >
+        Generate PDF for Administrative and Extension Activities
+      </button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="mGeneratePDF5()">
+      <button class="btn" style="text-align: center">Generate Overall PDF</button>
+    </div>
+    <div *ngIf="active_flag == 4" (click)="GeneratePDF()">
+      <button class="btn" style="text-align: center">Generate Consolidated Report</button>
+    </div>
+    </div>
     </div>
 </div>
