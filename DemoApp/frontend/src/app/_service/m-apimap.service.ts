@@ -4,6 +4,7 @@ import { MInterfaceService } from './m-interface.service';
 @Injectable({
   providedIn: 'root'
 })
+
 export class MAPImapService {
 
   constructor(private server: MInterfaceService) { }
